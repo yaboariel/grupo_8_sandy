@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head')   %>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Sandies Argentina</title> 
+        <link rel='stylesheet' href='/css/login-style.css'>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Hanalei&family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+        <link rel='stylesheet' href='/css/normalize.css'>
+
+</head>
+<body>
+    <!-- Header -->
+    <%- include('../partials/header')   %>
+    <main>
+
+        <h2 id='titulos-1' class= 'titles' >Ingresá a tu cuenta</h2>
+        
+        <form>
+            <div class='container-input'>
+                <input type='text' id='nombreUsuario' placeholder="Télefono, e-mail o usuario" name='nombreUsuario'>
+            </div>
+            <div class='container-input'>
+                <input type='password' id='password' placeholder="Clave" name='pasword'>
+            </div>
+            <div class='container-button'>
+                <button type='submit' id='boton-enviar'><a class='send-text' href="/">Continuar</a></button>
+            </div>
+        </form>
+
+        <h4 id='titulos-1' class= 'titles' >¿No tenés cuenta?</h4>
+
+        <form>
+            <div class='container-button'>
+                <button type='submit' id='boton-enviar'><a class='send-text' href="/register">Crear Cuenta</a></button>
+            </div> 
+        </form>
+
+    </main>
+
+    <footer> 
+        <section class='contenedor-footer1'>
+
+            <section class='contenedor-footer2'>
+                <i id='footer-icons' class="fas fa-credit-card"></i>
+                <h2 class= 'footer-title'>Lorem ipsum dolor</h2>
+                <p class='footer-p'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa praesentium ullam sint voluptate sequi, et possimus ut adipisci. Fugiat quibusdam illum vitae aperiam quam distinctio impedit, ad nisi nobis qui.</p>
+            </section>
+
+            <section class='contenedor-footer2'>
+                <i id='footer-icons' class="fas fa-gift"></i>
+                <h2 class= 'footer-title'>Lorem ipsum dolor</h2>
+                <p class='footer-p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, impedit quas! Qui, ex sapiente. Autem amet, minus iure sapiente sint, culpa numquam dolor harum voluptatum sed sunt, officia voluptate exercitationem.</p>
+            </section>
+
+            <section id='last-section-footer' class='contenedor-footer2'>
+                <i id='footer-icons' class="fas fa-user-shield"></i>
+                 <h2 class= 'footer-title'>Lorem ipsum dolor</h2>
+                <p class='footer-p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus facere quos nulla eos odio exercitationem tempora, dolorem explicabo? Deserunt qui est nemo rerum eligendi accusantium beatae, dolor similique a assumenda.</p>
+            </section>
+
+        </section>
+
+        <section id='copyright'>
+            <p >Copyright © 2020 Sandies Argentina</p>
+        </section>
+
+    </footer>
+
+</body>
+</html>

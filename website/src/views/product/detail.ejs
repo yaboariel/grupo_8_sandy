@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head')   %>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/css/styles-pdetail.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Detalle del Producto</title>
+</head>
+<!-- Header -->
+<%- include('../partials/header')   %>
+<body>
+    <main>
+        <div class="pd-top-section-non-mobile">
+            <section class="pd-images-container">
+                <div id="pd-title-container">
+                    <h1 class="pd-title">Crocs Classic Unisex</h1>
+                </div>
+                <div class="pd-images-subcontainer">
+                    <div class="pd-main-image-container">
+                        <img src="\images\crocs-classic-b.jpg" alt="crocs-classic-b">
+                    </div>
+                    <div class="pd-gallery-container">
+                        <div class="pd-gallery-detail">
+                            <img src="\images\crocs-classic-b.jpg" alt="crocs-classic-b">
+                        </div>
+                        <div class="pd-gallery-detail">
+                            <img src="\images\crocs-classic-b-2.jpg" alt="crocs-classic-b">
+                        </div>
+                        <div class="pd-gallery-detail">
+                            <img src="\images\crocs-classic-b-3.jpg" alt="crocs-classic-b">
+                        </div>
+                        <div class="pd-gallery-detail">
+                            <img src="\images\crocs-classic-b-4.jpg" alt="crocs-classic-b">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="pd-sidebar-non-mobile">
+                <section class="pd-variations-container">
+                    <form id="pd-variations-form" action="" method="GET">
+                        <div class="pd-variations-size-container">
+                            <label for="pd-variations-size">Talle</label>
+                            <select name="pd-size" id="pd-variations-size" required>
+                                <option value="" disabled selected>Seleccione un talle</option>
+                                <option value="35-36-M4/W6">35-36 M4/M6</option>
+                                <option value="Negro">36-37 M5/W7</option>
+                                <option value="37-38-M6/W8">37-38 M6/W8</option>
+                                <option value="38-39-M7/W9">38-39 M7/W9</option>
+                                <option value="39-40-M8/W10">39-40 M8/W10</option>
+                                <option value="40-40-M9/W11">40-40 M9/W11</option>
+                                <option value="41-42-M10/W12">41-42 M10/W12</option>
+                                <option value="42-43-M11">42-43 M11</option>
+                                <option value="43-44-M12">43-44 M12</option>
+                            </select>
+                        </div>
+                        <div id="pd-color-container">
+                            <label for="pd-color">Color</label>
+                            <select name="pd-color" id="pd-color" required>
+                                <option value="" disabled selected>Seleccione un color</option>
+                                <option value="Blanco">Blanco</option>
+                                <option value="Negro">Negro</option>
+                                <option value="Amarillo">Amarillo</option>
+                                <option value="Rojo">Rojo</option>
+                                <option value="Verde">Verde</option>
+                                <option value="Azul">Azul</option>
+                            </select>
+                        </div>
+                    </form>
+                </section>
+                <section class="pd-buy-container">
+                    <div class="pd-buy-subcontainer">
+                        <button type="submit" class="pd-buy-prompt-button" form="pd-variations-form" formaction="/productCart">
+                            <p>Comprar "Crocs Classic Originales Unisex" ahora</p>
+                        </button>
+                        <div class="pd-buy-tags">
+                            <div class="pd-buy-tags-price-container">
+                                <p>$3500</p>
+                            </div>
+                             <button type="submit" class="pd-buy-tags-cart-button" form="pd-variations-form" formaction="">
+                                <p>O añadir al carro</p>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section id="pd-specs-container">
+                    <h2 class="pd-specs-title">Características principales</h2>
+                    <ul class="pd-specs-list">
+                       <li>Marca: Crocs</li>
+                       <li>Modelo: Crocband</li>
+                       <li>Genero: Hombre</li>
+                       <li>Tipo de calzado: Ojota</li>
+                       <li>Material de suela: Croslite</li>
+                    </ul>
+                </section>
+                <section id="pd-description-container">
+                    <h2 class="pd-description-title">Descripción</h2>
+                    <p class="pd-description">
+                        Deslízate con tus suecos favoritos y disfruta un ajuste a medida,
+                        un diseño amigable al agua y un formato ventilado para una mejor respiración.
+                        Los puertos de ventilación proveen respiración y ayudan a drenar el agua y la suciedad.
+                        Material Croslite completamente moldeado para un confort Crocs.
+                        Consultá la medidas de las plantillas en la Guía de talles que se encuentra encima del precio de la publicación.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="pd-middle-section-non-mobile">
+            <section class="pd-questions-container">
+                <h2 class="pd-questions-title">Preguntas y respuestas</h2>
+                <h3 class="pd-questions-subtitle">Preguntar al vendedor</h3>
+                <div class="pd-questions-subcontainer">
+                    <form action="" class="pd-questions-form" method="POST">
+                        <textarea name="question" placeholder="Escribí tu pregunta..."
+                        autocomplete="off" rows="1"maxlength="2000" required></textarea>
+                        <input type="submit" value="Preguntar" class="pd-questions-form-askbutton">
+                    </form>
+                </div>
+                <div class="pd-questions-questionlist">
+                    <h3 class="pd-questions-questionlist-subtitle">Preguntas realizadas</h3>
+                    <div class="pd-questions-questionlist-item">
+                        <div class="pd-questions-questionlist-item-question">
+                            <p>Hola! Hay Stock? Hace envios a Cordoba?</p>
+                        </div>
+                        <div class="pd-questions-questionlist-item-answer">
+                            <p>Buenas tardes! Si, tenemos stock del producto. Hacemos envios a todo el pais!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pd-middle-section-misc pd-questions-container">
+                <h2><i class="fas fa-info-circle"></i>   Cómo cuidar mis Crocs</h2>
+                <div class="pd-middle-section-misc-item">
+                    <p>· Los modelos que lleven materiales más delicados
+                        se limpian por un paño húmedo. Los que son solo de Croslite con agua fría
+                         y jabón.
+                    </p>
+                    <p>· No expongas tus Crocs a altas temperaturas o al sol intenso, 
+                        el calor puede llegar a deformarlas.
+                    </p>
+                </div>
+            </section>
+        </div>
+        <section id="pd-bottom">
+            <h2 class="pd-bottom-subtitle">Productos recomendados</h2>
+            <div class="pd-bottom-gallery">
+                <div class="pd-bottom-gallery-item">
+                    <div class="pd-bottom-gallery-item-image">
+                        <img src="\images\crocs-st-c.webp" alt="">
+                    </div>
+                    <div class="pd-bottom-gallery-item-name"><p>
+                        Crocs Santa Cruz Men
+                    </p></div>
+                    <div class="pd-bottom-gallery-item-price">$15000</div>
+                    <div class="pd-bottom-gallery-item-off"></div>
+                </div>
+                <div class="pd-bottom-gallery-item">
+                    <div class="pd-bottom-gallery-item-image">
+                        <img src="\images\crocs-pink.webp" alt="">
+                    </div>
+                    <div class="pd-bottom-gallery-item-name"><p>
+                        Crocs Mujer Due Sport Clog Pink
+                    </p></div>
+                    <div class="pd-bottom-gallery-item-price">$15000</div>
+                    <div class="pd-bottom-gallery-item-off"></div>
+                </div>
+                <div class="pd-bottom-gallery-item">
+                    <div class="pd-bottom-gallery-item-image">
+                        <img src="\images\crocs-baya.webp" alt="">
+                    </div>
+                    <div class="pd-bottom-gallery-item-name"><p>
+                        Crocs Sandalias Baya Khaki
+                    </p></div>
+                    <div class="pd-bottom-gallery-item-price">$15000</div>
+                    <div class="pd-bottom-gallery-item-off"></div>
+                </div>
+                <div class="pd-bottom-gallery-item">
+                    <div class="pd-bottom-gallery-item-image">
+                        <img src="\images\crocs-literide.webp" alt="">
+                    </div>
+                    <div class="pd-bottom-gallery-item-text">
+                        <div class="pd-bottom-gallery-item-name"><p>
+                            Literide Clog Originales Lapi
+                        </p></div>
+                        <div class="pd-bottom-gallery-item-price">$15000</div>
+                        <div class="pd-bottom-gallery-item-off"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <%- include('../partials/footer')   %> 
+    <script> </script>
+</body>
+</html>

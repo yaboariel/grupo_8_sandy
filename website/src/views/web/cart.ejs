@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head')   %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/css/styles-pdetail.css">
+    <link rel="stylesheet" href="/css/styles-pdcart.css">
+    <link rel='stylesheet' href='/css/login-style.css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+    <%- include('../partials/header')   %>
+    <main>
+        <div class="pd-cart-container">
+            <h1 class="pd-cart-title">Tu carrito de compras</h1>
+            <div class="pd-cart-top-container">
+                <div class="pd-cart-top-name">
+                    <p>Item</p>
+                </div>
+                <div class="pd-cart-top-price">
+                    <p>Precio unitario</p>
+                </div>
+                <div class="pd-cart-top-quantity">
+                    <p>Cantidad</p>
+                </div>
+                <div class="pd-cart-top-subtotal">
+                    <p>Subtotal</p>
+                </div>
+            </div>
+            <div class="pd-cart-item-container">
+                <div class="pd-cart-item-itemname">
+                    <p>Crocs Classic Unisex</p>
+                </div>
+                <div class="pd-cart-item-itemprice">
+                    <p>$3500</p>
+                </div>
+                <div class="pd-cart-item-itemquantity">
+                    <input type="number" min="1" max="100" step="12" value="1">
+                </div>
+                <div class="pd-cart-item-itemsubtotal">
+                    <p>$3500</p>
+                </div>
+                <div class="pd-cart-item-delete-container">
+                    <button class="pd-cart-item-delete-button"><i class="fas fa-trash-alt"></i>Eliminar</button>
+                </div>
+            </div>
+            <div class="pd-cart-item-container">
+                <div class="pd-cart-item-itemname">
+                    <p>Crocs Mujer Due Sport Clog Pink</p>
+                </div>
+                <div class="pd-cart-item-itemprice">
+                    <p>$3000</p>
+                </div>
+                <div class="pd-cart-item-itemquantity">
+                    <input type="number" min="1" max="100" step="12" value="1">
+                </div>
+                <div class="pd-cart-item-itemsubtotal">
+                    <p>$3000</p>
+                </div>
+                <div class="pd-cart-item-delete-container">
+                    <button class="pd-cart-item-delete-button"><i class="fas fa-trash-alt"></i>Eliminar</button>
+                </div>
+            </div>
+            <div class="pd-cart-item-container">
+                <div class="pd-cart-item-itemname">
+                    <p>Sandalias Gomon Sueco Plataforma Trenzado</p>
+                </div>
+                <div class="pd-cart-item-itemprice">
+                    <p>$2000</p>
+                </div>
+                <div class="pd-cart-item-itemquantity">
+                    <input type="number" min="1" max="100" step="12" value="1">
+                </div>
+                <div class="pd-cart-item-itemsubtotal">
+                    <p>$2000</p>
+                </div>
+                <div class="pd-cart-item-delete-container">
+                    <button class="pd-cart-item-delete-button"><i class="fas fa-trash-alt"></i>Eliminar</button>
+                </div>
+            </div>
+            <div class="pd-cart-total-container">
+                <h1>Total: $7500</h1>
+            </div>
+            <div class="pd-cart-buttons-container">
+                <button class="pd-cart-buttons-continue">Continuar comprando</button>
+                <button class="pd-cart-buttons-checkout" type="submit">Proceder al pago</button>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <%- include('../partials/footer')   %> 
+</body>
+</html>

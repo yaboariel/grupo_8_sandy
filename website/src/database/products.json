@@ -1,0 +1,188 @@
+[
+    {
+        "id":1,
+        "title":"Sandalia 1",
+        "modelo":"con tiras",
+        "marca":"crocs",
+        "material":"goma";
+        "categoria":"sandalia",   /*sandalia, crocs, ojotas, */
+        "foto":"/images/sandalias2.jpg",
+        "precio":2400,
+        "descuento":10,
+        "descripcion":"sandalia crocs",
+        "talles":"34,35,36,37",
+        "destacado":true,
+        "genero":"f",    /*puede ser f, m o f y m (unisex)*/
+        "adulto":true,
+        "colores":["rojo","naranja"]    
+
+    },
+    {
+        "id":2,
+        "title":"Sandalia 2",
+
+    },
+    {
+        "id":3,
+        "title":"Sandalia 3"
+    },
+    {
+        "id":4,
+        "title":"Sandalia 4"
+    }, 
+    {
+        "id":5,
+        "title":"Sandalia 5"
+    },
+    {
+        "id":6,
+        "title":"Sandalia 6"
+    }, 
+    {
+        "id":7,
+        "title":"Sandalia 7"
+    },
+    {
+        "id":8,
+        "title":"Sandalia 8"
+    },
+    {
+        "id":9,
+        "title":"Sandalia 9"
+    },
+    {
+        "id":10,
+        "title":"Sandalia 10"
+    },
+    {
+        "id":11,
+        "title":"Sandalia 11"
+    },
+    {
+        "id":12,
+        "title":"Sandalia 12"
+    },
+    {
+        "id":13,
+        "title":"Sandalia 13"
+    },
+    {
+        "id":14,
+        "title":"Sandalia 14"
+    },
+    {
+        "id":15,
+        "title":"Sandalia 15"
+    },
+    {
+        "id":16,
+        "title":"Sandalia 16"
+    }, 
+    {
+        "id":17,
+        "title":"Sandalia 17"
+    },
+    {
+        "id":18,
+        "title":"Sandalia 18"
+    },
+    {
+        "id":19,
+        "title":"Sandalia 19"
+    },
+    {
+        "id":20,
+        "title":"Sandalia 20"
+    },
+    {
+        "id":21,
+        "title":"Sandalia 21"
+    },
+    {
+        "id":22,
+        "title":"Sandalia 22"
+    },
+    {
+        "id":23,
+        "title":"Sandalia 23"
+    },
+    {
+        "id":24,
+        "title":"Sandalia 24"
+    },
+    {
+        "id":25,
+        "title":"Sandalia 25"
+    },
+    {
+        "id":26,
+        "title":"Sandalia 26"
+    }, 
+    {
+        "id":27,
+        "title":"Sandalia 27"
+    },
+    {
+        "id":28,
+        "title":"Sandalia 28"
+    },
+    {
+        "id":29,
+        "title":"Sandalia 29"
+    },
+    ,
+    {
+        "id":30,
+        "title":"Sandalia 30"
+    },
+    {
+        "id":31,
+        "title":"Sandalia 31"
+    },
+    {
+        "id":32,
+        "title":"Sandalia 32"
+    },
+    {
+        "id":33,
+        "title":"Sandalia 33"
+    },
+    {
+        "id":34,
+        "title":"Sandalia 34"
+    },
+    {
+        "id":35,
+        "title":"Sandalia 35"
+    },
+    {
+        "id":36,
+        "title":"Sandalia 36"
+    }, 
+    {
+        "id":37,
+        "title":"Sandalia 37"
+    },
+    {
+        "id":38,
+        "title":"Sandalia 38"
+    },
+    {
+        "id":39,
+        "title":"Sandalia 39"
+    },
+    {
+        "id":40,
+        "title":"Sandalia 40"
+    },
+]
+
+
+<figure class="producto-imagen"><a href""><img src="/images/sandalias2.jpg"></a>
+                        </figure>
+                        </section>
+                        <section class="caja-producto">
+                                <i class="fas fa-truck"></i>
+                                <p class="precios">$6.770</p>
+                                <p class="descuentos">40% OFF</p>
+                                <p class="descripciones">Cafetera Moulinex</p>

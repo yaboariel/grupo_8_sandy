@@ -1,0 +1,63 @@
+.pd-cart-container{
+    padding: 8px;
+    margin: 4px 0;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.pd-cart-top-container, .pd-cart-item-container{
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    margin: 10px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+.pd-cart-top-container{
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+}
+.pd-cart-top-container div{
+    border-right: none;
+}
+
+.pd-cart-top-name, .pd-cart-item-delete-container{
+    text-align: left;
+}
+
+.pd-cart-item-delete-button{
+    outline: none;
+    padding: 0;
+    border: #b63568;
+    border-radius: 5px;
+    background-color: #ffdcea;
+    color: #b63568;
+}
+
+
+.pd-cart-item-itemquantity{
+    text-align: center;
+}
+
+.pd-cart-item-itemquantity input{
+    border: 1px solid rgb(0,118,203);
+    border-radius: 5px;
+}
+
+.pd-cart-total-container{
+    text-align: right;
+}
+
+.pd-cart-buttons-container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pd-cart-buttons-container button{
+    background-color: rgb(0,118,203);
+    padding: 8px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
