@@ -5,7 +5,7 @@
   "main": "website/src/index.js",
   "engines": {
     "node": "14.x"
-  }
+  },
   "scripts": {
     "test": "clear && nodemon website/src/index.js -e .mjs,.js,.json,.ejs,.css",
     "start": "node website/src/index.js",
