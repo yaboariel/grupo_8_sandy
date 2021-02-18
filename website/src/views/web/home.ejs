@@ -9,19 +9,18 @@
     
     <!-- Header -->
     <%- include('../partials/header')   %>
-
-    <figure id="banner"><img src="/images/banner-sandalias.jpg" width="100%" alt="banner mercadoliebre"></figure>
-
+    <section id="caja-banner">
+    <section id="banner"><img src="/images/banner-sandalias.jpg" alt="banner sandalias"></section>
+     </section>   
     <!-- Page content -->
-    <main>
+
+    <main> 
+
     <h2 class="titulares">BASADO EN TU ULTIMA VISITA</h2>
-        <section class="productos">
+         <section class="productos">
                 <article class="producto">
                        
                         <section class="caja-producto-imagen"> 
-                               
-                               
-                                                                           
                         <figure class="producto-imagen"><a href""><img src="/images/sandalias2.jpg"></a>
                         </figure>
                         </section>
@@ -74,7 +73,12 @@
                   </section>
                 </article>
           <article class="producto">
-            <p> <a href""><img src="/images/sandalias5.jpg"></a></p>
+
+                <section class="caja-producto-imagen">
+                <figure class="producto-imagen">
+                        <a href""><img src="/images/sandalias5.jpg"></a>
+                </figure>
+                </section>
             <section class="caja-producto">
                     <i class="fas fa-truck"></i>
                     <p class="precios">$70.500</p>
@@ -96,8 +100,10 @@
       </section>
 </article>
 <article class="producto">
-<p> <a href""><img src="/images/sandalias4.jpg"></a></p>
-<section class="caja-producto">
+        <section class="caja-producto-imagen"> 
+        <figure class="producto-imagen"> <a href""><img src="/images/sandalias4.jpg"></a></figure>
+         </section>
+        <section class="caja-producto">
         <i class="fas fa-truck"></i>
         <p class="precios">$70.500</p>
         <p class="descuentos">10% off</p>
@@ -105,7 +111,9 @@
 </section>
 </article>
       <article class="producto">
-          <p> <a href""><img src="/images/sandalias5.jpg"></a></p>
+        <section class="caja-producto-imagen"> 
+        <figure class="producto-imagen"> <a href""><img src="/images/sandalias5.jpg"></a></figure>
+        </section>
       <section class="caja-producto">
         <i class="fas fa-truck"></i>
         <p class="precios">$70.500</p>
@@ -115,7 +123,9 @@
       </article>
 
     <article class="producto">
-      <p> <a href""><img src="/images/sandalias4.jpg"></a></p>
+        <section class="caja-producto-imagen"> 
+                <figure class="producto-imagen"> <a href""><img src="/images/sandalias4.jpg"></a></figure>
+                 </section>
       <section class="caja-producto">
               <i class="fas fa-truck"></i>
               <p class="precios">$70.500</p>
@@ -124,7 +134,9 @@
       </section>
     </article>
     <article class="producto">
-      <p><a href""><img src="/images/sandalias3.jpg"></a></p>
+        <section class="caja-producto-imagen"> 
+                <figure class="producto-imagen"> <a href""><img src="/images/sandalias3.jpg"></a></figure>
+                 </section>
       <section class="caja-producto">
           <i class="fas fa-truck"></i>
           <p class="precios">$23.200</p>
@@ -133,7 +145,9 @@
       </section>    
 </article>
 <article class="producto">
-  <p><a href""><img src="/images/sandalias5.jpg"></a></p>
+        <section class="caja-producto-imagen"> 
+                <figure class="producto-imagen"> <a href""><img src="/images/sandalias5.jpg"></a></figure>
+                 </section>
   <section class="caja-producto">
       <i class="fas fa-truck"></i>
       <p class="precios">$23.200</p>
@@ -142,7 +156,9 @@
   </section>    
 </article>
 <article class="producto">
-  <p><a href""><img src="/images/sandalias4.jpg"></a></p>
+        <section class="caja-producto-imagen"> 
+                <figure class="producto-imagen"> <a href""><img src="/images/sandalias4.jpg"></a></figure>
+                 </section>
   <section class="caja-producto">
       <i class="fas fa-truck"></i>
       <p class="precios">$23.200</p>
@@ -151,10 +167,10 @@
   </section>    
 </article>
     </section>
+</main>
 
 
-
-        
+        <!--
         <section class="productos">
                
               
@@ -183,9 +199,9 @@
                         
                 </article>
         </section>
-
+-->
         <h2 class="titulares">CATEGORIAS</h2>
-        <section class="productos">
+     <!--   <section class="productos">
                
                
                 <article class="producto">   
@@ -220,7 +236,7 @@
                  
           </article>
         </section>
-          
+    -->       
 
         
 
@@ -229,11 +245,8 @@
 
      
     
-     
-      
-
         
-      <div class="ps-row ps-padding-64" id="menu">
+    <div class="ps-row ps-padding-64" id="menu">
         <div class="ps-col l6 ps-padding-large">
           <h1 class="ps-center">Menu</h1>
           <br />
@@ -248,10 +261,14 @@
         </div> 
         
          </div>
-        </main>    
+      
+    
+     
+        
       <!-- Footer -->
+</body>
       <%- include('../partials/footer')   %> 
     
   
-  </body>
+  
 </html>

@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "..\\proyecto-integrador-Grupo-8"
 		}
 	],
 	"settings": {}

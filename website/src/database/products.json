@@ -20,11 +20,37 @@
     {
         "id":2,
         "title":"Sandalia 2",
+        "modelo":"cuero",
+        "marca":"sandalia",
+        "material":"cuero";
+        "categoria":"sandalia",   /*sandalia, crocs, ojotas, */
+        "foto":"/images/sandalias2.jpg",
+        "precio":5600,
+        "descuento":20,
+        "descripcion":"sandalia cuero",
+        "talles":"40,41",
+        "destacado":true,
+        "genero":"f",    /*puede ser f, m o f y m (unisex)*/
+        "adulto":true,
+        "colores":["natural"]    
 
     },
     {
         "id":3,
-        "title":"Sandalia 3"
+        "title":"Sandalia 3",
+        "modelo":"con tiras",
+        "marca":"crocs",
+        "material":"goma";
+        "categoria":"sandalia",   /*sandalia, crocs, ojotas, */
+        "foto":"/images/sandalias2.jpg",
+        "precio":2400,
+        "descuento":10,
+        "descripcion":"sandalia crocs",
+        "talles":"34,35,36,37",
+        "destacado":true,
+        "genero":"f",    /*puede ser f, m o f y m (unisex)*/
+        "adulto":true,
+        "colores":["rojo","naranja"]    
     },
     {
         "id":4,

@@ -8,11 +8,9 @@
   }
 */
 *{
-  /*font-family: 'ProximaNova-Semibold', Helvetica, Arial;*/
   font-family: 'Roboto', sans-serif; 
-  margin:0;
-  
-  box-sizing: border-box;
+    margin:0;
+    box-sizing: border-box;
   }
  
  
@@ -29,16 +27,12 @@
 
 
 /* top envuelve al logo, la barra de busqueda y mensaje de cuotas, salvo para celulares donde oculto las cuotas*/
-.top        { display:flex;
-              /*flex-wrap:wrap;*/
-              padding:10px;
-              /*box-sizing: border-box; */
+.top        { display:flex;              
+              padding:10px;              
               justify-content: space-between; 
               text-align:center;
               width:90%;
               margin:auto;
-            
-              /*margin:0 auto;*/
               box-sizing: border-box;
             }
 .logo       {
@@ -49,24 +43,23 @@
 .barbusqueda {        
                 /*width:20%;*/
                 
-
              }               
 .barbusqueda input[type=text]{
               margin-top:0px;
               margin-left:0px;
-              padding: 100px 100px;
+              padding: 1px 8px;
               border: 1px solid lightskyblue;
-              font-size: 12px;
-              /*width:20%*/
+              font-size: 0.75rem;
+              
                    }
 
 
 .cuotas       {              
               
               color:silver;
-              /*display:none;*/
               font-size:1rem;
               justify-content: flex-end;
+              display:none;
             } 
 
                           
@@ -106,7 +99,7 @@ img  {
       }   
 .opciones {text-align:center;}
 
-.opciones, .opciones2 ,.opciones2soloicono {
+.opciones, .opciones2  {
             display:none;
             }
 
@@ -126,7 +119,11 @@ img  {
 }
         
       
-
+#footcontainer {
+  box-sizing: border-box;
+  display:flex;
+  justify-content: space-evenly;
+}
 
 
 
@@ -168,8 +165,8 @@ media screen 361px
 
 
 @media screen and (min-width: 361px) {
-  .encabezado {height:70px}
-  #banner {  margin-top:70px; }
+
+.encabezado {height:70px}
 
 .barbusqueda input[type=text]{
       margin-top:0px;
@@ -183,14 +180,10 @@ media screen 361px
             margin-top:4px;
       }        
          
-.barbusqueda {        
-                
-             } 
 
 .cuotas {              
           margin-top:8px;
           font-size:1rem;
-          display:none;
         }           
 #cuotas2  { display:none;} 
 
@@ -245,25 +238,20 @@ width: 40%;
 display:none;
 }
 
-.opciones2soloicono a{          
-font-size: 1rem;
-text-decoration: none;
-font-weight:bold;
-margin-left:10px;
-}      
 
 
 
 
-.barras {display:none}
  
 footer { 
           text-align:center;
           padding:20px;
           background-color:#012641;
           color:#ffffff;
+          box-sizing: border-box;
+          
         }
-
+}
 
 /*
 ***************************************************************************************************
@@ -376,6 +364,7 @@ media screen 769px
 
 #footcontainer {
   box-sizing: border-box;
+  width:100%;
   display:flex;
  
 }
@@ -498,6 +487,7 @@ media screen 769px
 #footcontainer {
   box-sizing: border-box;
   display:flex;
+  width: 90%;
   justify-content: space-evenly;
 }
 .columnas-foot {

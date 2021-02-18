@@ -21,7 +21,7 @@ lo tenes que mandar por parametro al home destacados:result
 */
 module.exports = {
     index : (req,res) =>{
-        return res.render(path.resolve(__dirname, '../views/web/home'),{menues: menues,styles: ["home.css","master.css"], title:"Sandy titulo"});
+        return res.render(path.resolve(__dirname, '../views/web/home'),{menues: menues,styles:["home.css","master.css"], title:"Sandy titulo"});
     },
     
     cart : (req,res) =>{

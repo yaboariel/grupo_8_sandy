@@ -1,32 +1,38 @@
-main {
-    margin:0 auto; 
-    width:90%;
-       }
+ 
+
+       
+#caja-banner { width:100%}
+
+#banner {  margin-top:100px;
+       
+        }
+
 body {              
-       background-color: #b9bdad;
-     }  
-
-#banner {  margin-top:100px; ;
-           
-
-}
+          background-color: #b9bdad;
+          width:100%;
+        }              
+main {
+          margin:0 auto; 
+          width:90%;
+             }     
+ 
 
 .productos { 
     display:flex;
-    padding:1rem; 
     flex-wrap:wrap;
     box-sizing: border-box;
+    justify-content: center;
     
    }
 
    .genero  {
-    font-size: 88px;
+    font-size: 55px;
     text-align: center;
     color: #0073CD;
    }
    .genero.pink  {
     color: #FF007F;
-   }
+   }  
    
    .boton.pink {
     background-color: #FF007F;
@@ -55,48 +61,50 @@ body {
     text-align: center;
     margin-top:20px;
   } 
- .caja-producto {
+  .caja-producto {
     border-top: 1px #ebebeb solid;
     padding:15px;
-    position:relative; 
+    position:relative;
     text-align:center;
-   }  
+   }
   
 .producto {
-       margin:20px auto;
+       margin:9px auto;
        background-color: rgb(255, 255, 255);
        box-sizing: border-box;
 
 
       }
-.caja-producto-imagen {
-  
-  
+.caja-producto-imagen{
+              
 
-}      
+
+}
+
+.producto-imagen{
+  text-align:center;
+}
+
 .producto-imagen a img{
   
-              display: block;
-              margin-left: auto;
-              margin-right: auto;
-              max-height: 300px;
-              max-width:300px;
+              /*display: block;*/
+              /*margin-left: auto;*/
               width:auto;
+              height:200px;
+              max-width:200px;
 }
 .producto-genero {
-margin:120px auto;
-
+margin:20px auto;
 background-color: rgb(255, 255, 255);
 box-sizing: border-box;
 
 
 }
 .producto-genero a img {
-     width:70%;
-     height:450px; 
+     width:auto;
+     height:350px; 
      display: block;
-     margin-left: auto;
-     margin-right: auto;
+    
 
 }
 
@@ -162,26 +170,28 @@ p {font-size:12px;}
 
 @media screen and (min-width: 361px) {
             
-            #banner {  margin-top:70px; }
+            #banner {  margin-top:50px; }
           
           
           
           .productos {
-                      flex-wrap:wrap;
+                      
                      }  
           
           .producto{  box-shadow:none;  
                       width:45%; 
                       transition: box-shadow 1s;
+                      
                     }
           
-          /*.producto a img {
-                       height:130px; */
-                      
+          .producto a img {
+                       max-width:150px; 
+          }
           
-          }          
+                  
           
-          .descripciones {display:none;
+          .descripciones {
+                  display:none;
                     }
                     
           
@@ -189,7 +199,7 @@ p {font-size:12px;}
           } 
           
                 
-          
+        }          
           
           
           
@@ -213,7 +223,6 @@ p {font-size:12px;}
                             
             
           .productos {
-                        flex-wrap:wrap;
                        }
           .producto{
                         /*box-shadow:  0px 0px 10px rgb(100 , 100, 100);*/
@@ -241,24 +250,25 @@ p {font-size:12px;}
           
            @media screen and (min-width: 1000px) {
             
-            #banner {  margin-top:100px;}
+            #banner {  margin-top:88px;}
+
             /*.producto a img {
               height: 250px;
           }*/
-          
-            
+                     
           
            }
           
           @media screen and (min-width: 1200px) {
             
-          
-            #banner {  margin-top:120px;}
+            #banner {  margin-top:100px;}
+
+            
             
             
             .producto {
               /*box-shadow:  0px 0px 10px rgb(100 , 100, 100);*/
-              width:23%;
+              width:24%;
               margin-right:10px;
             }
              .producto:hover  .descripciones {
