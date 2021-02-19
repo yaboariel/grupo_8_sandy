@@ -2,96 +2,126 @@
 <html lang="en">
 <head>
     <%- include('../partials/head')   %>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="/css/styles-pdetail.css">
-    <link rel="stylesheet" href="/css/styles-pdcart.css">
-    <link rel='stylesheet' href='/css/login-style.css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <title>Document</title>
-</head>
 <body>
     <!-- Header -->
     <%- include('../partials/header')   %>
     <main>
-        <div class="pd-cart-container">
+        <article class="pd-cart-container">
             <h1 class="pd-cart-title">Tu carrito de compras</h1>
-            <div class="pd-cart-top-container">
-                <div class="pd-cart-top-name">
+            <!-- Referencias -->
+            <section class="pd-cart-top-container">
+                <!-- Nombre -->
+                <section class="pd-cart-top-name">
                     <p>Item</p>
-                </div>
-                <div class="pd-cart-top-price">
+                </section>
+                <!-- Precio -->
+                <section class="pd-cart-top-price">
                     <p>Precio unitario</p>
-                </div>
-                <div class="pd-cart-top-quantity">
+                </section>
+                <!-- Cantidad -->
+                <section class="pd-cart-top-quantity">
                     <p>Cantidad</p>
-                </div>
-                <div class="pd-cart-top-subtotal">
+                </section>
+                <!-- Subtotal -->
+                <section class="pd-cart-top-subtotal">
                     <p>Subtotal</p>
-                </div>
-            </div>
-            <div class="pd-cart-item-container">
-                <div class="pd-cart-item-itemname">
+                </section>
+            </section>
+            <!-- Item 1 -->
+           
+                <article class="pd-cart-item-container">
+                    <!-- Nombre -->
+                <section class="pd-cart-item-itemname">
                     <p>Crocs Classic Unisex</p>
-                </div>
-                <div class="pd-cart-item-itemprice">
+                </section>
+                <!-- Precio -->
+                <section class="pd-cart-item-itemprice">
                     <p>$3500</p>
-                </div>
-                <div class="pd-cart-item-itemquantity">
-                    <input type="number" min="1" max="100" step="12" value="1">
-                </div>
-                <div class="pd-cart-item-itemsubtotal">
+                </section>
+                <!-- Cantidad -->
+                <section class="pd-cart-item-itemquantity" id="test">
+                    <input type="number" min="1" max="100" value="1">
+                </section>
+                <!-- Subtotal -->
+                <section class="pd-cart-item-itemsubtotal">
                     <p>$3500</p>
-                </div>
-                <div class="pd-cart-item-delete-container">
+                </section>
+                <!-- Eliminar -->
+                <section class="pd-cart-item-delete-container">
                     <button class="pd-cart-item-delete-button"><i class="fas fa-trash-alt"></i>Eliminar</button>
-                </div>
-            </div>
-            <div class="pd-cart-item-container">
-                <div class="pd-cart-item-itemname">
+                </section>        
+                </article>
+                
+            <!-- Item 2 -->
+           
+                <article class="pd-cart-item-container">
+                    <!-- Nombre -->
+                <section class="pd-cart-item-itemname">
                     <p>Crocs Mujer Due Sport Clog Pink</p>
-                </div>
-                <div class="pd-cart-item-itemprice">
+                </section>
+                <!-- Precio -->
+                <section class="pd-cart-item-itemprice">
                     <p>$3000</p>
-                </div>
-                <div class="pd-cart-item-itemquantity">
+                </section>
+                <!-- Cantidad -->
+                <section class="pd-cart-item-itemquantity">
                     <input type="number" min="1" max="100" step="12" value="1">
-                </div>
-                <div class="pd-cart-item-itemsubtotal">
+                </section>
+                <!-- Subtotal -->
+                <section class="pd-cart-item-itemsubtotal">
                     <p>$3000</p>
-                </div>
-                <div class="pd-cart-item-delete-container">
+                </section>
+                <!-- Eliminar -->
+                <section class="pd-cart-item-delete-container">
                     <button class="pd-cart-item-delete-button"><i class="fas fa-trash-alt"></i>Eliminar</button>
-                </div>
-            </div>
-            <div class="pd-cart-item-container">
-                <div class="pd-cart-item-itemname">
+                </section>        
+                </article>
+                
+            <!-- Item 3 -->
+           
+                <article class="pd-cart-item-container">
+                    <!-- Nombre -->
+                <section class="pd-cart-item-itemname">
                     <p>Sandalias Gomon Sueco Plataforma Trenzado</p>
-                </div>
-                <div class="pd-cart-item-itemprice">
+                </section>
+                <!-- Precio -->
+                <section class="pd-cart-item-itemprice">
                     <p>$2000</p>
-                </div>
-                <div class="pd-cart-item-itemquantity">
+                </section>
+                <!-- Cantidad -->
+                <section class="pd-cart-item-itemquantity">
                     <input type="number" min="1" max="100" step="12" value="1">
-                </div>
-                <div class="pd-cart-item-itemsubtotal">
+                </section>
+                <!-- Subtotal -->
+                <section class="pd-cart-item-itemsubtotal">
                     <p>$2000</p>
-                </div>
-                <div class="pd-cart-item-delete-container">
+                </section>
+                <!-- Eliminar -->
+                <section class="pd-cart-item-delete-container">
                     <button class="pd-cart-item-delete-button"><i class="fas fa-trash-alt"></i>Eliminar</button>
-                </div>
-            </div>
-            <div class="pd-cart-total-container">
-                <h1>Total: $7500</h1>
-            </div>
-            <div class="pd-cart-buttons-container">
-                <button class="pd-cart-buttons-continue">Continuar comprando</button>
-                <button class="pd-cart-buttons-checkout" type="submit">Proceder al pago</button>
-            </div>
-        </div>
+                </section>        
+                </article>
+                
+            <!-- Total -->
+            <section class="pd-cart-total-container">
+                <h1>Total: $8500</h1>
+            </section>
+            <!-- Botones -->
+            <section class="pd-cart-buttons-container">
+                <!-- Ir a inicio -->
+                <form action="/">
+                    <button class="pd-cart-button hover-button-blue focus-button-blue">Continuar comprando</button>
+                </form>
+                <!-- Ir a checkout -->
+                <form action="/checkout" method="POST">
+                    <button class="pd-cart-button hover-button-blue focus-button-blue" type="submit">Proceder al pago</button>
+                </form>
+            </section>
+        </article>
     </main>
     <!-- Footer -->
-    <%- include('../partials/footer')   %> 
+    <%- include('../partials/footer')   %>
+    <!-- Workaround (evita que se disparen transiciones al cargar la pagina en Chrome) -->
+    <script> </script> 
 </body>
 </html>

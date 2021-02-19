@@ -12,9 +12,10 @@ app.use(express.static(path.resolve(__dirname,'../public')));
 
 const webRoutes = require( path.resolve(__dirname,"routes",'webRoutes'));
 app.use('/',webRoutes);
-/*
+
+/*Descomente la siguiente linea, asi que ya estaria funcionando la conexion*/
 const productRoutes = require( path.resolve(__dirname,"routes",'productRoutes'));
 app.use('/productos',productRoutes);
-*/
+
 const userRoutes = require( path.resolve(__dirname,"routes",'userRoutes'));
 app.use('/usuario',userRoutes);

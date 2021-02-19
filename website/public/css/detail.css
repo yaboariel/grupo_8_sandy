@@ -1,0 +1,363 @@
+/*
+.
+└── styles-pdetail.css
+    ├── estilosGenerales
+    ├── main
+    │   ├── sectionTop
+    │   ├── sectionMid
+    │   └── sectionBottom
+    └── mediaQueries
+*/
+
+/*Quizas deberia poner alguno de los estilos generales en otro .css para poder aplicarlos en cualquier otro .ejs,
+  para no tener que andar cargando toda este archivo*/
+/*////////////////////////////////estilosGenerales////////////////////////////////*/
+
+body{
+    background-color: #ececec;
+    font-family: Helvetica, Arial;
+}
+
+/*Creo que es preferible tener un max-width por si el display llegase a ser demasiado ancho*/
+main{
+    max-width: 1440px;
+    margin-top: 70px;
+}
+
+
+/*Dicta el estilo de las "cajas"*/
+.main-container{
+    background-color: #ffffff;
+    margin: 4px 0;
+    padding: 4px;
+    border-radius: 5px;
+    transition: all 0.250s;
+}
+
+.main-container:hover{
+    box-shadow: 0 0 10px #b8b8b8;
+}
+
+/*Titulo*/
+h1{
+    font-size: 1.5rem;
+}
+
+/*Subtitulo*/
+h2{
+    color: #424242;
+    font-weight: 100;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+/*Heading 3*/
+h3{
+    margin-bottom: 4px;
+}
+
+/*Glowing Border*/
+.glowing-border:hover { 
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.glowing-border:focus { 
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+/*Boton hover azul*/
+.hover-button-blue:hover{
+    background-color: #2357a5;
+}
+
+.focus-button-blue:focus{
+    background-color: #c6ddff;
+}
+/*Botton hover rosado*/
+.hover-button-pink:hover{
+    background-color: #b8255f;
+}
+
+.focus-button-pink:focus{
+    background-color: #ffdcea;
+}
+
+/*////////////////////////////////main////////////////////////////////*/
+
+/*--------------------------------sectionTop--------------------------------*/
+
+/*Contenedor de thumbnails de imagen principal*/
+.pd-gallery-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*Cada thumbnail*/
+.pd-gallery-detail{
+    border: 1px solid #3483fa;
+    margin: 0 4px;
+    transition: all 0.250s;
+}
+
+/*Aumenta size del thumbnail*/
+.pd-gallery-detail:hover{
+    transform: scale(1.2);
+}
+
+/*Solo la 1ra seccion del sidebar. Elimina margen superior para mejor alineacion*/
+.pd-sidebar section{
+    margin-top: 0;
+}
+
+/*Cada contenedor de variacion de producto*/
+.pd-variations-form article{
+    background-color: #ffffff;
+    display: flex;
+    padding: 4px;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    transition: all 0.250s;
+}
+
+/*Cada variacion excepto la ultima*/
+.pd-variations-form article:not(.pd-variations-form article:last-child){
+    margin-bottom: 8px;
+}
+
+/*Cada select de cada variacion*/
+.pd-variations-form article select, input{
+    flex: 1;
+    outline: 0;
+    border: none;
+    background-color: transparent;
+}
+
+/*Estilo del label de cada variacion*/
+.pd-variations-form article label{
+    color: #424242;
+    font-weight: 600;
+}
+
+
+/*Aumenta padding inferior del contenedor de compra para evitar overflow*/
+.pd-buy-container{
+    padding-bottom: 20px;
+}
+
+/*Permite que los tags inferiores del contenedor de compra puedan ser
+posicionados facilmente*/
+.pd-buy-subcontainer{
+    position: relative;
+}
+
+/*Boton de compra*/
+.pd-buy-prompt-button{
+    background-color: #3483fa;
+    padding: 14px;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    border: none;
+    min-width: 100%;
+    transition: all 0.250s;
+}
+
+/*Tags inferiores*/
+.pd-buy-tags{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0px;
+    bottom: -12px;
+    min-width: 100%;
+}
+
+.pd-buy-tags div, button{
+    padding: 4px;
+}
+
+/*Contenedor precio*/
+.pd-buy-tags-price-container{
+    background-color: #ffdcea;
+    color: #fa3483;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/*Boton agregar al carrito*/
+.pd-buy-tags-cart-button{
+    background-color: #fa3483;
+    color: white;
+    transition: all 0.250s;
+    border: none;
+    outline: none;
+    border-bottom-right-radius: 5px;
+}
+
+
+/*--------------------------------sectionMid--------------------------------*/
+
+/*Campo para hacer pregunta*/
+.pd-questions-form textarea{
+    min-width: 100%;
+    padding: 8px;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    height: 45.8182px;
+    resize: none;
+    outline: none;
+    border-color: #f5f5f5;
+    border-radius: 5px;
+    transition: all 0.250s;
+}
+
+.pd-questions-form textarea:focus{
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+/*Boton para preguntar*/
+.pd-questions-form-askbutton{
+    background-color: #3483fa;
+    padding: 4px;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    border: none;
+    min-width: 100%;
+    transition: all 0.250s;
+}
+
+/*Contenedor de respuesta*/
+.pd-questions-questionlist-item-answer{
+    margin-left: 15px;
+}
+
+/*Seccion miscelanea oculta en width inicial*/
+.pd-middle-section-misc{
+    display: none;
+}
+
+/*--------------------------------sectionBottom--------------------------------*/
+
+/*Dicta como esta ordenado los productos de la galeria inferior*/
+.pd-bottom-gallery{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*Contenedor de un producto*/
+.pd-bottom-gallery-item{
+    margin: 4px;
+}
+
+/*Contenedor de la imagen*/
+.pd-bottom-gallery-item-image{
+    display: flex;
+    min-height: 50%;
+    max-height: 50%;
+    border: 1px solid #3483fa;
+    border-radius: 5px;
+}
+
+/*Imagen*/
+.pd-bottom-gallery-item-image img{
+    object-fit: contain;
+}
+/*////////////////////////////////mediaQueries////////////////////////////////*/
+
+@media (min-width:768px){
+
+    /*Aumenta margen para que el header no se coma la parte superior del main*/
+    main{
+        margin-top: 100px;
+    }
+
+    /*Dispone la parte superior en fila*/
+    .pd-top-section{
+        display: flex;
+    }
+
+    /*Crea un sidebar*/
+    .pd-sidebar{
+        margin: 4px 0 4px 6px;
+        display: inline-flex;
+        flex-direction: column;
+        flex-grow: 1;
+        border-radius: 5px;
+    }
+    .pd-images-subcontainer{
+        display: inline-flex;
+    }
+
+    .pd-images-container{
+        min-width: 65%;
+        margin-bottom: 4px;
+    }
+
+    /*Coloca los thumbnails en columna*/
+    .pd-gallery-container{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 14.6%;
+    }
+
+    .pd-gallery-detail{
+        margin: 10% 4px;
+    }
+    
+    .pd-questions-container{
+        margin-bottom: 8px;
+        min-width: 65%;
+    }
+
+    .pd-questions-form-askbutton{
+        min-width: 30%;
+    }
+
+    /*Dispone la parte intermedia en fila*/
+    .pd-middle-section{
+        display: flex;
+    }
+
+    /*Estilo de la seccion miscelanea*/
+    .pd-middle-section-misc{
+        display: block;
+        margin-left: 6px;
+        min-width: auto;
+        background-color: #c6ddff;
+        color: #3483fa;
+    }
+
+    .pd-bottom-gallery-item{
+        max-height: 180px;
+    }
+
+    .pd-bottom-gallery-item-image{
+        display: flex;
+        min-height: 70%;
+        max-height: 70%;
+        transition: all 0.250s;
+    }
+
+    .pd-bottom-gallery-item:hover{
+        transform: scale(1.2);
+    }
+
+    .pd-bottom-gallery-item:hover .pd-bottom-gallery-item-image{
+        border-color: #9ecaed;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    main{
+        margin: 120px auto;
+
+    }
+}

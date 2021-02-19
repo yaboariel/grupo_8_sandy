@@ -1,0 +1,85 @@
+*{
+    font-family: Helvetica, Arial;
+}
+
+main{
+    margin-top: 70px;
+}
+
+.pd-cart-container{
+    padding: 8px;
+    margin: 4px 0;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.pd-cart-top-container, .pd-cart-item-container{
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    margin: 10px 0;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.250s;
+}
+.pd-cart-top-container{
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+}
+.pd-cart-top-container div{
+    border-right: none;
+}
+
+.pd-cart-top-name, .pd-cart-item-delete-container{
+    text-align: left;
+}
+
+.pd-cart-item-delete-button{
+    outline: none;
+    padding: 0;
+    border: #b63568;
+    border-radius: 5px;
+    background-color: #ffdcea;
+    color: #b63568;
+}
+
+#test{
+    text-align: center !important; 
+}
+
+.pd-cart-item-itemquantity input{
+    border: 1px solid #3483fa;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.pd-cart-total-container{
+    text-align: right;
+}
+
+.pd-cart-buttons-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pd-cart-button{
+    background-color: #3483fa;
+    padding: 8px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.250s;
+}
+
+@media screen and (min-width: 360px) {
+    main{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .pd-cart-item-container{
+        margin: 20px 0;
+    }
+}
