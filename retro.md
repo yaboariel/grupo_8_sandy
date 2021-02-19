@@ -24,9 +24,6 @@ punto. Tambien se penso en el logo y en los colores a usar.
 *   Crear repositorio en github: Se lo creo sin inconvenientes siguiendo lo que se aprendio en playground.
 *   Busqueda de sitios similares: Este punto fue fundamental para elegir el layout que queriamos en nuestra pagina. Encontramos muy buenos diseños de los cuales inspirarnos. 
 Al principio elegimos un diseño con una paleta de colores y letras, pero despues en los otros sprints estos fueron mutando. 
-#### https://www.crocs.com.ar/
-
-Este sitio web es moderno y simple, basado en un tipo de producto que pensamos publicar en nuestro sitio web. Tiene un diseño muy minimalista y funcional para encontrar facilmente lo que busquemos. Esta pensado con las caracteristicas de este tipo de producto, utilizando categorias propias de los calzados. 
 
 #### Conclusión: 
 
