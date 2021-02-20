@@ -1,10 +1,6 @@
- 
 
-       
-#caja-banner { width:100%}
-
-#banner {  margin-top:100px;
-       
+#banner {  
+          display:none;
         }
 
 body {              
@@ -13,9 +9,114 @@ body {
         }              
 main {
           margin:0 auto; 
-          width:90%;
+          width:80%;
              }     
- 
+
+             
+body {font-family: Verdana, sans-serif; margin:0}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+/*.slideshow-container:before {
+position:relative;
+top:200px;
+
+}*/
+             /* Slideshow container */
+             .slideshow-container {
+               max-width: 1500px;
+               position: relative;
+               margin-top:  120px;
+               margin-left: auto;
+              margin-right: auto;
+             }
+             
+             /* Next & previous buttons */
+             .prev, .next {
+               cursor: pointer;
+               position: absolute;
+               top: 50%;
+               width: auto;
+               padding: 16px;
+               margin-top: -22px;
+               color: white;
+               font-weight: bold;
+               font-size: 18px;
+               transition: 0.6s ease;
+               border-radius: 0 3px 3px 0;
+               user-select: none;
+             }
+             
+             /* Position the "next button" to the right */
+             .next {
+               right: 0;
+               border-radius: 3px 0 0 3px;
+             }
+             
+             /* On hover, add a black background color with a little bit see-through */
+             .prev:hover, .next:hover {
+               background-color: rgba(0,0,0,0.8);
+             }
+             
+             /* Caption text */
+             .text {
+               color: #f2f2f2;
+               font-size: 15px;
+               padding: 8px 12px;
+               position: absolute;
+               bottom: 8px;
+               width: 100%;
+               text-align: center;
+             }
+             
+             /* Number text (1/3 etc) */
+             .numbertext {
+               color: #f2f2f2;
+               font-size: 12px;
+               padding: 8px 12px;
+               position: absolute;
+               top: 0;
+             }
+             
+             /* The dots/bullets/indicators */
+             .dot {
+               cursor: pointer;
+               height: 15px;
+               width: 15px;
+               margin: 0 2px;
+               background-color: #bbb;
+               border-radius: 50%;
+               display: inline-block;
+               transition: background-color 0.6s ease;
+             }
+             
+             .active, .dot:hover {
+               background-color: #717171;
+             }
+             
+             /* Fading animation */
+             .fade {
+               -webkit-animation-name: fade;
+               -webkit-animation-duration: 1.5s;
+               animation-name: fade;
+               animation-duration: 1.5s;
+             }
+             
+             @-webkit-keyframes fade {
+               from {opacity: .4} 
+               to {opacity: 1}
+             }
+             
+             @keyframes fade {
+               from {opacity: .4} 
+               to {opacity: 1}
+             }
+             
+             /* On smaller screens, decrease text size */
+             @media only screen and (max-width: 300px) {
+               .prev, .next,.text {font-size: 11px}
+             }
+
 
 .productos { 
     display:flex;
@@ -24,42 +125,45 @@ main {
     justify-content: center;
     
    }
+   
 
-   .genero  {
-    font-size: 55px;
-    text-align: center;
+
+ 
+
+.genero  {
+    font-size: 30px;
     color: #0073CD;
+    text-align: center;
    }
-   .genero.pink  {
+.genero.pink  {
     color: #FF007F;
    }  
    
-   .boton.pink {
+.boton.pink {
     background-color: #FF007F;
     
   }
-  .boton   {
+ .boton   {
     text-align: center;
     background-color: #0073CD;
     color:white;
-    display: inline-block;
     background-color: #0076CB;
     padding: 15px 48px;
-    /*font-family: 'ProximaNova-Bold', Helvetica, Arial;*/
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #FFF;
     border: 0px;
-    border-radius: 0px;
+    border-radius: 10px;
     cursor: pointer;
+    flex-grow:2;
   }
 
    .titulares{ 
     /*font-family: 'ProximaNova-Semibold', Helvetica, Arial;*/
     font-size:30px; 
     text-align: center;
-    margin-top:20px;
+    margin-top:140px;
   } 
   .caja-producto {
     border-top: 1px #ebebeb solid;
@@ -75,10 +179,35 @@ main {
 
 
       }
-.caja-producto-imagen{
-              
+.productos.cat {
+width:90%;
+margin-left:auto;
+margin-right:auto;
+flex-direction:column;
+text-align: center;
+margin:100px;
+
+}
+.producto.cat {
+ 
+ justify-content: space-evenly;
+ width:30%;
+       }
+       .producto.cat > .producto.cat a img {
+        width: auto;
+        height : auto;
+        max-height: 100%;
+        max-width: 100%;
+      }
+       
 
 
+.producto.cat a img {
+      text-align:center;
+      width: auto;
+      height: 250px;
+      max-width: 150px;
+      object-fit: contain;
 }
 
 .producto-imagen{
@@ -87,35 +216,55 @@ main {
 
 .producto-imagen a img{
   
-              /*display: block;*/
-              /*margin-left: auto;*/
               width:auto;
               height:200px;
               max-width:200px;
 }
+
+.productos-genero { 
+  
+  margin-top:100px;
+  margin-bottom:100px;
+  width: 90%;
+  text-align: center;
+
+  display:none;
+  margin-left:auto;
+  margin-right:auto;
+ }
+
+
 .producto-genero {
-margin:20px auto;
+margin:10px 100px;
 background-color: rgb(255, 255, 255);
 box-sizing: border-box;
+display:flex;
+flex-direction: column;
+
+}
+
+.caja-producto-imagen{
+              
+  justify-content: center;
 
 
 }
 .producto-genero a img {
      width:auto;
-     height:350px; 
-     display: block;
-    
+     height:250px; 
+     max-width:150px;
+     
+
 
 }
 
-
-
-           .caja-producto-genero {
+.caja-producto-genero {
             border-top: 1px #ebebeb solid;
             padding:15px;
             position:relative;
-            text-align:center;
-           }
+            display:flex;
+            flex-direction:column;
+          }
 
            
 
@@ -126,8 +275,9 @@ main section article section i
           padding: 5px ;
           width: 30px ;
           height: 30px ;
-          border: 1px solid #39b54a ;
+          border: 1px solid orange ;
           background-color: #FFF ;
+          color:orange;
           border-radius: 50% ;
           position: absolute ;
           right: 20px ;
@@ -165,19 +315,24 @@ p {font-size:12px;}
             line-height: 1.7;
             padding: 20px 0px;
             width: 100%; 
+            justify-content: center;
         }
        
 
 @media screen and (min-width: 361px) {
-            
-            #banner {  margin-top:50px; }
-          
-          
-          
+          #banner {  
+          display:none;
+          }
+
           .productos {
                       
                      }  
           
+          .titulares {
+                      margin-top:140px;
+
+          }
+
           .producto{  box-shadow:none;  
                       width:45%; 
                       transition: box-shadow 1s;
@@ -187,7 +342,7 @@ p {font-size:12px;}
           .producto a img {
                        max-width:150px; 
           }
-          
+       
                   
           
           .descripciones {
@@ -197,13 +352,40 @@ p {font-size:12px;}
           
           .producto:hover { box-shadow:  0px 0px 100px rgb(116, 116, 116);
           } 
-          
+            
+
+
+          .producto-genero a img {
+            width:auto;
+            height:250px; 
+            max-width:150px;
+            
+       
+       
+       }
+       .productos-genero { 
+        display:flex;
+        flex-direction:column;
+        
+        
+       }
+      
+
                 
         }          
+
+        /*
+********************************************
+media screen 440px
+*/
+@media screen and (min-width: 440px) {
+
+  #banner {  margin-top:50px; 
+    display: block;         }
           
+.titulares { margin-top:0px;}          
           
-          
-          
+}         
           
           
           
@@ -238,8 +420,23 @@ p {font-size:12px;}
           .descripciones {
                        display:hidden;
                       }
-          
-          
+                      .genero  {
+                        font-size: 55px;
+                        color: #0073CD;
+                        text-align: center;
+                       }
+                       .producto-genero a img {
+                        width:auto;
+                        height:250px; 
+                        max-width:250px;
+                      }
+                      .productos-genero { 
+                        flex-direction: row;
+                      }
+                      .productos.cat {
+                        flex-direction: row;
+
+                      }  
           
           }
           
@@ -275,7 +472,9 @@ p {font-size:12px;}
               display:block;
               color:black;
              }
-          
+             .producto.cat a img {
+              
+              max-width: 250px;
           
           }
           

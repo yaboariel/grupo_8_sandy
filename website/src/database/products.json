@@ -1,18 +1,19 @@
+
 [
     {
         "id":1,
         "title":"Sandalia 1",
         "modelo":"con tiras",
         "marca":"crocs",
-        "material":"goma";
-        "categoria":"sandalia",   /*sandalia, crocs, ojotas, */
+        "material":"goma",
+        "categoria":"sandalia",   
         "foto":"/images/sandalias2.jpg",
         "precio":2400,
         "descuento":10,
         "descripcion":"sandalia crocs",
         "talles":"34,35,36,37",
         "destacado":true,
-        "genero":"f",    /*puede ser f, m o f y m (unisex)*/
+        "genero":"f",    
         "adulto":true,
         "colores":["rojo","naranja"]    
 
@@ -22,15 +23,15 @@
         "title":"Sandalia 2",
         "modelo":"cuero",
         "marca":"sandalia",
-        "material":"cuero";
-        "categoria":"sandalia",   /*sandalia, crocs, ojotas, */
+        "material":"cuero",
+        "categoria":"sandalia",   
         "foto":"/images/sandalias2.jpg",
         "precio":5600,
         "descuento":20,
         "descripcion":"sandalia cuero",
-        "talles":"40,41",
+        "talles":["40","41"],
         "destacado":true,
-        "genero":"f",    /*puede ser f, m o f y m (unisex)*/
+        "genero":"f",   
         "adulto":true,
         "colores":["natural"]    
 
@@ -40,175 +41,354 @@
         "title":"Sandalia 3",
         "modelo":"con tiras",
         "marca":"crocs",
-        "material":"goma";
-        "categoria":"sandalia",   /*sandalia, crocs, ojotas, */
+        "material":"goma",
+        "categoria":"sandalia",  
         "foto":"/images/sandalias2.jpg",
         "precio":2400,
         "descuento":10,
         "descripcion":"sandalia crocs",
         "talles":"34,35,36,37",
         "destacado":true,
-        "genero":"f",    /*puede ser f, m o f y m (unisex)*/
+        "genero":"f",   
+        "adulto":true,
+        "colores":["rojo","naranja"]    
+    },
+  
+
+
+    {
+        "id":4,
+        "title":"Sandalia 4", 
+        "modelo":"con tiras",
+        "marca":"Havaiana",
+        "material":"goma",
+        "categoria":"sandalia",  
+        "foto":"/images/sandalias4.jpg",
+        "precio":13100,
+        "descuento":0,
+        "descripcion":"High",
+        "talles":"34,35,36,37",
+        "destacado":true,
+        "genero":"f",   
+        "adulto":true,
+        "colores":["rojo","naranja"]    
+    }, 
+    {
+        "id":5,
+        "title":"Crocs 5",
+        "modelo":"",
+        "marca":"Sea Walk",
+        "material":"goma",
+        "categoria":"sandalia",  
+        "foto":"/images/sandalias6.webp",
+        "precio":2400,
+        "descuento":30,
+        "descripcion":"Crocs",
+        "talles":"34,35,36,37",
+        "destacado":true,
+        "genero":"f",   
         "adulto":true,
         "colores":["rojo","naranja"]    
     },
     {
-        "id":4,
-        "title":"Sandalia 4"
-    }, 
-    {
-        "id":5,
-        "title":"Sandalia 5"
-    },
-    {
         "id":6,
-        "title":"Sandalia 6"
+        "title":"Sandalia 6", 
+        "modelo":"Sandalias de salir",
+        "marca":"crocs",
+        "material":"cuerina",
+        "categoria":"sandalia",  
+        "foto":"/images/sandalias6.webp",
+        "precio":2400,
+        "descuento":50,
+        "descripcion":"Ojotas",
+        "talles":"34,35,36,37",
+        "destacado":true,
+        "genero":"f",   
+        "adulto":true,
+        "colores":["rojo","naranja"]    
     }, 
     {
         "id":7,
-        "title":"Sandalia 7"
+        "title":"Sandalia 7", 
+        "modelo":"con tiras",
+        "marca":"Rider",
+        "material":"goma",
+        "categoria":"sandalia cerrada",  
+        "foto":"/images/sandalias3.jpg",
+        "precio":6400,
+        "descuento":15,
+        "descripcion":"sandalia rider",
+        "talles":"34,35,36,37",
+        "destacado":true,
+        "genero":"f",   
+        "adulto":true,
+        "colores":["rojo","naranja"]    
     },
     {
         "id":8,
-        "title":"Sandalia 8"
+        "title":"Ojotas 8", 
+        "modelo":"Con destapador",
+        "marca":"Havaiana",
+        "material":"goma",
+        "categoria":"sandalia",  
+        "foto":"/images/sandalias5.jpg",
+        "precio":7300,
+        "descuento":0,
+        "descripcion":"Ojota destapador",
+        "talles":"34,35,36,37",
+        "destacado":true,
+        "genero":"f",   
+        "adulto":true,
+        "colores":["rojo","naranja"]    
     },
     {
         "id":9,
-        "title":"Sandalia 9"
+        "title":"Guillermina 9",
+        "modelo":"Guillermina dama clasicas",
+        "marca":"Sea Walk",
+        "material":"goma eva",
+        "categoria":"sandalia",  
+        "foto":"/images/sandalias5.jpg",
+        "precio":5500,
+        "descuento":10,
+        "descripcion":"Guillermina seawalk",
+        "talles":"34,35,36,37",
+        "destacado":true,
+        "genero":"f",   
+        "adulto":true,
+        "colores":["rojo","naranja"]    
     },
     {
         "id":10,
-        "title":"Sandalia 10"
+        "title":"Crocs 10", 
+        "modelo":"Crocs banda",
+        "marca":"crocs",
+        "material":"goma",
+        "categoria":"crocs",  
+        "foto":"/images/crocs-crocband.jpg",
+        "precio":8400,
+        "descuento":0,
+        "descripcion":"sandalia crocs",
+        "talles":"40,41,42,43,44",
+        "destacado":true,
+        "genero":"f",   
+        "adulto":true,
+        "colores":["azul","blanco"]    
     },
     {
         "id":11,
-        "title":"Sandalia 11"
+        "title":"Sandalia 11", 
+        "modelo":"clasica",
+        "marca":"crocs",
+        "material":"goma",
+        "categoria":"crocs",  
+        "foto":"/images/crocs-classic.jpg",
+        "precio":4500,
+        "descuento":0,
+        "descripcion":"sandalia crocs clasica",
+        "talles":"34,35,36,37",
+        "destacado":true,
+        "genero":["f","m"],   
+        "adulto":true,
+        "colores":["rojo","naranja"]    
     },
     {
         "id":12,
-        "title":"Sandalia 12"
+        "title":"Sandalia 12", 
+        "modelo":"con tiras",
+        "marca":"crocs",
+        "material":"goma",
+        "categoria":"sandalia",  
+        "foto":"/images/sandalias2.jpg",
+        "precio":2400,
+        "descuento":10,
+        "descripcion":"sandalia crocs",
+        "talles":"34,35,36,37",
+        "destacado":true,
+        "genero":"f",   
+        "adulto":true,
+        "colores":["rojo","naranja"]    
     },
     {
         "id":13,
-        "title":"Sandalia 13"
+        "title":"Sandalia 13", 
+        "modelo":"con tiras",
+        "marca":"crocs",
+        "material":"goma",
+        "categoria":"sandalia",  
+        "foto":"/images/sandalias2.jpg",
+        "precio":2400,
+        "descuento":10,
+        "descripcion":"sandalia crocs",
+        "talles":"34,35,36,37",
+        "destacado":false,
+        "genero":"f",   
+        "adulto":true,
+        "colores":["rojo","naranja"]    
     },
     {
         "id":14,
-        "title":"Sandalia 14"
+        "title":"Sandalia 14", 
+        "modelo":"con tiras",
+        "marca":"crocs",
+        "material":"goma",
+        "categoria":"sandalia",  
+        "foto":"/images/sandalias2.jpg",
+        "precio":2400,
+        "descuento":10,
+        "descripcion":"sandalia crocs",
+        "talles":"34,35,36,37",
+        "destacado":false,
+        "genero":"f",   
+        "adulto":true,
+        "colores":["rojo","naranja"]    
     },
     {
         "id":15,
-        "title":"Sandalia 15"
+        "title":"Sandalia 15",
+        "modelo":"con tiras",
+        "marca":"crocs",
+        "material":"goma",
+        "categoria":"sandalia",  
+        "foto":"/images/sandalias2.jpg",
+        "precio":2400,
+        "descuento":10,
+        "descripcion":"sandalia crocs",
+        "talles":"34,35,36,37",
+        "destacado":false,
+        "genero":"f",   
+        "adulto":true,
+        "colores":["rojo","naranja"]    
     },
     {
         "id":16,
-        "title":"Sandalia 16"
+        "title":"Sandalia 16", 
+        "destacado":false
     }, 
     {
         "id":17,
-        "title":"Sandalia 17"
+        "title":"Sandalia 17",
+        "destacado":false
     },
     {
         "id":18,
-        "title":"Sandalia 18"
+        "title":"Sandalia 18", 
+        "destacado":false
     },
     {
         "id":19,
-        "title":"Sandalia 19"
+        "title":"Sandalia 19",
+        "destacado":false
     },
     {
         "id":20,
-        "title":"Sandalia 20"
+        "title":"Sandalia 20",
+        "destacado":false
     },
     {
         "id":21,
-        "title":"Sandalia 21"
+        "title":"Sandalia 21",
+        "destacado":false
     },
     {
         "id":22,
-        "title":"Sandalia 22"
+        "title":"Sandalia 22",
+        "destacado":false
     },
     {
         "id":23,
-        "title":"Sandalia 23"
+        "title":"Sandalia 23",
+        "destacado":false
     },
     {
         "id":24,
-        "title":"Sandalia 24"
+        "title":"Sandalia 24",
+        "destacado":false
     },
     {
         "id":25,
-        "title":"Sandalia 25"
+        "title":"Sandalia 25",
+        "destacado":false
     },
     {
         "id":26,
-        "title":"Sandalia 26"
+        "title":"Sandalia 26",
+        "destacado":false
     }, 
     {
         "id":27,
-        "title":"Sandalia 27"
+        "title":"Sandalia 27",
+        "destacado":false
     },
     {
         "id":28,
-        "title":"Sandalia 28"
+        "title":"Sandalia 28",
+        "destacado":false
     },
     {
         "id":29,
-        "title":"Sandalia 29"
+        "title":"Sandalia 29",
+        "destacado":false
     },
-    ,
     {
         "id":30,
-        "title":"Sandalia 30"
+        "title":"Sandalia 30",
+        "destacado":false
     },
     {
         "id":31,
-        "title":"Sandalia 31"
+        "title":"Sandalia 31",
+        "destacado":false
     },
     {
         "id":32,
-        "title":"Sandalia 32"
+        "title":"Sandalia 32",
+        "destacado":false
     },
     {
         "id":33,
-        "title":"Sandalia 33"
+        "title":"Sandalia 33",
+        "destacado":false
     },
     {
         "id":34,
-        "title":"Sandalia 34"
+        "title":"Sandalia 34",
+        "destacado":false
     },
     {
         "id":35,
-        "title":"Sandalia 35"
+        "title":"Sandalia 35",
+        "destacado":false
     },
     {
         "id":36,
-        "title":"Sandalia 36"
+        "title":"Sandalia 36",
+        "destacado":false
+        
     }, 
     {
         "id":37,
-        "title":"Sandalia 37"
+        "title":"Sandalia 37", 
+        "destacado":false
     },
     {
         "id":38,
-        "title":"Sandalia 38"
+        "title":"Sandalia 38", 
+        "destacado":false
     },
     {
         "id":39,
-        "title":"Sandalia 39"
+        "title":"Sandalia 39",
+        "destacado":false
     },
     {
         "id":40,
-        "title":"Sandalia 40"
-    },
+        "title":"Sandalia 40", 
+        "destacado":false
+    }
 ]
 
 
-<figure class="producto-imagen"><a href""><img src="/images/sandalias2.jpg"></a>
-                        </figure>
-                        </section>
-                        <section class="caja-producto">
-                                <i class="fas fa-truck"></i>
-                                <p class="precios">$6.770</p>
-                                <p class="descuentos">40% OFF</p>
-                                <p class="descripciones">Cafetera Moulinex</p>
+
+
+

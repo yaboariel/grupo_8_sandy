@@ -9,8 +9,8 @@
 */
 *{
   font-family: 'Roboto', sans-serif; 
-    margin:0;
     box-sizing: border-box;
+    margin:0;
   }
  
  
@@ -20,7 +20,7 @@
               width:100%;
               position:fixed;   
               top: 0;
-              height:100px;
+              height:140px;
               z-index: 100;
 
             }
@@ -29,25 +29,25 @@
 /* top envuelve al logo, la barra de busqueda y mensaje de cuotas, salvo para celulares donde oculto las cuotas*/
 .top        { display:flex;              
               padding:10px;              
-              justify-content: space-between; 
+              flex-direction: column;
               text-align:center;
-              width:90%;
+              width:70%;
               margin:auto;
               box-sizing: border-box;
             }
-.logo       {
-                width:25%;
+
+.logo       {  
+                width:100%;
+                text-align:center;
+
             }
 
    
-.barbusqueda {        
-                /*width:20%;*/
-                
-             }               
+            
 .barbusqueda input[type=text]{
               margin-top:0px;
               margin-left:0px;
-              padding: 1px 8px;
+              padding: 1px 0px;
               border: 1px solid lightskyblue;
               font-size: 0.75rem;
               
@@ -156,30 +156,15 @@ img  {
               color:whitesmoke;
               margin-bottom: 20px;
 }
- 
-
 /*
 ********************************************
 media screen 361px
-*/
-
+*/ 
 
 @media screen and (min-width: 361px) {
 
-.encabezado {height:70px}
+.encabezado {height:130px}
 
-.barbusqueda input[type=text]{
-      margin-top:0px;
-     padding: 6px 8px;
-     border-radius: 10px ;
-     margin-top:4px;
-     border: none;
-      font-size: 10px;
-         }
-.logo       {
-            margin-top:4px;
-      }        
-         
 
 .cuotas {              
           margin-top:8px;
@@ -252,6 +237,37 @@ footer {
           
         }
 }
+
+
+/*
+********************************************
+media screen 440px
+*/
+@media screen and (min-width: 440px) {
+
+  .encabezado {height:60px}
+  .top{flex-direction: row;}
+  .barbusqueda input[type=text]{
+        margin-top:5px;
+       padding: 6px 8px;
+       border-radius: 10px ;
+       margin-top:7px;
+       border: none;
+        font-size: 10px;
+           }
+  .logo       {
+              margin-top:4px;
+              
+              width: 30%;
+            }        
+           
+
+}
+
+
+
+
+
 
 /*
 ***************************************************************************************************
