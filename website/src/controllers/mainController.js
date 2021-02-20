@@ -9,11 +9,14 @@ const result = products.filter(product => product.destacado==true);
 
 module.exports = {
     index : (req,res) =>{
+
         return res.render(path.resolve(__dirname, '../views/web/home'),{products:result, styles:["master.css","home.css"], title:"Sandy titulo"});
     },
     
+   
+    
     cart : (req,res) =>{
-        return res.render(path.resolve(__dirname, '../views/web/cart'));
+        return res.render(path.resolve(__dirname, '../views/web/cart'),{styles: ["master.css", "cart.css", "detail.css"], title: "Sandy | Carrito"});
     }
 
     /*about : (req,res) =>{
