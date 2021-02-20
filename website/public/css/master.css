@@ -11,6 +11,8 @@
   font-family: 'Roboto', sans-serif; 
     box-sizing: border-box;
     margin:0;
+    padding: 0;
+    line-height: 1.5;
   }
  
  
@@ -20,7 +22,7 @@
               width:100%;
               position:fixed;   
               top: 0;
-              height:140px;
+              height:100px;
               z-index: 100;
 
             }
@@ -29,25 +31,26 @@
 /* top envuelve al logo, la barra de busqueda y mensaje de cuotas, salvo para celulares donde oculto las cuotas*/
 .top        { display:flex;              
               padding:10px;              
-              flex-direction: column;
+              justify-content: space-between; 
               text-align:center;
-              width:70%;
+              width:90%;
               margin:auto;
               box-sizing: border-box;
             }
-
-.logo       {  
-                width:100%;
-                text-align:center;
-
+.logo       {
+                width:25%;
             }
 
-   
-            
+/*   
+.barbusqueda {        
+                width:20%;
+                
+             }  */        
+
 .barbusqueda input[type=text]{
               margin-top:0px;
               margin-left:0px;
-              padding: 1px 0px;
+              padding: 1px 8px;
               border: 1px solid lightskyblue;
               font-size: 0.75rem;
               
@@ -84,7 +87,7 @@ img  {
      } 
 
 
-}
+
 .caja-menu {           background-color: #000000;
 
                         }
@@ -117,54 +120,118 @@ img  {
               font-size:0.7rem;
 
 }
+/*FOOTER CLASES*/
+
+footer {
+  background-color: #012641;
+}
+
+.container-footer{
+    max-width: 1170px;
+    margin:auto;
+    width: 100%;
+    background-color: #012641;
+    padding: 20px 0;
+  }
+  
+
+.container-footer2{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+ul{
+    list-style: none;
+}
+        
+.block{
+  width: 25%;
+  padding: 0 15px;
+}
+        
+.block h4{
+  font-size: 18px;
+  color: #C9A836;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+        .block h4::before{
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          background-color: #C0C0C0;
+          height: 2px;
+          width: 50px;
+        }
+        
+        .block ul li{
+          margin-bottom: 10px;
+        }
+        
+        .block ul li a{ /*Letras a Footer*/
+          font-size: 16px;
+          color: #C9A836;
+          text-decoration: none;
+          font-weight: 300;
+          color: white;
+          display: block;
+          transition: all 0.3s ease;
+        }
+        
+        .block ul li a:hover{
+          color: #C9A836;
+          padding-left: 8px;
+        }
+        
+        .block .socialref a{ /*Color Animacion Iconos*/
+          display: inline-block;
+          height: 40px;
+          width: 40px;
+          background-color: rgba(255,255,255,0.2);
+          margin:0 10px 10px 0;
+          text-align: center;
+          line-height: 40px;
+          border-radius: 50%;
+          color: #C9A836;
+          transition: all 1s ease;
+        }
+        .block .socialref a:hover{
+          color: #24262b;
+          background-color: white;
+        }
         
       
-#footcontainer {
-  box-sizing: border-box;
-  display:flex;
-  justify-content: space-evenly;
-}
-
-
-
-.icofoot {
-          
-          font-size:2.0em;
-          color:#d7a836;
-          margin-bottom: 10px;
-          transition: color 1s;
-
-        }
-
-.icofoot:hover {
-          color:magenta;
-
-}
-.titfoot {
-          margin-bottom:10px;
-
-        }
-
-.textfoot {
-          color:#d7a836;
-          font-size: 12px;
-        }
-
 #Copyright  {
               margin-top:25px;
               text-align:center;
               color:whitesmoke;
               margin-bottom: 20px;
 }
+ 
+
 /*
 ********************************************
 media screen 361px
-*/ 
+*/
+
 
 @media screen and (min-width: 361px) {
 
-.encabezado {height:130px}
+.encabezado {height:70px}
 
+.barbusqueda input[type=text]{
+      margin-top:0px;
+     padding: 6px 8px;
+     border-radius: 10px ;
+     margin-top:4px;
+     border: none;
+      font-size: 10px;
+         }
+.logo       {
+            margin-top:4px;
+      }        
+         
 
 .cuotas {              
           margin-top:8px;
@@ -190,10 +257,12 @@ padding-left: 0px;
 justify-content: flex-start;
 width: 50%;
 }
-.opciones li{
-    /*flex: 1; */
-  }            
 
+/*
+.opciones li{
+    flex: 1;
+  }            
+*/
 .opciones a{
 
   font-size: 1.3rem;
@@ -225,50 +294,6 @@ display:none;
 
 
 
-
-
- 
-footer { 
-          text-align:center;
-          padding:20px;
-          background-color:#012641;
-          color:#ffffff;
-          box-sizing: border-box;
-          
-        }
-}
-
-
-/*
-********************************************
-media screen 440px
-*/
-@media screen and (min-width: 440px) {
-
-  .encabezado {height:60px}
-  .top{flex-direction: row;}
-  .barbusqueda input[type=text]{
-        margin-top:5px;
-       padding: 6px 8px;
-       border-radius: 10px ;
-       margin-top:7px;
-       border: none;
-        font-size: 10px;
-           }
-  .logo       {
-              margin-top:4px;
-              
-              width: 30%;
-            }        
-           
-
-}
-
-
-
-
-
-
 /*
 ***************************************************************************************************
 media screen 769px
@@ -282,7 +307,8 @@ media screen 769px
         height:100px;
     
       }
-      .top {justify-content: space-between; 
+      .top {
+        justify-content: space-between; 
         text-align:center;
         width:90%;
         margin:auto;
@@ -376,19 +402,12 @@ media screen 769px
           
 
 
-.barras {display:none}
+.barras {
+  display:none
 
-#footcontainer {
-  box-sizing: border-box;
-  width:100%;
-  display:flex;
- 
+  }
 }
-.columnas-foot {
-  width:30%;
- 
- }
-}
+
 
 
 /*media screen 1000px*****************************************************************************/
@@ -454,10 +473,10 @@ media screen 769px
   
   
 
-
-  .caja-menu {           /*background-color: #0076CB;
-                          border-bottom:  #0076CB 7px solid;*/
-
+/*
+  .caja-menu {           background-color: #0076CB;
+                          border-bottom:  #0076CB 7px solid;
+*/
   }
   .top {justify-content: space-between; 
         text-align:center;
@@ -476,40 +495,17 @@ media screen 769px
    justify-content: flex-end;
 
    }
-  
-  .barbusqueda {
-
-  }
-
-  
+    
   .menu {
     display:flex;
     justify-content: space-between; 
   }
-  .menu a {
-    
-  }
   
-
-  
-
   .icono {
      margin-left:10px;
 
 
   }
-
-  
-#footcontainer {
-  box-sizing: border-box;
-  display:flex;
-  width: 90%;
-  justify-content: space-evenly;
-}
-.columnas-foot {
- width:30%;
-
-}
 
 }
 
