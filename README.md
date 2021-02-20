@@ -1,4 +1,4 @@
-# grupo_8_dg
+# grupo_8_Sandy
 
 ![logo digital house](https://www.digitalhouse.com/ar/logo-dh-blanco.png)
 
