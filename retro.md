@@ -1,6 +1,4 @@
 
-![logo digital house](https://www.digitalhouse.com/ar/logo-dh-blanco.png)
-
 # Retro Sprint 1
 
 ## Definición del nicho/tema que vamos a trabajar:
