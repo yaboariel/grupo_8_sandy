@@ -1,6 +1,4 @@
 
-![logo digital house](https://www.digitalhouse.com/ar/logo-dh-blanco.png)
-
 # Retro Sprint 1
 
 ## Definición del nicho/tema que vamos a trabajar:
@@ -29,3 +27,30 @@ Al principio elegimos un diseño con una paleta de colores y letras, pero despue
 
 No tuvimos inconvenientes con el sprint 1. Nos presento un desafio porque no nos conociamos entre nosotros y tuvimos que empezar a conocernos. Pero nos pusimos de acuerdo rapidamente y se
 pudo avanzar sin problemas. 
+
+
+
+
+# Retro Sprint 2
+
+## Definición de temas trabajados:
+*   Crear Estructura de archivos utilizando express y node.
+*   Crear Home y que sea responsive.
+*   Crear Detalle de producto.
+*   Crear Carrito de compras.
+*   Crear Login o pagina de ingreso.
+
+### Para decidir que hacia cada uno tuvimos un intercambio de mensajes hasta que dividimos el trabajo de la manera mas justa.
+Utilizamos el codigo hecho en clase para mercadoliebre como base para arrancar con este proyecto y nos encontramos con algunas dificultades en el medio: 
+*   Dificultad con el uso de Github y git: Hubo errores de duplicidad de tareas donde cada uno trabajo en cosas iguales y sobreescribio el codigo del otro. Tambien, en el uso de git es imprescindible no olvidarse de ningun detalle asi que tuvimos que ir y venir varias veces hasta que pudimos hacer algo conjunto funcione bien.  
+*   Dificultad con los estilos. Tuvimos que revisar lo visto en playground para entender bien lo de flexbox y demas. 
+*   Hacerlo responsive fue todo un desafio. 
+*   Usamos el trello y definimos las tareas que habia que hacer, pero no lo definimos de una manera que no haya superposicion de codigo. Un error que esperemos no cometer nuevamente. 
+
+#### Cosas que nos salieron bien 
+Integramos ejs a pesar de que no se pidio. Sumamos las rutas y los controllers. Creamos un logo mas o menos descente y un layout que sin ser una maravilla, estaba bien. El carrito de compras y el detalle del producto quedo muy lindo. 
+
+#### Conclusión: 
+
+El sprint 2 fue todo un desafio y nos permitio sentar bases para el resto del proyecto. Se armo la estructura del sitio, los ejs, controladores y los ruteadores. Esto nos permitira que en los otros sprints podamos ir agregando cosas modularmente. 
+
