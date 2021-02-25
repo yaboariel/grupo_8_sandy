@@ -3,7 +3,7 @@
     {
         "id":1,
         "title":"Sandalia 1",
-        "modelo":"con tiras",
+        "modelo":"1",
         "marca":"crocs",
         "material":"goma",
         "categoria":"sandalia",   
@@ -21,7 +21,7 @@
     {
         "id":2,
         "title":"Sandalia 2",
-        "modelo":"cuero",
+        "modelo":"2",
         "marca":"sandalia",
         "material":"cuero",
         "categoria":"sandalia",   
@@ -38,7 +38,7 @@
     },
     {
         "id":3,
-        "title":"Sandalia 3",
+        "title":"Sandalia",
         "modelo":"con tiras",
         "marca":"crocs",
         "material":"goma",

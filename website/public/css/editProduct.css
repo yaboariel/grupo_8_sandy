@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+p {
+    color: black
+}
+
+main{
+    margin-top: 70px;
+}
+
+.navbar-text{
+    width:100%;
+    border-radius: 0.25em;
+    padding:0.75em;
+    margin:1em auto;
+    /*border: none;*/
+}
+
+#titulos-1{
+    color: black;
+    text-align:center;
+    text-decoration: underline;
+}
+
+.container-input{
+    width:100%;
+    margin:1em auto;
+}
+
+.principal-label{
+    font-weight: bold;
+    color:#3a3a3a;
+    width:100%;
+}
+
+.container-main{
+    padding: 8px;
+    margin: 4px 0;
+    background-color: #B9BDAD;
+}
+
+.container-info, .container-item{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin: 10px 0;
+    text-align: center;
+    vertical-align: middle;
+    border-color: black;
+}
+.container-info{
+    background-color: #9B9F99;
+    color: black;
+}
+
+.container-price input{
+    border: 1px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+

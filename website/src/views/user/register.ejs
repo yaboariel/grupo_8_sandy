@@ -1,56 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-<% include("../partial/head")  %> 
+<head>
+
+        <title>Sandy Argentina</title> 
+        
+        <% include("../partials/head")  %> 
+
+        <link rel='stylesheet' href='/css/login-style.css'> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel='stylesheet' href='/css/normalize.css'> 
+
+</head>
+
 <body>
-    <header> 
-        <section id='header-1'>
 
-        <section class='header-main'>
-
-            <figure class='logo'>
-                <a href="/"> <img id='logo' src= 'images/descarga.png' alt= 'Logotipo PRUEBA Paginaweb'></a>
-            </figure>
-
-            <section class='navbar'>
-                <section>
-                    <div>
-                        <input class='navbar-text' type='text' id='busqueda' placeholder="Buscar modelos, talles, etc" name='busqueda'>
-                    </div>
-                </section>
-            </section>
-
-        </section>
-            <nav>               
-
-                <section class='mobile-1'>
-
-                    <ul class="text-items">
-                        <li><a href= '#'>Ofertas</a></li>
-                        <li><a href= '#'>Marcas Recomendadas</a></li>
-                        <li><a href= '#'>Categorias</a></li>
-                        <li><a href= '#'>Ayuda</a></li>
-                        <li><a href= '#'>Quienes Somos</a></li>
-                    </ul>
-
-                    <ul class="text-items">
-                        <li><a href="/register">Creá tu cuenta <i class="fas fa-id-badge"></i></i></a></li>
-                        <li><a href= "/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></i></li>
-                        <li><a href= '#'>Mis compras <i class="fas fa-box"></i></a></i></li>
-                    </ul>
-
-                </section>
-
-                <figure id='mobile-1' class= 'burger-menu'>
-                    <i class="fas fa-bars" id='burger-menu'></i>
-                </figure>
-
-        </nav>
-        </section>
-
-    </header>
+    <%- include('../partials/header')   %>
     <main>
         <h2 id='titulos-1' class= 'titles' >Crea tu cuenta</h2>
-        <form action="" method="" enctype="">
+        <form>
             <div class='container-input'>
                 <input class='text-input' type='text' id='nombreCompleto' placeholder="Nombre y Apellido" name='nombreCompleto' required minlength="3">
             </div>
@@ -61,25 +28,26 @@
                 <input class='text-input' type='email' id='email' placeholder="Email" name='email' required>
             </div>
             <div class='container-input'>
-                <input class='text-input' type='text' id='domicilio' name='domicilio' placeholder="Domicilio (Ejemplo: Av. Cabildo 999 4to A)" required>
+                <label class='principal-label'>Fecha de nacimiento</label>
+                <input class='text-input' type='date' id='fechaNacimiento' name='fechaNacimiento' required>
             </div>
             <div class='container-input'>
-                <label class='principal-label' >Creá tu contraseña</label>
-                <input  id='container-5' type='password' name='contraseña' placeholder="Clave" required>
-            </div>
-            <div class='container-input'>
-                <label class='principal-label' >Confirmá tu contraseña</label>
-                <input  id='container-5' type='password' name='contraseña' placeholder="Repetir Clave" required>
+                <input class='text-input' type='text' id='domicilio' name='domicilio' placeholder="Domicilio" required>
             </div>
             <div class='container-input'>
                 <label class='principal-label'>Selecciona tu foto de perfil<i>(opcional)</i></label>
                 <input id='foto-perfil' type='file' name='imgPerfil'>
             </div>
-            <div class='container-button'>
-                <button type='submit' id='boton-enviar'>Enviar</button>
+            <div class='container-input'>
+                <label class='principal-label' >Creá tu contraseña</label>
+                <input  id='container-5' type='password' name='contraseña' value='contraseña' required>
+            </div>
+            <div class='container-input'>
+                <label class='principal-label' >Confirmá tu contraseña</label>
+                <input  id='container-5' type='password' name='contraseña' value='contraseña' required>
             </div>
             <div class='container-button'>
-                <button type='reset' id='boton-reset'>Borrar</button>
+                <button type='submit' id='boton-enviar'>Enviar</button>
             </div>
 
             </form>
@@ -92,36 +60,9 @@
             </div>
         </form>
 
-    </main>
+   </main>
+   <%- include('../partials/footer')   %>
 
-    <footer> 
-        <section class='contenedor-footer1'>
-
-            <section class='contenedor-footer2'>
-                <i id='footer-icons' class="fas fa-credit-card"></i>
-                <h2 class= 'footer-title'>Lorem ipsum dolor</h2>
-                <p class='footer-p'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa praesentium ullam sint voluptate sequi, et possimus ut adipisci. Fugiat quibusdam illum vitae aperiam quam distinctio impedit, ad nisi nobis qui.</p>
-            </section>
-
-            <section class='contenedor-footer2'>
-                <i id='footer-icons' class="fas fa-gift"></i>
-                <h2 class= 'footer-title'>Lorem ipsum dolor</h2>
-                <p class='footer-p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, impedit quas! Qui, ex sapiente. Autem amet, minus iure sapiente sint, culpa numquam dolor harum voluptatum sed sunt, officia voluptate exercitationem.</p>
-            </section>
-
-            <section id='last-section-footer' class='contenedor-footer2'>
-                <i id='footer-icons' class="fas fa-user-shield"></i>
-                 <h2 class= 'footer-title'>Lorem ipsum dolor</h2>
-                <p class='footer-p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus facere quos nulla eos odio exercitationem tempora, dolorem explicabo? Deserunt qui est nemo rerum eligendi accusantium beatae, dolor similique a assumenda.</p>
-            </section>
-
-        </section>
-
-        <section id='copyright'>
-            <p >Copyright © 2020 Sandies Argentina</p>
-        </section>
-
-    </footer>
 
 </body>
 </html>

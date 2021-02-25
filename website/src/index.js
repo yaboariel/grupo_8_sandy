@@ -19,3 +19,4 @@ app.use('/productos',productRoutes);
 
 const userRoutes = require( path.resolve(__dirname,"routes",'userRoutes'));
 app.use('/usuario',userRoutes);
+

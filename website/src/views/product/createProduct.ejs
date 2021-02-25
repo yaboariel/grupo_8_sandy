@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <% include("../partial/head")  %> 
+
+<body>
+
+    <%- include('../partials/header')   %>
+
+    <main>
+        <h2 id='titulos-1'>Producto Nuevo</h2>
+
+        <form action="" method="" enctype="">
+
+            <div class='container-input'>
+                <input class='text-input' type='text' id='tituloProducto' placeholder="Titulo" name='tituloProducto' required>
+            </div>
+
+            <div class='container-input'>
+                <input class='text-input' type='text' id='sku' placeholder="SKU" name='sku'>
+            </div>
+
+            <div class='container-input'>
+                <input class='text-input' type='text' id='container-5' placeholder="Descripción" name='descripcion' maxlength="150">
+            </div>
+
+
+            <div class='container-input'>
+                <label class='principal-label'></label>
+                <input id='foto-perfil' type='file' name='imgPerfil'>
+            </div>
+            
+            <div class='container-3'>
+                <label class='principal-label'>Género</label>
+                <div class='radius-options'>
+                <label>
+                    <input type='radio' name='genero' value='hombre'>
+                    Hombre
+                </label>
+                <label>
+                    <input id='genero' type='radio' name='genero' value='mujer'>
+                    Mujer
+                </label>
+                <label>
+                    <input id='genero' type='radio' name='genero' value='ambos'>
+                    Unisex
+                </label>
+                <label>
+                    <input id='genero' type='radio' name='genero' value='ambos'>
+                    Otro
+                </label>
+                </div>
+            </div>
+            
+            <div class='container-4'>
+                <label class='principal-label'>Talles Disponibles</label>
+                    <div class='checkbox'>
+                <label class='options'>
+                    <input type='checkbox' name='talle'>
+                    Todos 
+                </label>
+                <label class='options'>
+                    <input type='checkbox' name='talle'>
+                    27
+                </label>
+                <label class='options'>
+                    <input type='checkbox' name='talle'>
+                    28
+                </label>
+                <label class='options'>
+                    <input type='checkbox' name='talle'>
+                    29
+                </label>
+                <label class='options'>
+                    <input type='checkbox' name='talle'>
+                    30
+                </label>
+                <label class='options'>
+                    <input type='checkbox' name='talle'>
+                    30
+                </label>
+                <label class='options'>
+                    <input type='checkbox' name='talle'>
+                    32
+                </label>
+                <label class='options'>
+                    <input type='checkbox' name='talle'>
+                    33
+                </label>
+                <label class='options'>
+                    <input type='checkbox' name='talle'>
+                    34
+                </label>
+                </div>
+            </div>
+
+            <div class='container-input'>
+                <label class='principal-label'>Marca</label>
+                <select class='container-input' placeholder>
+                    <option>Seleccione</option>
+                    <option>Alita</option>
+                    <option>Antoinette</option>
+                    <option>A Pie</option>
+                    <option>Araquina</option>
+                    <option>Austri</option>
+                    <option>Avance bs as</option>
+                    <option>Azaleia</option>
+                    <option>Azzira</option>
+                    <option>Battaglia Laguna</option>
+                    <option>Becca Shoes</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class='container-input'>
+                <label class='principal-label'>Color</label>
+                <br>
+                <select class='container-input' placeholder>
+                    <option>Seleccione</option>
+                    <option>Amarillo</option>
+                    <option>Azul</option>
+                    <option>Beige</option>
+                    <option>Blanco</option>
+                    <option>Bordó</option>
+                    <option>Bronce</option>
+                    <option>Camel</option>
+                    <option>Celeste</option>
+                    <option>Cobre</option>
+                    <option>Coral</option>
+                    <option>Fucsia</option>
+                </select>
+            </div>
+
+            <div class='container-input'>
+                <label class='principal-label'>Temporada</label>
+                <select class='container-input' placeholder>
+                    <option>Seleccione</option>
+                    <option>Todas las Temporadas</option>
+                    <option>Pre verano</option>
+                    <option>Invierno</option>
+                    <option>Otoño-Invierno</option>
+                    <option>Pre invierno</option>
+                </select>
+            </div>
+
+            <div class='container-input'>
+                <label class='principal-label'>Material Calzado</label>
+                <select class='container-input' placeholder>
+                    <option>Seleccione</option>
+                    <option>Sintético</option>
+                    <option>Cuero</option>
+                    <option>Gamuza</option>
+                    <option>Textil</option>
+                    <option>Lona</option>
+                </select>
+            </div>
+
+            <div class='container-input'>
+                <label class='principal-label'>Stock</label>
+                <br>
+                <input class='text-input' type='number' id='stock' placeholder="1-99" name='stock' required min="1" max="99">
+            </div>
+
+            <div class='container-input'>
+                <label class='principal-label'>Precio</label>
+                <br>
+                <input class='text-input' type='number' id='stock' placeholder="$" name='stock' required min="1">
+            </div>
+
+            <div class='container-input'>
+                <input class='text-input' type='text' id='observacion' placeholder="Observación (opcional)" name='observacion'>
+            </div>
+
+            <div class='container-input'>
+                <input class='text-input' type='number' id='rentabilidad' placeholder="Rentabilidad (opcional)" name='rentabilidad' min="1">
+            </div>
+
+            <div class='container-input'>
+                <label class='principal-label'>IVA</label>
+                <br>
+                <select class='container-input' placeholder>
+                    <option>Seleccione</option>
+                    <option>%10</option>
+                    <option>%21</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class='container-input'>
+            <label class='principal-label'>Costo Interno</label>
+            <br>
+                <input class='text-input' type='number' id='costoInterno' placeholder="$" name='costoInterno' min="1">
+            </div>
+
+
+
+            <div class='container-input'>
+                <label class='principal-label'>Administrador (encargado de hacer los cambios)</label>
+                <br>
+                <br>
+                <input class='text-input' type='text' id='usuario' placeholder="Usuario" name='usuario'>
+                <input  id='container-5' type='password' name='contraseña' placeholder="********" required>
+            </div>
+
+            <div class='container-button'>
+                <button type='submit' id='boton-enviar'>Publicar</button>
+            </div>
+            <div class='container-button'>
+                <button type='submit' id='boton-enviar'>Enviar a la Papelera</button>
+            </div>
+
+            </form>
+    </main>
+    <%- include('../partials/footer')   %>
+</body>
+</html>

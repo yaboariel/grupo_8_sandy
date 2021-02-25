@@ -3,13 +3,13 @@ const userDB = require(path.resolve(__dirname,"..","database","models","user"));
 const productDB = require(path.resolve(__dirname,"..","database","models","product"));
 module.exports = {
     login: (req,res) => {
-        let styles = ["master.css","login.css"];
+        let stylesss = ["master.css","login-style.css"];
         let title = "Sandy | Ingresar";
-        res.render("user/login",{styles,title})
+        return res.render(path.resolve(__dirname, '../views/user/login'),{styles:["master.css","login-style.css"],title})
     },
     register: (req,res) => {
-        let styles = ["master.css","register.css"];
+        let styles = ["master.css","register-style.css"];
         let title = "Sandy | Registro";
-        res.render("user/register",{styles,title})
+        return res.render(path.resolve(__dirname, '../views/user/register'),{styles,title})
     }
 }

@@ -1,13 +1,48 @@
 *{
     box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+/*Etiquetas generales por orden de aparición con sus respectivos hovers*/
+
+body{
+    color: #03264C;
+    background-color: #B9BDAD;
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration: none;
+    color:#03264C;
+}
+
+p{
+    font-size: 0.75em;
+}
+
+main{
+    background-color: #B9BDAD;
+    widows: 90%;
+    margin:auto;
+}
+
+form{
+    width:100%;
 }
 
 /*Clases*/
 
-
 .container-input{
-    width:90%;
+    width:100%;
     margin:1em auto;
+}
+
+.radius-options{
+    margin:1.25em;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .container-3{
@@ -21,27 +56,41 @@
     width:100%;
 }
 
+[type="checkbox"], [type="radio"] {
+    margin-right:0.625em;
+}
 
 .container-4{
     margin:1.5625em auto;
     width:90%;
 }
 
+.checkbox{
+    margin:1.25em;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.options{
+    margin:0.625em;
+}
 
 .container-button{
     width:90%;
     margin:0.625em auto;
 }
 
-/*IDS*/
+
+/*ID's*/
 
 #titulos-1{
-    color:#666666;
-    background-color: #ebebeb;
+    color: black;
     text-align:center;
+    text-decoration: underline;
 }
 
-#perfil-vendedor{
+#genero{
     margin-left:2.5em;
 }
 
@@ -50,7 +99,7 @@
     border-radius: 0.25em;
     border: none;
     margin:1.25em auto;
-    color: #666666
+    
 }
 
 #container-5{
@@ -59,11 +108,10 @@
     border: none;
     padding:0.75em;
     margin:0.625em auto;
-    color: #666666
-
 }
 
 #boton-enviar{
+    background-color:#012641;
     color: #ffffff;
     border-color: transparent;
     width:100%;
@@ -74,13 +122,10 @@
 }
 
 #boton-enviar:hover{
-    background-color:  #0022AA;
+    background-color:  #114267;
 }
 
-
-
-
-/*MQ Tablet */
+/*MQ Tablet Smartphone*/
 
 @media(min-width: 568px){
 
@@ -88,6 +133,7 @@
         margin:0.625em auto;
         max-width: 30.4375em;
     }
+}
 
 /*MQ PC*/
 
@@ -101,5 +147,5 @@
     .container-button{
         max-width:30.4375em;
     }
-}
+    
 }
