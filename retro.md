@@ -54,3 +54,27 @@ Integramos ejs a pesar de que no se pidio. Sumamos las rutas y los controllers. 
 
 El sprint 2 fue todo un desafio y nos permitio sentar bases para el resto del proyecto. Se armo la estructura del sitio, los ejs, controladores y los ruteadores. Esto nos permitira que en los otros sprints podamos ir agregando cosas modularmente. 
 
+
+# Retro Sprint 3
+
+## Definición de temas trabajados:
+*   Aplicación Node.js+Express+EJS con: Archivos parciales (head, header, footer, etc.) 
+*   Home Listado de productos Detalle del producto Carrito de productos. 
+*   Formulario de registro y login 
+*   Formulario de carga y edición de productos.
+
+### Para evitar superposicion de tareas, dividimos el trabajo por vistas: Uno la parte de usuario, otro la home y otro productos. 
+Adaptamos el codigo de Dani al nuestro y nos encontramos con los siguientes inconvenientes: 
+*   Dificultad para hacer andar los archivos parciales de ejs: Nos costo que anden bien. A prueba y error pudimos identificar los errores y corregir.   
+*   Dificultad subiendo trabajo con github. Seguimos con algunos problemas con esto. Tuvimos que subir algun codigo a mano sin que pueda pushearlo el que lo hizo. 
+*   Estuvimos mucho tiempo identificando un error que nos rompia el codigo. Al final nos dimos cuenta que al incluir los partials en el ejs de una de las vistas habia un caracter que rompia todo.  
+*   Seguimos usando Trello para agregar los datos de los sprints pero no se fue actualizando a medida que se iban haciendo. 
+
+#### Cosas que nos salieron bien 
+Tal vez faltaria mas sinergia con respecto a cuando se termina una parte el trabajo y que se suba inmediatamente para poder permitir que otro de los integrantes pueda seguir cuando este ocioso.   
+
+#### Conclusión: 
+
+El sprint 3 se concluyo correctamente. Estaria bueno que en los proximos sprints podamos seguir mas rapido cuando se haya terminado.  
+
+
