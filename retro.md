@@ -69,6 +69,7 @@ Adaptamos el codigo de Dani al nuestro y nos encontramos con los siguientes inco
 *   Dificultad subiendo trabajo con github. Seguimos con algunos problemas con esto. Tuvimos que subir algun codigo a mano sin que pueda pushearlo el que lo hizo. 
 *   Estuvimos mucho tiempo identificando un error que nos rompia el codigo. Al final nos dimos cuenta que al incluir los partials en el ejs de una de las vistas habia un caracter que rompia todo.  
 *   Seguimos usando Trello para agregar los datos de los sprints pero no se fue actualizando a medida que se iban haciendo. 
+*   Heroku falla. Todavia no pudimos hacerlo andar. Cuando puedan, nos gustaria poder ver en que nos estamos equivocando al hacer el deploy. 
 
 #### Cosas que nos salieron bien 
 Tal vez faltaria mas sinergia con respecto a cuando se termina una parte el trabajo y que se suba inmediatamente para poder permitir que otro de los integrantes pueda seguir cuando este ocioso.   
