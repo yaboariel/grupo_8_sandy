@@ -1,0 +1,39 @@
+[
+    {
+        "id":1,
+        "nombre":"Sandalias"
+    },
+    {
+        "id":2,
+        "nombre":"Zuecos"
+    },
+    {
+        "id":3,
+        "nombre":"Ojotas"
+    },
+    {
+        "id":4,
+        "nombre":"Pantuflas"
+    },
+    {
+        "id":5,
+        "nombre":"Mocasines"
+    },
+    {
+        "id":6,
+        "nombre":"Alpargatas"
+    },
+    {
+        "id":7,
+        "nombre":"Chatitas"
+    },
+    {
+        "id":8,
+        "nombre":"Sandalia10"
+    },
+    {
+        "id":9,
+        "nombre":"Sandalia5"
+    }
+
+]

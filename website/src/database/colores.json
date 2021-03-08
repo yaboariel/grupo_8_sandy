@@ -1,0 +1,51 @@
+[
+    {
+        "id":1,
+        "nombre":"Blanco"
+    }, 
+
+    {
+        "id":2,
+        "nombre":"Negro"
+    }, 
+    {
+        "id":3,
+        "nombre":"Azul"
+    }, 
+    {
+        "id":4,
+        "nombre":"Rojo"
+    }, 
+    {
+        "id":5,
+        "nombre":"Verde"
+    }, 
+    {
+        "id":6,
+        "nombre":"Amarillo"
+    }, 
+    {
+        "id":7,
+        "nombre":"Celeste"
+    }, 
+    {
+        "id":8,
+        "nombre":"Rosa"
+    }, 
+    {
+        "id":9,
+        "nombre":"Fucsia"
+    }, 
+    {
+        "id":10,
+        "nombre":"Marron"
+    }, 
+    {
+        "id":11,
+        "nombre":"Naranja"
+    }
+
+
+
+
+]

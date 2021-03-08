@@ -1,0 +1,68 @@
+[
+    {
+        "id":1,
+        "nombre":"Havaianas"
+    },
+    {
+        "id":2,
+        "nombre":"Crocs"
+    },
+    {
+        "id":3,
+        "nombre":"Sarkany"
+    },
+    {
+        "id":4,
+        "nombre":"Lady Stork"
+    },
+    {
+        "id":5,
+        "nombre":"Viamo"
+    },
+    {
+        "id":6,
+        "nombre":"Paruolo"
+    },
+    {
+        "id":7,
+        "nombre":"Briganti"
+    },
+    {
+        "id":8,
+        "nombre":"Ipanema"
+    },
+    {
+        "id":9,
+        "nombre":"Vizzano"
+    }, 
+    {
+        "id":10,
+        "nombre":"UGG"
+    },
+    {
+        "id":11,
+        "nombre":"Zara"
+    },
+    {
+        "id":12,
+        "nombre":"Prune"
+    }, 
+    {
+        "id":13,
+        "nombre":"Picadilly"
+    }, 
+    {
+        "id":14,
+        "nombre":"Nazaria"
+    }, 
+    {
+        "id":16,
+        "nombre":"Hush Pappies"
+    }, 
+    {
+        "id":17,
+        "nombre":"Cheeky"
+    }
+
+
+]
