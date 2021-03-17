@@ -13,7 +13,7 @@ module.exports = (req,res,next) =>{
 
 const fs = require('fs');
 const path = require('path');
-let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/models/users')));
+let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));
         
 module.exports = (req,res,next) =>{
     //Variable locals (super global - vive en las vistas )

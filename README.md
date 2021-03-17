@@ -93,3 +93,4 @@ Sprint 3: https://trello.com/invite/b/PEjegO3e/d619b68c0c333bc0d932360ed4de612e/
 
 Sprint 4: https://trello.com/invite/b/ygjhkoc2/a10dae9fee9aa910186f8b47732584f2/sprint-4
 
+Dbdesigner para hacer modelo entidad relacion de base de datos

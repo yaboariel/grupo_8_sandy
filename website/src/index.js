@@ -2,7 +2,7 @@ const express=require('express');
 const app = express();
 const path = require('path');
 
-app.set('puerto', process.env.PORT || 3000);
+app.set('puerto', process.env.PORT || 3002);
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname,"./views"));
 
@@ -19,4 +19,7 @@ app.use('/productos',productRoutes);
 
 const userRoutes = require( path.resolve(__dirname,"routes",'userRoutes'));
 app.use('/usuario',userRoutes);
+
+const adminRoutes = require( path.resolve(__dirname,"routes",'adminRoutes'));
+app.use('/administrar',adminRoutes);
 
