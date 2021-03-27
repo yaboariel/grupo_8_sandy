@@ -15,6 +15,8 @@
 <body>
 
     <%- include('../partials/header')   %>
+
+
     <main>
         <h2 id='titulos-1' class= 'titles' >Crea tu cuenta</h2>
         <form>
@@ -28,10 +30,6 @@
                 <input class='text-input' type='email' id='email' placeholder="Email" name='email' required>
             </div>
             <div class='container-input'>
-                <label class='principal-label'>Fecha de nacimiento</label>
-                <input class='text-input' type='date' id='fechaNacimiento' name='fechaNacimiento' required>
-            </div>
-            <div class='container-input'>
                 <input class='text-input' type='text' id='domicilio' name='domicilio' placeholder="Domicilio" required>
             </div>
             <div class='container-input'>
@@ -40,11 +38,11 @@
             </div>
             <div class='container-input'>
                 <label class='principal-label' >Creá tu contraseña</label>
-                <input  id='container-5' type='password' name='contraseña' value='contraseña' required>
+                <input  id='container-5' type='password' name='contraseña' placeholder="contraseña"required>
             </div>
             <div class='container-input'>
                 <label class='principal-label' >Confirmá tu contraseña</label>
-                <input  id='container-5' type='password' name='contraseña' value='contraseña' required>
+                <input  id='container-5' type='password' name='contraseña' placeholder="contraseña"required>
             </div>
             <div class='container-button'>
                 <button type='submit' id='boton-enviar'>Enviar</button>
@@ -53,14 +51,15 @@
             </form>
        
         <h4 id='titulos-1' class= 'titles' >¿Tenes cuenta?</h4>
-
+            <br>
         <form>
             <div class='container-button'>
-                <button type='submit' id='boton-enviar'><a class='send-text' href="/login">Ingresa</a></button>
+                <button type='submit' id='boton-enviar'><a class='send-text' href="/usuario/ingresar">Ingresa</a></button>
             </div>
         </form>
 
    </main>
+   
    <%- include('../partials/footer')   %>
 
 

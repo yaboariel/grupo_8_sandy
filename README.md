@@ -6,16 +6,12 @@
 
 ## Página web con un diseño apuntado al publico objetivo y a los productos que ofrecera. Programada con HTML5 - CSS3 - (FLEXBOX) - NODEJS - EXPRESS
 
-### Teniendo en cuenta el estudio de mercado realizado por los 3 integrantes del grupo, investigando los productos mas populares de mercadolibre en http://tendencias.mercadolibre.com.ar, llegamos a la conclusion que los siguientes nichos van a ser considerados para tomar la decision final:
+### Teniendo en cuenta el estudio de mercado realizado por los 3 integrantes del grupo, investigando los productos mas populares de mercadolibre en http://tendencias.mercadolibre.com.ar, llegamos a la conclusion que los siguientes temas serán considerados para tomar la decision final:
 
+*   Crocs
 *   Sandalias economicas para adultos (dama y caballero).
 *   Zuecos de mujer.
 *   Ojotas con plataforma, Ojotas altas mujer.
-*   Camperas de jean de hombre.
-*   Set De Mates.
-*   Organizador para baño.
-*   colchon inflable 1 plaza.
-*   Vestido hindu.
 
 
 #### Nuestra idea es apuntar a un tipo de producto en un nicho no tan grande que abarque lo suficiente para que haya distintos tipos de productos pero que tenga un limite. Para ello, nos enfocamos en las busquedas populares de mercadolibre y en el publico objetivo de esas busquedas. Apuntamos a un publico tanto hombres como mujeres adultos. 
