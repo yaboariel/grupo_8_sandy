@@ -15,9 +15,10 @@ module.exports = {
     },
     /* Por post */
     save: (req,res) => {
-        productDB.write(req.body);
-       
-        res.redirect('../views/admin/administrar');
+        const filename= req.file.filename
+        productDB.write(req.body,filename);
+        
+        res.redirect('/administrar');
 
 /*
         return res.render(path.resolve(__dirname, '../views/admin/'),{styles: ["master.css", "createProduct.css"], title: "Sandy | Agregar Producto"});*/
@@ -36,27 +37,37 @@ module.exports = {
     
     /* Por post */
     update: (req,res) => {
+        res.send('Got a PUT request at /user')
         let todos=productDB.all();
         req.body.id = req.params.id;
-        req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
+        req.body.foto = req.file ? req.file.filename : req.body.oldImagen;
         let productUpdate = todos.map(uno =>{
             if(uno.id == req.body.id){
-                return uno = req.body;
+                uno.title=req.body.title;
+                uno.descripcion=req.body.descripcion;
+                uno.precio=req.body.precio;
+                uno.descuento=req.body.descuento;
+                uno.foto='/images/'+req.body.foto; 
+                
             }
             return uno;
         })
+
+        
         let productActualizar = JSON.stringify(productUpdate,null,2);
-        fs.writeFileSync(path.resolve(__dirname,'../database/motos.json'),productActualizar);
-        res.redirect('../views/admin/administrar');
+        console.log(productActualizar);
+        fs.writeFileSync(path.resolve(__dirname,'../database/products.json'),productActualizar);
+        res.redirect('/administrar');
     },
     destroy: (req,res) =>{
+        
         let todos=productDB.all();
-
         const productoDeleteId = req.params.id;
         const productosFinal = todos.filter(uno => uno.id != productoDeleteId);
+        console.log(productosFinal)
         let productosGuardar = JSON.stringify(productosFinal,null,2)
-        fs.writeFileSync(path.resolve(__dirname, '../database/motos.json'),productosGuardar);
-        res.redirect('../views/admin/administrar');
+        fs.writeFileSync(path.resolve(__dirname, '../database/products.json'),productosGuardar);
+        res.redirect('/administrar');
     }
 
     

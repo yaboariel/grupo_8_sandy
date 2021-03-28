@@ -2,9 +2,10 @@
 <html lang="es">
   <%- include('../partials/head.ejs') %>    
 <body>
+    <%- include('../partials/header.ejs') %>
+
     <main class="container-fluid">
-      <%- include('../partials/navBar.ejs') %>
-      <!--Administrador de productos-->
+     <!-- Administrador de productos-->
       <br>
       <section class="row">
         <article class="col-12 ">
@@ -25,13 +26,13 @@
               </tr>
             </thead>
             <tbody>
-              <% motos.forEach(moto => { %>
+              <% productos.forEach(prod => { %>
               <tr>
-                <td><%= moto.id%> </td>
-                <td><%= moto.nombre%> </td>
-                <td><a href="/administrar/detail/<%= moto.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                <td><a href="/administrar/edit/<%= moto.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                <td><a href="/administrar/delete/<%= moto.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+                <td><%= prod.id%> </td>
+                <td><%= prod.title%> </td>
+                <td><a href="/administrar/detail/<%= prod.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                <td><a href="/administrar/edit/<%= prod.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                <td><a href="/administrar/delete/<%= prod.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
               </tr>
               <% }); %>
             </tbody>
@@ -41,4 +42,20 @@
       <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </main>
   </body>
-</html>
+</html>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

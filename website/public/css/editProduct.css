@@ -8,7 +8,7 @@ p {
 }
 
 main{
-    margin-top: 70px;
+    margin-top: 150px;
 }
 
 .navbar-text{
@@ -18,7 +18,12 @@ main{
     margin:1em auto;
     /*border: none;*/
 }
-
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
 #titulos-1{
     color: black;
     text-align:center;
