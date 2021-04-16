@@ -93,4 +93,7 @@ Sprint 5: https://trello.com/invite/b/FyfKoFuL/aa168ec6a3e93ad2e4c6218e9e6007d5/
 
 Sprint 6: https://trello.com/invite/b/wpNy3m2L/8b2742628274f7018e5a08b17352c42a/sprint-6
 
-Dbdesigner para hacer modelo entidad relacion de base de datos
+En Dbdesigner se armo el DER. Este archivo que esta en la raiz es el resultado: 
+sandie__dynobird.com__2021-04-16 16_29_39.png
+Y en createdatabase esta el codigo para crearla. 
+
