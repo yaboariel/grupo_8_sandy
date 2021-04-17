@@ -95,5 +95,6 @@ Sprint 6: https://trello.com/invite/b/wpNy3m2L/8b2742628274f7018e5a08b17352c42a/
 
 En Dbdesigner se armo el DER. Este archivo que esta en la raiz es el resultado: 
 sandie__dynobird.com__2021-04-16 16_29_39.png
-Y en createdatabase esta el codigo para crearla. 
+La estructura para crear la db este en: structure.sql
+
 
