@@ -11,43 +11,43 @@ module.exports = (sequelize, dataTypes) => {
         title: {
             type: dataTypes.STRING(100),
             allowNull: false
-        }
+        },
         model: {
             type: dataTypes.STRING(100),
             allowNull: false
-        }
+        },
         brand_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
-        }
+        },
         material_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
-        }
+        },
         category_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
-        }
+        },
         foto_id: {
             type: dataTypes.BIGINT(30).UNSIGNED,
             allowNull: false
-        }
+        },
         descuento: {
             type: dataTypes.SMALLINT(3).UNSIGNED,
             allowNull: false
-        }
+        },
         destacado: {
             type: dataTypes.TINYINT(1).UNSIGNED,
             allowNull: false
-        }
+        },
         genero: {
             type: dataTypes.TINYINT(1),
             allowNull: false
-        }
+        },
         adulto: {
             type: dataTypes.TINYINT(1),
             allowNull: false
-        }
+        },
         color_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
@@ -70,7 +70,7 @@ module.exports = (sequelize, dataTypes) => {
             otherKey: 'movie_id',
             timestamps: false
         })
-        
+
 
 
     }
