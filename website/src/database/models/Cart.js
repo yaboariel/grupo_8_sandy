@@ -1,3 +1,5 @@
+module.exports = (sequelize, dataTypes) => {
+
 let alias = 'Cart';
     let cols = {
         id: {
@@ -12,15 +14,15 @@ let alias = 'Cart';
             allowNull: false
         },
         qty: {
-            dataTypes.BIGINT(10).UNSIGNED,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         },
         talle_id: {
-            dataTypes.BIGINT(10).UNSIGNED,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         },
         user_id: {
-            dataTypes.BIGINT(10).UNSIGNED,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         }
     };
@@ -33,10 +35,13 @@ let alias = 'Cart';
     const Cart = sequelize.define(alias, cols, config); 
 
         Cart.associate = function(models) {
-            Cart.hasMany(models.Product, { // models.Carts -> Movie es el valor de alias en movie.js
-                as: "products", // El nombre del modelo pero en plural
-                foreignKey: "product_id"
-            })
+            Cart.belongsToMany(models.Product, { // models.Actor -> Actors es el valor de alias en actor.js
+                as: "products",
+                through: 'Prod_cart',
+                foreignKey: 'cart_id',
+                otherKey: 'prod_id',
+                timestamps: false
+            })  
             Cart.belongsTo(models.User, { // models.Genre -> Genres es el valor de alias en genres.js
                 as: "users",
                 foreignKey: "user_id"

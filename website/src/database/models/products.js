@@ -48,7 +48,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TINYINT(1),
             allowNull: false
         },
-        color_id: {
+        Product_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         }
@@ -63,13 +63,45 @@ module.exports = (sequelize, dataTypes) => {
     const Product = sequelize.define(alias, cols, config); 
 
     Product.associate = function (models) {
-        Product.belongsToMany(models.Movie, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "movies",
-            through: 'Product_movie',
-            foreignKey: 'Product_id',
-            otherKey: 'movie_id',
+        
+        Product.belongsTo(models.Brand, { // models.Genre -> Genres es el valor de alias en genres.js
+            as: "brand",
+            foreignKey: "brand_id"
+        })        
+        Product.belongsTo(models.Material, { // models.Genre -> Genres es el valor de alias en genres.js
+            as: "material",
+            foreignKey: "material_id"
+        })  
+        Product.belongsTo(models.Category, { // models.Genre -> Genres es el valor de alias en genres.js
+            as: "category",
+            foreignKey: "category_id"
+        })  
+        Product.belongsTo(models.Foto, { // models.Genre -> Genres es el valor de alias en genres.js
+            as: "foto",
+            foreignKey: "foto_id"
+        })  
+        Product.belongsToMany(models.Product, { // models.Actor -> Actors es el valor de alias en actor.js
+            as: "colors",
+            through: 'Prod_color',
+            foreignKey: 'product_id',
+            otherKey: 'color_id',
             timestamps: false
-        })
+        })  
+        Product.belongsToMany(models.Size, { // models.Actor -> Actors es el valor de alias en actor.js
+            as: "sizes",
+            through: 'Prod_size',
+            foreignKey: 'product_id',
+            otherKey: 'size_id',
+            timestamps: false
+        })  
+        Product.belongsToMany(models.Cart, { // models.Actor -> Actors es el valor de alias en actor.js
+            as: "carts",
+            through: 'Prod_cart',
+            foreignKey: 'product_id',
+            otherKey: 'cart_id',
+            timestamps: false
+        })  
+        
 
 
 
