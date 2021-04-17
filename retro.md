@@ -96,4 +96,47 @@ A pesar de todas las dificultades, pudimos hacer andar el crud. Nos falta mucho 
 
 El sprint 4 se concluyo completamente despues de la fecha pactada. Esperemos que en los proximos sprints nos podamos organizar de mejor manera.   
 
+# Retro Sprint 5
+
+## Definición de temas trabajados:
+*   Generar JSON de productos y usuarios. 
+*   Crud Completo de productos. 
+
+### Tuvimos problemas para desarrollar el sprint y no pudimos hacerlo a tiempo como hubieramos querido. 
+Usando el codigo de Dani y el del video largo de crud de playground, nos encontramos con una mayor dificultad y poco tiempo disponible. Estos son los inconvenientes con los que nos atravezamos: 
+*  Dificultad para armar los cruds, teniendo en cuenta de que hay que armar rutas, toda la logica del controlador y matchear con los archivos json. Nos llevo tiempo entenderlos y disponemos de poco tiempo los 3 integrantes por distintas razones.    
+*  Se nos dificulto cumplir con la division de tareas porque Agustin, por problemas personales, no estaba disponible para hacer las tareas, Santiago empezo la facultad y disponia de menos tiempo, y Ariel como empezaron el colegio sus hijos y con el tema zooms y presenciales, dispone de mucho menos tiempo para trabajar. Por lo tanto, pudimos avanzar, pero mucho mas lentamente y sin la misma energia que antes.      
+
+#### Cosas que nos salieron bien 
+A pesar de todas las dificultades, pudimos hacer andar el crud. Nos falta mucho en el tema maquillaje y look and feel porque primero priorizamos que ande el proyecto y cumplir con las cosas que nos piden.    
+
+#### Conclusión: 
+
+El sprint 4 se concluyo completamente despues de la fecha pactada. Esperemos que en los proximos sprints nos podamos organizar de mejor manera.   
+
+
+
+
+
+# Retro Sprint 6
+
+## Definición de temas trabajados:
+*   Generar el DER con todas las tablas y relaciones entre tablas. 
+*   Crud Completo de productos integrado con la base de datos que creamos y sequelize. 
+*   Armar los modelos en sequelize, crear carpetas y archivos para integrarlo con el sitio y esta herramienta.  
+
+### Muchos problemas con el tiempo disponible para avanzar con el proyecto. 
+Venimos un poco atrasados con el proyecto integrador y nos esta costando avanzar como en los primeros sprints. 
+*  El armado del DER si hizo en tiempo pero la integracion de sequelize la empezamos esta semana por lo que venimos lento con el avance de este sprint. Esperemos tener un poco de tiempo el fin de semana para poder avanzar lo maximo posible.     
+*  Armamos el DER y la estructura, falta pasar la definicion y relaciones de las tablas a sequelize. Ya se hizo algunas, faltan las de productos y usuarios que son las mas pesadas. Tambien falta el CRUD "como la gente". 
+
+#### Cosas que nos salieron bien 
+El DER lo pudimos armar sin problemas. Nos lo chequeo la semana pasada Dani.     
+
+#### Conclusión: 
+
+El sprint 6, como los anteriores, se realizo con varios puntos sin terminar. Tenemos el problema de tiempo. Uno de los companeros esta con mucho trabajo y no pudo aportar mucho y el haber empezado el colegio de los hijos de Ariel y la facultad de Santiago, nos acoto muchisimo el tiempo libre.     
+
+
+
 
