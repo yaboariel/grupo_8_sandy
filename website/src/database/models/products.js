@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Product'; /* esto todavia no esta armado */
+    let alias = 'Product';
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -8,19 +8,51 @@ module.exports = (sequelize, dataTypes) => {
         },
         // created_at: dataTypes.TIMESTAMP,
         // updated_at: dataTypes.TIMESTAMP,
-        first_name: {
+        title: {
             type: dataTypes.STRING(100),
             allowNull: false
-        },
-        last_name: {
+        }
+        model: {
             type: dataTypes.STRING(100),
             allowNull: false
-        },
-        rating: {
-            type: dataTypes.DECIMAL(3,1),
+        }
+        brand_id: {
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
-        },
-        favorite_movie_id: dataTypes.BIGINT(10).UNSIGNED
+        }
+        material_id: {
+            type: dataTypes.BIGINT(10).UNSIGNED,
+            allowNull: false
+        }
+        category_id: {
+            type: dataTypes.BIGINT(10).UNSIGNED,
+            allowNull: false
+        }
+        foto_id: {
+            type: dataTypes.BIGINT(30).UNSIGNED,
+            allowNull: false
+        }
+        descuento: {
+            type: dataTypes.SMALLINT(3).UNSIGNED,
+            allowNull: false
+        }
+        destacado: {
+            type: dataTypes.TINYINT(1).UNSIGNED,
+            allowNull: false
+        }
+        genero: {
+            type: dataTypes.TINYINT(1),
+            allowNull: false
+        }
+        adulto: {
+            type: dataTypes.TINYINT(1),
+            allowNull: false
+        }
+        color_id: {
+            type: dataTypes.BIGINT(10).UNSIGNED,
+            allowNull: false
+        }
+        
     };
     let config = {
         timestamps: true,
@@ -38,6 +70,9 @@ module.exports = (sequelize, dataTypes) => {
             otherKey: 'movie_id',
             timestamps: false
         })
+        
+
+
     }
 
     return Product
