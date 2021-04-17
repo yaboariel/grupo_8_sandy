@@ -99,20 +99,21 @@ El sprint 4 se concluyo completamente despues de la fecha pactada. Esperemos que
 # Retro Sprint 5
 
 ## Definición de temas trabajados:
-*   Generar JSON de productos y usuarios. 
-*   Crud Completo de productos. 
+*   Login de usuarios. 
+*   Registro de usuarios. 
 
-### Tuvimos problemas para desarrollar el sprint y no pudimos hacerlo a tiempo como hubieramos querido. 
-Usando el codigo de Dani y el del video largo de crud de playground, nos encontramos con una mayor dificultad y poco tiempo disponible. Estos son los inconvenientes con los que nos atravezamos: 
-*  Dificultad para armar los cruds, teniendo en cuenta de que hay que armar rutas, toda la logica del controlador y matchear con los archivos json. Nos llevo tiempo entenderlos y disponemos de poco tiempo los 3 integrantes por distintas razones.    
-*  Se nos dificulto cumplir con la division de tareas porque Agustin, por problemas personales, no estaba disponible para hacer las tareas, Santiago empezo la facultad y disponia de menos tiempo, y Ariel como empezaron el colegio sus hijos y con el tema zooms y presenciales, dispone de mucho menos tiempo para trabajar. Por lo tanto, pudimos avanzar, pero mucho mas lentamente y sin la misma energia que antes.      
+### Este sprint lo hicimos con el tiempo justo y nos faltaron terminar algunas cosas. Santiago armo buena parte de el porque teniamos que terminar el Sprint 4 que habian quedo pendientes algunas cosas que no funcionaban.  
+Estos son los detalles del sprint: 
+*  Quedaron pendientes la ruta de huespedes y de usuarios y la funcion de recordar al usuario que ya habia ingresado.    
+*  El tablero de trabajo fue actualizado con quien hizo cada cosa y el retro se hizo despues de la entrega.
+*  Falto un poco el maquillaje en Css para los formularios y el login. 
 
 #### Cosas que nos salieron bien 
-A pesar de todas las dificultades, pudimos hacer andar el crud. Nos falta mucho en el tema maquillaje y look and feel porque primero priorizamos que ande el proyecto y cumplir con las cosas que nos piden.    
+Salio bien el registro de usuarios y el logeo que funcionaba correctamente.     
 
 #### Conclusión: 
 
-El sprint 4 se concluyo completamente despues de la fecha pactada. Esperemos que en los proximos sprints nos podamos organizar de mejor manera.   
+El sprint 5 esta hecho parcialmente. Faltaron algunas cosas que debemos completar en el futuro.   
 
 
 
