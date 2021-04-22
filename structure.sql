@@ -26,13 +26,7 @@ CREATE TABLE `Prod_size` (
    `size_id` INT,
    `stock` int,
    `price` int,
-   PRIMARY KEY (`id`)
-);
-
-CREATE TABLE `Prod_color` (
-   `id` int,
-   `prod_id` int,
-   `color_id` int,
+   `colorID` int,
    PRIMARY KEY (`id`)
 );
 
@@ -107,7 +101,7 @@ ALTER TABLE `Prod_size` ADD CONSTRAINT `FK_3882a1be-3718-4ca2-adef-4a6643f6b9e2`
 
 ALTER TABLE `Prod_size` ADD CONSTRAINT `FK_11175114-bd12-439e-8693-6ee2b8fbb013` FOREIGN KEY (`size_id`) REFERENCES `sizes`(`id`);
 
-ALTER TABLE `Prod_color` ADD CONSTRAINT `FK_2abd7455-6d34-4347-988b-37cc69341486` FOREIGN KEY (`color_id`) REFERENCES `colors`(`id`);
+ALTER TABLE `Prod_size` ADD CONSTRAINT `FK_f49606a5-80b4-4a85-959f-81b20d7044e6` FOREIGN KEY (`colorID`) REFERENCES `colors`(`id`);
 
 ALTER TABLE `Prod_cart` ADD CONSTRAINT `FK_90d51bec-9ddc-4ec1-abba-05882b3077e0` FOREIGN KEY (`prod_id`) REFERENCES `products`(`id`);
 
