@@ -93,8 +93,10 @@ Sprint 5: https://trello.com/invite/b/FyfKoFuL/aa168ec6a3e93ad2e4c6218e9e6007d5/
 
 Sprint 6: https://trello.com/invite/b/wpNy3m2L/8b2742628274f7018e5a08b17352c42a/sprint-6
 
-En Dbdesigner se armo el DER. Este archivo que esta en la raiz es el resultado: 
-sandie__dynobird.com__2021-04-16 16_29_39.png
-La estructura para crear la db este en: structure.sql
+- En Dbdesigner se armo el DER. Este archivo que esta en la raiz es el resultado: 
+- sandie__dynobird.com__2021-04-16 16_29_39.png
+- La estructura para crear la db este en: structure.sql
+- Herramientas a utilizar: bootstrap y getuikit.com para front. 
+- https://sequelize.org/master/manual/assocs.html#basics-of-queries-involving-associations Mirar esta documentacion para la nueva version de sequelize. 
 
 
