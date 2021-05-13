@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         timestamps: true,
-        createdAt: 'created_at',
+        createdAt: 'createdAt',
         updatedAt: 'updated_at',
         deletedAt: false
     }
@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
          
             Brand.hasMany(models.Product, { // models.Movies -> Movie es el valor de alias en movie.js
                 as: "products", // El nombre del modelo pero en plural
-                foreignKey: "brand_id"
+                foreignKey: "brandId"
             })
         
     }

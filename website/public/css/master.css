@@ -24,7 +24,9 @@
                 z-index: 100;
   
               }
-  
+  main {
+                margin-top:100px;
+             }
   
   /* top envuelve al logo, la barra de busqueda y mensaje de cuotas, salvo para celulares donde oculto las cuotas*/
   .top        { display:flex;              
@@ -217,7 +219,9 @@
   @media screen and (min-width: 361px) {
   
   .encabezado {height:70px}
-  
+  main {
+    margin-top:70px;
+  }
   .barbusqueda input[type=text]{
         margin-top:0px;
        padding: 6px 8px;
@@ -304,6 +308,9 @@
         .encabezado {
           height:100px;
       
+        }
+        main {
+          margin-top:100px;
         }
         .top {
           justify-content: space-between; 
@@ -416,8 +423,12 @@
     
     .encabezado {
       height:100px;
-  
+     }
+    main {
+      margin-top:100px;
     }
+     
+
     input::-webkit-input-placeholder {
       font-size: 20px;
       line-height: 3;
@@ -467,7 +478,9 @@
       height:120px;
   
     }
-  
+    main {
+      margin-top: 120px;
+    }
     
     
   

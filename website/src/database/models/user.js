@@ -38,7 +38,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(255),
             allowNull: false
         },
-        cart_id: {
+        cartId: {
             type: dataTypes.BIGINT(10),
             allowNull: false
         }
@@ -56,7 +56,7 @@ module.exports = (sequelize, dataTypes) => {
     User.associate = function (models) {
         User.hasMany(models.Cart, { // models.Movies -> Movie es el valor de alias en movie.js
             as: "carts", // El nombre del modelo pero en plural
-            foreignKey: "cart_id"
+            foreignKey: "cartId"
         })
     }
 

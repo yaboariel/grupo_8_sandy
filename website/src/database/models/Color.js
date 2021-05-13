@@ -1,3 +1,6 @@
+/**hay que trabajar sobre esta tabla para relacionar con prod-size */
+
+
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Color';
     let cols = {
@@ -22,12 +25,12 @@ module.exports = (sequelize, dataTypes) => {
     const Color = sequelize.define(alias, cols, config); 
 
     Color.associate = function (models) {
-         
-        Color.belongsToMany(models.Product, { // models.Actor -> Actors es el valor de alias en actor.js
+         /*esto hay que cambiarlo con lo que mando edu */
+        Color.belongsTo(models.Product, { 
             as: "products",
-            through: 'Prod_color',
-            foreignKey: 'color_id',
-            otherKey: 'prod_id',
+            through: 'ProdColor',
+            foreignKey: 'colorId',
+            otherKey: 'prodId',
             timestamps: false
         })  
         

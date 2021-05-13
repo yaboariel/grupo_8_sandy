@@ -9,7 +9,7 @@ let alias = 'Cart';
         },
         // created_at: dataTypes.TIMESTAMP,
         // updated_at: dataTypes.TIMESTAMP,
-        prod_id: {
+        prodId: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         },
@@ -17,11 +17,11 @@ let alias = 'Cart';
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         },
-        talle_id: {
+        talleId: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         },
-        user_id: {
+        userId: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         }
@@ -38,17 +38,17 @@ let alias = 'Cart';
             Cart.belongsToMany(models.Product, { // models.Actor -> Actors es el valor de alias en actor.js
                 as: "products",
                 through: 'Prod_cart',
-                foreignKey: 'cart_id',
-                otherKey: 'prod_id',
+                foreignKey: 'cartId',
+                otherKey: 'prodId',
                 timestamps: false
             })  
             Cart.belongsTo(models.User, { // models.Genre -> Genres es el valor de alias en genres.js
                 as: "users",
-                foreignKey: "user_id"
+                foreignKey: "userId"
             })
             Cart.hasMany(models.Size, { // models.Movies -> Movie es el valor de alias en movie.js
                 as: "sizes", // El nombre del modelo pero en plural
-                foreignKey: "size_id"
+                foreignKey: "sizeId"
             })
     
     

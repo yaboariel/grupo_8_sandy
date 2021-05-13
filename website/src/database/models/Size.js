@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
          
             Size.hasMany(models.Product, { // models.Movies -> Movie es el valor de alias en movie.js
                 as: "products", // El nombre del modelo pero en plural
-                foreignKey: "Size_id"
+                foreignKey: "SizeId"
             })
         
     }

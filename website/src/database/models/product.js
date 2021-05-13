@@ -1,59 +1,108 @@
-const fs = require("fs");
-const path = require("path");
-
-const product= module.exports = {
-     all: () => {
-        let filePath = path.resolve(__dirname,"../products.json");
-        let dataFile = fs.readFileSync(filePath,"utf-8");
-        return JSON.parse(dataFile);
-    },
-     one: (id) => {
-        let filePath = path.resolve(__dirname,"../products.json");
-        let dataFile = fs.readFileSync(filePath,"utf-8");
-        let data = JSON.parse(dataFile);
-        return data.find(e => e.id == id);
-    },
-     write: (data,filename) => {
-        const todos=product.all();
-        let nuevoProducto = {
-            id: product.generateId(),
-            nombre : data.nombre,
-            descripcion: data.descripcion,
-            precio: data.precio,
-            descuento: data.descuento,
-            foto: filename
+module.exports = (sequelize, dataTypes) => {
+    let alias = 'Product';
+    let cols = {
+        id: {
+            type: dataTypes.BIGINT(10).UNSIGNED,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        // created_at: dataTypes.TIMESTAMP,
+        // updated_at: dataTypes.TIMESTAMP,
+        title: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        model: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        brandId: {
+            type: dataTypes.BIGINT(10).UNSIGNED,
+            allowNull: false
+        },
+        materialId: {
+            type: dataTypes.BIGINT(10).UNSIGNED,
+            allowNull: false
+        },
+        categoryId: {
+            type: dataTypes.BIGINT(10).UNSIGNED,
+            allowNull: false
+        },
+        fotoId: {
+            type: dataTypes.BIGINT(30).UNSIGNED,
+            allowNull: false
+        },
+        descuento: {
+            type: dataTypes.SMALLINT(3).UNSIGNED,
+            allowNull: false
+        },
+        destacado: {
+            type: dataTypes.TINYINT(1).UNSIGNED,
+            allowNull: false
+        },
+        genero: {
+            type: dataTypes.TINYINT(1),
+            allowNull: false
+        },
+        adulto: {
+            type: dataTypes.TINYINT(1),
+            allowNull: false
         }
-      
-        todos.push(nuevoProducto);
-        let nuevoProductoGuardar = JSON.stringify(todos,null,4);
-        fs.writeFileSync(path.resolve(__dirname,'../products.json'), nuevoProductoGuardar);
+        
+        
+    };
+    let config = {
+        timestamps: true,
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        deletedAt: false
+    }
+    const Product = sequelize.define(alias, cols, config); 
 
-        /*
-        let dataJSON = JSON.stringify(data,null,4);
-        fs.writeFileSync(filePath,dataJSON);*/
-    },
+    Product.associate = function (models) {
+        
+        Product.belongsTo(models.Brand, { // models.Genre -> Genres es el valor de alias en genres.js
+            as: "brand",
+            foreignKey: "brandId"
+        })        
+        Product.belongsTo(models.Material, { // models.Genre -> Genres es el valor de alias en genres.js
+            as: "material",
+            foreignKey: "materialId"
+        })  
+        Product.belongsTo(models.Category, { // models.Genre -> Genres es el valor de alias en genres.js
+            as: "category",
+            foreignKey: "categoryId"
+        })  
+        Product.belongsTo(models.Foto, { // models.Genre -> Genres es el valor de alias en genres.js
+            as: "foto",
+            foreignKey: "fotoId"
+        })  
+        Product.belongsToMany(models.Product, { // models.Actor -> Actors es el valor de alias en actor.js
+            as: "colors",
+            through: 'Prod_color',
+            foreignKey: 'productId',
+            otherKey: 'colorId',
+            timestamps: false
+        })  
+        Product.belongsToMany(models.Size, { // models.Actor -> Actors es el valor de alias en actor.js
+            as: "sizes",
+            through: 'ProdSize',
+            foreignKey: 'productId',
+            otherKey: 'sizeId',
+            timestamps: false
+        })  
+        Product.belongsToMany(models.Cart, { // models.Actor -> Actors es el valor de alias en actor.js
+            as: "carts",
+            through: 'ProdCart',
+            foreignKey: 'productId',
+            otherKey: 'cartId',
+            timestamps: false
+        })  
+        
 
-     generateId: () => {
-       let productos =product.all();
-       console.log("hola estoy en generateid")
-       
-       let lastuser=productos.pop(); 
-       if (lastuser) {
-        console.log()   
-        return lastuser.id+1
-        }
-       else
-       return 1
-/* generar ids con contador de 1  */
-
-    },
-     searchByField :  (field,text ) => {
-        let filePath = path.resolve(__dirname,"../products.json");
-        let dataFile = fs.readFileSync(filePath,"utf-8");
-        let data = JSON.parse(dataFile);
-        return data.filter(e => e[field] === text);
 
 
     }
 
-}
+    return Product
+};

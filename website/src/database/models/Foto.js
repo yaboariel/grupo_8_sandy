@@ -24,7 +24,7 @@ module.exports = (sequelize, dataTypes) => {
     Foto.associate = function (models) {
             Foto.belongsTo(models.Product, { // models.Genre -> Genres es el valor de alias en genres.js
                 as: "product",
-                foreignKey: "product_id"
+                foreignKey: "productId"
             })
             
         

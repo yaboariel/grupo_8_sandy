@@ -1,3 +1,6 @@
+/*Home page----------------------------- */
+
+
 const path = require('path');
 const productDB = require(path.resolve(__dirname,"..","database","models","product"));
 const products= productDB.all(); 

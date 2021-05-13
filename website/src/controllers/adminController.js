@@ -1,81 +1,120 @@
 const path = require('path');
 const fs = require('fs');
-
-
-const productDB = require(path.resolve(__dirname,"..","database","models","product"));
+const DB = require(path.resolve(__dirname,"..","database","models"));
+const Op = DB.Sequelize.Op;
+const Product= DB.Product;
+const title= "Sandy | ADMIN";
+/*const productDB = require(path.resolve(__dirname,"..","database","models","product"));*/
 
 module.exports = {
     index: (req,res) => {
-        return res.render(path.resolve(__dirname, '../views/admin/administrar'),{productos:productDB.all(), styles: ["master.css", "detail.css"], title: "Sandy | ADMIN"});
+        Product
+        .findAll()
+        .then(productos => {
+              res.render(path.resolve(__dirname, '../views/admin/administrar'),{productos, styles: ["master.css", "detail.css"], title});
+        })
+        .catch(error => res.send(error))
     },
     /*Por get */
     create: (req,res) =>{
-        let productos=productDB.all();
-        res.render(path.resolve(__dirname, '../views/admin/create'),{productos, styles: ["master.css", "detail.css"], title: "Sandy | Create"});
+        Product
+        .findAll()
+        .then(productos => {
+              res.render(path.resolve(__dirname, '../views/admin/create'),{productos, styles: ["master.css", "detail.css"], title});
+        })
+        .catch(error => res.send(error))   
+        
     },
     /* Por post */
     save: (req,res) => {
-        const filename= req.file.filename
-        productDB.write(req.body,filename);
+         
+        const _body= req.body;
         
-        res.redirect('/administrar');
+        
+        _body.nombre = req.body.nombre,
+        _body.descripcion =req.body.descripcion,
+        _body.precio= req.body.precio,
+        _body.descuento=req.body.descuento,
+        _body.filename= req.file ? req.file.filename : ""
 
-/*
-        return res.render(path.resolve(__dirname, '../views/admin/'),{styles: ["master.css", "createProduct.css"], title: "Sandy | Agregar Producto"});*/
-    },
+        Product 
+        .create(_body)
+        .then(producto => res.redirect('/administrar') );
+      
+         },
 
     show: (req,res) => {
-                res.render(path.resolve(__dirname, '../views/admin/detail'), {calzado:productDB.one(req.params.id),styles: ["master.css", "detail.css"], title: "Sandy | Detalle"})
+        Product
+        .findByPk(req.params.id)
+        .then(calzado =>{ res.render(path.resolve(__dirname, '../views/admin/detail'), {calzado,styles: ["master.css", "detail.css"], title})
+                } )
+                
      
     },
     /* Por Get  */
     edit: function (req, res) {
-    let productoaEditar = productDB.one(req.params.id);
+        Product
+        .findByPk(req.params.id)
+        .then(calzado =>{ res.render(path.resolve(__dirname, '../views/admin/edit'), {calzado,styles: ["master.css", "detail.css"], title})
+                } )
+              
 
-    return res.render(path.resolve(__dirname, '../views/admin/edit'), { productoaEditar, styles: ["master.css", "editProduct.css"], title: "Sandy | Edit" });
     },
     
     /* Por post */
     update: (req,res) => {
         res.send('Got a PUT request at /user')
-        let todos=productDB.all();
-        req.body.id = req.params.id;
-        req.body.foto = req.file ? req.file.filename : req.body.oldImagen;
-        let productUpdate = todos.map(uno =>{
-            if(uno.id == req.body.id){
-                uno.title=req.body.title;
-                uno.descripcion=req.body.descripcion;
-                uno.precio=req.body.precio;
-                uno.descuento=req.body.descuento;
-                uno.foto='/images/'+req.body.foto; 
-                
-            }
-            return uno;
-        })
+        const _body=req.body;
+               
+        _body.title=req.body.title;
+        _body.descripcion=req.body.descripcion;
+        _body.precio=req.body.precio;
+        _body.descuento=req.body.descuento;
+        _body.fotoId=req.file ? req.file.filename : req.body.oldImagen;
+        Product
+        .update(_body ,{where: { 
+                            id: req.params.id
 
-        
-        let productActualizar = JSON.stringify(productUpdate,null,2);
-        console.log(productActualizar);
-        fs.writeFileSync(path.resolve(__dirname,'../database/products.json'),productActualizar);
-        res.redirect('/administrar');
-    },
+        }})
+        .then(calzado => { res.redirect('/administrar')})
+        .catch(error => res.send(error))
+            
+        },
     destroy: (req,res) =>{
+        Product
+        .destroy({
+                where: {
+                    id:req.params.id
+
+                }, 
+                force:true
+
+        })
+        .then(confirm => {
+                res.redirect('/administrar');
+        })
         
-        let todos=productDB.all();
-        const productoDeleteId = req.params.id;
-        const productosFinal = todos.filter(uno => uno.id != productoDeleteId);
-        console.log(productosFinal)
-        let productosGuardar = JSON.stringify(productosFinal,null,2)
-        fs.writeFileSync(path.resolve(__dirname, '../database/products.json'),productosGuardar);
-        res.redirect('/administrar');
-    }
+    },
 
-    
-    
-
-
-
+    search: (req,res) =>{
+        Product.findAll({
+                    where:{
+                        name: {[Op.like]: `%${req.query.buscar}%`}
+                    }
+        })
+        .then(resultado => { res.render(path.resolve(__dirname,"..","views","admin","administrar"),{calzados:resultado})})
+        .catch(error=> res.send(error))      
+         
+        }
+        
 }
+
+    
+    
+
+
+
+
 
 
 
