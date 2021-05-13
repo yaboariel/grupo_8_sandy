@@ -95,6 +95,8 @@ Sprint 6: https://trello.com/invite/b/wpNy3m2L/8b2742628274f7018e5a08b17352c42a/
 
 Sprint 7: https://trello.com/invite/b/GmKH9tDr/a73434c12ba9947be261443c3bcb0cc1/sprint-7
 
+Sprint 8: https://trello.com/invite/b/nWA8LrSo/e5088c1786e5301caf2d5d3fe36bf5f2/sprint-8
+
 - En Dbdesigner se armo el DER. Este archivo que esta en la raiz es el resultado: 
 - sandie__dynobird.com__2021-04-16 16_29_39.png
 - La estructura para crear la db este en: structure.sql
