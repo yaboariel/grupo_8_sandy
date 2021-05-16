@@ -11,7 +11,7 @@ module.exports = {
 
         return res.render(path.resolve(__dirname, '../views/web/home'),{products:result, styles:["master.css","home.css"], title:"Sandy titulo"});
     },
-    
+
     cart : (req,res) =>{
         return res.render(path.resolve(__dirname, '../views/web/cart'),{styles: ["master.css", "cart.css", "detail.css"], title: "Sandy | Carrito"});
     }
