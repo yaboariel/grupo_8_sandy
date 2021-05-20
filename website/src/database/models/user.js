@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         address: {
             type: dataTypes.STRING(255),
-            allowNull: false
+            allowNull: true
         },
         email: {
             type: dataTypes.STRING(255),
@@ -40,7 +40,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         cartId: {
             type: dataTypes.BIGINT(10),
-            allowNull: false
+            allowNull: true
         }
         
         

@@ -1,7 +1,54 @@
 const path = require('path');
+const fs = require('fs');
+const {Product, Category} = require('../database/models/');
+
 const productDB = require(path.resolve(__dirname,"..","database","models","product"));
 
 module.exports = {
+
+    index: function(req,res){
+        const calzados = Product.findAll();
+        const categorias = Category.findAll();
+        console.log(categorias)
+        Promise.all([calzados,categorias])
+        .then(([calzados,categorias]) =>{
+            res.render(path.resolve(__dirname , '..','views','product','products') , {calzados,categorias});
+        })           
+        .catch(error => res.send(error))
+    },
+
+    categorias: (req,res) =>{
+       //return res.send(req.query.categoria);
+       const categorias = Category.findAll();
+       const calzados = Product
+       .findAll({
+           where: {categoryId : req.query.categoria},
+           include: [{association: 'category'}]
+       })
+       Promise.all([calzados,categorias])
+       .then(([calzados,categorias]) =>
+           //return res.send(platoComida);
+           res.render(path.resolve(__dirname, '..','views','product','products'), {calzados,categorias})
+       )        
+    },
+
+    show: (req,res) => {
+        Product
+        .findByPk(req.params.id, {
+            include: ['category']
+        })
+        .then(calzado =>{
+            //return res.send(platoComida);
+            res.render(path.resolve(__dirname, '..','views','product','detail'), {calzado });
+        })
+    },
+
+}
+
+
+
+/*
+
     show: (req,res) => {
         return res.render(path.resolve(__dirname, '../views/product/detail'),{styles: ["master.css", "detail.css"], title: "Sandy | Detalle"});
     },
@@ -12,6 +59,9 @@ module.exports = {
         return res.render(path.resolve(__dirname, '../views/product/createProduct'),{styles: ["master.css", "createProduct.css"], title: "Sandy | Detalle"});
     }
 }
+
+*/
+
 
 /*
 

@@ -2,6 +2,10 @@ const express = require ( 'express' );
 const router=express.Router();
 const userController = require('../controllers/userController');
 const path = require('path');
+//Requerir el modulo de los controladores
+const usuariosController = require(path.resolve(__dirname, '../controllers/userController'));
+
+
 
 //Aquí requiero la Base  de Datos.   Esto lo hago para validar si el usuario está o no ya registrado
 const db = require('../database/models/');
@@ -23,8 +27,7 @@ const {
     body
 } = require('express-validator');
 
-//Requerir el modulo de los controladores
-const usuariosController = require(path.resolve(__dirname, '../controllers/userController'));
+
 
 //Aquí aperturo mi archivo de usuarios, ya que al registrarse un usuario es conveniente buscar que no exista una ya registrado con el mismo email o id o el campo que utlicen para identificar al usuario.
 

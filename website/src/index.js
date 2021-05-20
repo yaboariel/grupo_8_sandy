@@ -11,6 +11,7 @@ const cookieParser = require('cookie-parser');
 const mantenimiento = require('./middlewares/mantenimiento');
 //Requerir el middleware que controla si el usuario está o no Logueado
 const acceso = require('./middlewares/acceso');
+const carritoCantidadMiddleware = require('./middlewares/carritoCantidad');
 
 
 app.set('puerto', process.env.PORT || 3000);
@@ -28,6 +29,24 @@ app.use('/',webRoutes);
 /*Descomente la siguiente linea, asi que ya estaria funcionando la conexion*/
 const productRoutes = require( path.resolve(__dirname,"routes",'productRoutes'));
 app.use('/productos',productRoutes);
+
+
+app.use(session({
+    secret : 'topSecret',
+    resave: true,
+    saveUninitialized: true,
+}))
+
+//Aqui coloco el Middleware para activar lo referido a las cookies
+app.use(cookieParser());
+
+//Middleware de aplicación que se encarga de controlar si el usuario está logueado o no.
+app.use(acceso);
+
+
+//Aquí llamo a mi middleware para saber la cantidad de elementos que tiene el carrito
+app.use(carritoCantidadMiddleware);
+
 
 const userRoutes = require( path.resolve(__dirname,"routes",'userRoutes'));
 app.use('/usuarios',userRoutes);
@@ -56,16 +75,5 @@ Si un controlador de la tienda de sesión no implementa el comando táctil, ento
 
 */
 
-app.use(session({
-    secret : 'topSecret',
-    resave: true,
-    saveUninitialized: true,
-}))
-
-//Aqui coloco el Middleware para activar lo referido a las cookies
-app.use(cookieParser());
-
-//Middleware de aplicación que se encarga de controlar si el usuario está logueado o no.
-app.use(acceso);
 
 

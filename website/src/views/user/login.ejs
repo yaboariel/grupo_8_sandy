@@ -1,93 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<%- include("../partials/head")  %>     
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Registrar</title>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
-	<link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-	<main>
-		<form action="" class="formulario" id="formulario">
-			<!--Usuario -->
-			<div class="formulario__grupo" id="grupo__usuario">
-				<label for="usuario" class="formulario__label">Usuario</label>
-				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="usuario" id="usuario">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
-				</div>
-				<p class="formulario__input-error"><b>Usuario Invalido</b> incluya numeros, letras y guion bajo unicamente </p>
-			</div>
-
-			<!--Contraseña -->
-			<div class="formulario__grupo" id="grupo__password">
-				<label for="password" class="formulario__label">Contraseña</label>
-				<div class="formulario__grupo-input">
-					<input type="password" class="formulario__input" name="password" id="password">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
-				</div>
-				<p class="formulario__input-error"><b>Contraseña Invalida</b> 6 - 12 dígitos </b></p>
-			</div>
-        
-			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" class="formulario__btn">Crear Cuenta</button>
-			</div>
-        
-		</form>
-
-	</main>
-  <!-- Footer -->
-  <%- include('../partials/footer') %>
-  <script src="/js/formulario.js"></script>
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-      
-</body>
-</html>
-
-
-<!-- old code 
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<%- include("../partials/head")  %> 
+  <%- include('../partials/head') %>
+  <body>
+    <div class="container-fluid">
+        <%- include('../partials/navBar')%>  
+        <!-- Cuerpo principal -->
+        <section class="row">
+          <article class="col-12  card pt-5" >
+                  <div class="card-body">
+                    <h1 class="card-title text-center">Iniciar Sesión</h1>
+                    <h3 class="text-center" >Introduzca su correo y contraseña.</h3>
 
-      
+                  </div>
+          </article>
+      </section>
 
-<body>    
-
-    <%- include('../partials/header')   %>
-
-    <main>
-
-        <h2 id='titulos-1' class= 'titles' >Ingresá a tu cuenta</h2>
-        
-        <form>
-            <div class='container-input'>
-                <input type='text' id='nombreUsuario' placeholder="Télefono, e-mail o usuario" name='nombreUsuario'>
+        <section class="bg-home pt-15">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 mx-auto bg-light pt-2 ">
+                        <!--Aquí muestro los errores del lado del Js-Front -->
+                        <div>
+                            <ul id="errores"> </ul>
+                        </div>
+                            <!-- Aquí acomode los errores para que se vean mejor y Edu no se Angustie. Abrazos.--->
+                            <% if(typeof(errors) != 'undefined'){%>
+                                <ul class="alert alert-danger">
+                                    <% errors.forEach(error => { %>
+                                        <li><%= error.msg%></li>
+                                    <%});%>
+                                </ul>
+                            <%}%>    
+                   
+                        <div class="signup-form">
+                            <form class="formulario" id="formulario" action="/usuarios/login" method="POST">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="email" placeholder="Email" value="<%=typeof old == 'undefined' ? '':old.email %>">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" name="password" placeholder="Contraseña" >
+                                </div>
+                                <div class="form-group">
+                                  <input type="checkbox" name="recordarme"><label class="checkbox-inline">Recordarme</label>
+                                </div>
+                                <div class="form-group ">
+                                    <button type="submit" class="btn btn btn-info">Ingresar</button>
+                                </div>
+                            </form>
+                            <div class="text-center mb-3"><a href="/usuarios/registro">Aun no poseo una cuenta</a></div>
+                        </div>
+                    </div>                        
+                </div>
             </div>
-            <div class='container-input'>
-                <input type='password' id='password' placeholder="Clave" name='pasword'>
-            </div>
-            <div class='container-button'>
-                <button type='submit' id='boton-enviar'><a class='send-text' href="/">Continuar</a></button>
-            </div>
-        </form>
-
-        <h4 id='titulos-1' class= 'titles' >¿No tenés cuenta?</h4>
-
-        <form>
-            <div class='container-button'>
-                <button type='submit' id='boton-enviar'><a class='send-text' href="/register">Crear Cuenta</a></button>
-            </div> 
-        </form>
-
-    </main>
-
-    <%- include('../partials/footer')   %>
-
+        </section>
+        <!-- Footer -->
+        <%- include('../partials/footer') %>
+        <script src="/js/login.js"></script>
 </body>
 </html>
 
- -->
+
+
+
+

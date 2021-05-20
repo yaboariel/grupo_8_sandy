@@ -50,7 +50,8 @@ let provincias = provincia.sort(function (a, b) {
 const userController = {
 
     login: function(req,res){
-        res.render(path.resolve(__dirname, '../views/user/login'));
+        res.render(path.resolve(__dirname, '../views/user/login'),{styles:["master.css"/*,"login-style.css"*/],title:"Login - Sandy"})
+       
     },
     ingresar: (req, res) => {
 		
@@ -60,19 +61,18 @@ const userController = {
         let errors = validationResult(req);
         
         let usuarioLogueado;
-        
       /*-----Aquí programe un flter para verificar si el usuario está registrado o  no--------*/
         usuarioLogueado = users.filter(function (user) {
           return user.email == req.body.email && 
           bcrypt.compareSync(req.body.password, user.password)
         });
         
-        
         if (usuarioLogueado == "" ) {
-          res.render(path.resolve(__dirname, '../views/user/login'),{ errors: [{ msg: "Credenciales invalidas" }] });
+          res.render(path.resolve(__dirname, '../views/user/login'),{styles:["master.css"/*,"login-style.css"*/],title:"Login - Sandy",errors: [{ msg: "Credenciales invalidas" }] });
           
         } else {
           //Aquí guardo en SESSION al usuario logueado
+          
           req.session.usuario = usuarioLogueado[0];
           
         }
@@ -88,7 +88,7 @@ const userController = {
       //Este código lo comente ya que así lo usamos pero cuando buscamos las provincias en un archivo en formato JSON. Pero ahora usamos una API externa
       //  res.render(path.resolve(__dirname, '../views/usuarios/registro'), {provincias});
 
-      res.render(path.resolve(__dirname, '../views/user/register'));
+      res.render(path.resolve(__dirname, '../views/user/register'),{styles:["master.css"/*,"login-style.css"*/],title:"Registrarse - Sandy"});
     },
     //Este es el método donde guardo al usuario que se está registrando
     create: (req, res) => {
@@ -106,19 +106,23 @@ const userController = {
       // - Hasheamos la contraseña
 
       let user = {
-        firstName:req.body.first_name,
-        lastName: req.body.last_name,
+        username: req.body.user_name,
+        nombre:req.body.first_name,
+        apellido: req.body.last_name,
         email:req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
        /* provincia: Number(req.body.provincia),*/
-        avatar: req.file ? req.file.filename : '',
+        image: req.file ? req.file.filename : '',
         role: 1
       };
 
       User
       .create(user)
       .then((storedUser) => {
-          return  res.redirect('/login');
+        
+          return  res.redirect('/usuarios/login');
+          
+          
       })
       .catch(error => console.log(error));
     },

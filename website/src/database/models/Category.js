@@ -2,34 +2,34 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Category';
     let cols = {
         id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        // created_at: dataTypes.TIMESTAMP,
-        // updated_at: dataTypes.TIMESTAMP,
-        name: {
-            type: dataTypes.STRING(100),
-            allowNull: false
-        }
+        name: dataTypes.STRING,
     };
-    let config = {
-        timestamps: true,
-        createdAt: 'createdAt',
-        updatedAt: 'updatedAt',
-        deletedAt: false
-    }
-    const Category = sequelize.define(alias, cols, config); 
+    /*let config = {
+        tableName: 'categories',
+        timestamps: false
+    };*/
+    const Category = sequelize.define(alias, cols) 
+    //Aquí creo la relación con la tabla Dishes  - OJo: Relación de 1 a muchos
+    Category.associate = function(models){
+        Category.hasMany(models.Product,{
+                as: 'products',
+                foreignKey: 'categoryId'})}   
+    return Category
+}
 
-    Category.associate = function (models) {
-        Category.hasMany(models.Product, { // models.Movies -> Movie es el valor de alias en movie.js
-            as: "products", // El nombre del modelo pero en plural
-            foreignKey: "categoryId"
-        })
-            
-        
-    }
+
+
     
 
-    return Category
-};
+
+
+
+
+
+
+
+
