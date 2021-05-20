@@ -28,8 +28,8 @@ let alias = 'Cart';
     };
     let config = {
         timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt',
         deletedAt: false
     }
     const Cart = sequelize.define(alias, cols, config); 

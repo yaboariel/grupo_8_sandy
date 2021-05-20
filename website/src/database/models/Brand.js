@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         timestamps: true,
         createdAt: 'createdAt',
-        updatedAt: 'updated_at',
+        updatedAt: 'updatedAt',
         deletedAt: false
     }
     const Brand = sequelize.define(alias, cols, config); 

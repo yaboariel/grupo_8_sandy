@@ -30,7 +30,7 @@ const productRoutes = require( path.resolve(__dirname,"routes",'productRoutes'))
 app.use('/productos',productRoutes);
 
 const userRoutes = require( path.resolve(__dirname,"routes",'userRoutes'));
-app.use('/usuario',userRoutes);
+app.use('/usuarios',userRoutes);
 
 const adminRoutes = require( path.resolve(__dirname,"routes",'adminRoutes'));
 app.use('/administrar',adminRoutes);

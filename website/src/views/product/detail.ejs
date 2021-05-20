@@ -1,241 +1,56 @@
-<!DOCTYPE html>
+<!--Pendiente adaptar esto-->
+
+<!doctype html>
 <html lang="es">
-<head>
-    
-    <%- include('../partials/head')   %>
-    <title>Detalle del Producto</title>
-</head>
-<body>
-    <!-- Header -->
-    <%- include('../partials/header')   %>
-    <!-- Main -->
-    <main>
-        <!-- Detalles del producto-->
-        <section class="pd-top-section">
-            <!-- Titulo y imagenes-->
-            <section class="pd-images-container main-container">
-                <!-- Subcontenedor de titulo -->
-                <div id="pd-title-container">
-                    <h1 class="pd-title">Crocs Classic Unisex</h1>
-                </div>
-                <!-- Subcontenedor de imagenes --> 
-                <div class="pd-images-subcontainer">
-                    <!-- Imagen principal -->
-                    <figure class="pd-main-image-container">
-                        <img src="\images\crocs-classic-b.jpg" alt="crocs-classic-b">
-                    </figure>
-                    <!-- Galeria de thumbnails -->
-                    <section class="pd-gallery-container">
-                        <figure class="pd-gallery-detail glowing-border">
-                            <img src="\images\crocs-classic-b.jpg" alt="crocs-classic-b">
-                        </figure>
-                        <figure class="pd-gallery-detail glowing-border">
-                            <img src="\images\crocs-classic-b-2.jpg" alt="crocs-classic-b">
-                        </figure>
-                        <figure class="pd-gallery-detail glowing-border">
-                            <img src="\images\crocs-classic-b-3.jpg" alt="crocs-classic-b">
-                        </figure>
-                        <figure class="pd-gallery-detail glowing-border">
-                            <img src="\images\crocs-classic-b-4.jpg" alt="crocs-classic-b">
-                        </figure>
-                    </section>
-                </div>
-            </section>
-            <!-- Acciones y descripciones -->
-            <aside class="pd-sidebar">
-                <!-- Variaciones -->
-                <section class="pd-variations-container main-container">
-                    <form id="pd-var" class="pd-variations-form" action="" method="GET">
-                        <!-- Talle -->
-                        <article class="pd-variations-size glowing-border">
-                            <label for="pd-variations-size">Talle:</label>
-                            <select name="pd-size" id="pd-variations-size" required>
-                                <option value="" disabled selected>Seleccione un talle</option>
-                                <option value="35-36-M4/W6">35-36 M4/M6</option>
-                                <option value="Negro">36-37 M5/W7</option>
-                                <option value="37-38-M6/W8">37-38 M6/W8</option>
-                                <option value="38-39-M7/W9">38-39 M7/W9</option>
-                                <option value="39-40-M8/W10">39-40 M8/W10</option>
-                                <option value="40-40-M9/W11">40-40 M9/W11</option>
-                                <option value="41-42-M10/W12">41-42 M10/W12</option>
-                                <option value="42-43-M11">42-43 M11</option>
-                                <option value="43-44-M12">43-44 M12</option>
-                            </select>
-                        </article>
-                        <!-- Colores -->
-                        <article class="pd-variations-color glowing-border">
-                            <label for="pd-color">Color:</label>
-                            <select name="pd-color" id="pd-color" required>
-                                <option value="" disabled selected>Seleccione un color</option>
-                                <option value="Blanco">Blanco</option>
-                                <option value="Negro">Negro</option>
-                                <option value="Amarillo">Amarillo</option>
-                                <option value="Rojo">Rojo</option>
-                                <option value="Verde">Verde</option>
-                                <option value="Azul">Azul</option>
-                            </select>
-                        </article>
-                        <!-- Cantidad -->
-                        <article class="pd-variations-quantity glowing-border">
-                            <label for="pd-quantity">Cantidad:</label>
-                            <input type="number" min="1" max="100" value="1">
-                        </article>
-                    </form>
-                </section>
-                <!-- Accion de compra -->
-                <section class="pd-buy-container main-container">
-                    <article class="pd-buy-subcontainer">
-                        <!-- Comprar -->
-                        <button type="submit" class="pd-buy-prompt-button hover-button-blue focus-button-blue" form="pd-var" formaction="/carrito">
-                            <p>Comprar "Crocs Classic Originales Unisex" ahora</p>
-                        </button>
-                        <!-- Subcontenedor precio y carro -->
-                        <div class="pd-buy-tags">
-                            <!-- Precio $ -->
-                            <div class="pd-buy-tags-price-container">
-                                <p>$3500</p>
-                            </div>
-                            <!-- Agregar al carro -->
-                             <button type="submit" class="pd-buy-tags-cart-button hover-button-pink focus-button-pink" form="pd-variations-form" formaction="">
-                                <p>O añadir al carro</p>
-                            </button>
+  <%- include('../partials/head') %>
+  <body>
+    <div class="container-fluid">
+      <%- include('../partials/navBar') %>  
+
+        <!-- Cuerpo principal -->
+        <section class="row">
+          <article class="col-12  card pt-5" >
+                  <div class="card-body">
+                    <h1 class="card-title text-center">Detalle del Plato</h1>
+                  </div>
+          </article>
+      </section>
+
+        <section class="bg-home pt-4">
+            <div class="container">
+                <div class="row" >
+                    <div class="col-6  bg-light ">
+                            <ul class="list-group">
+                                <li class="list-group-item">Id: <%= platoComida.id%></li>
+                                <li class="list-group-item">Nombre: <%= platoComida.name%></li>
+                                <li class="list-group-item">Categoria: <%= platoComida.category.name%></li>
+                                <li class="list-group-item">Descripción: <%= platoComida.description%></li>
+                                <li class="list-group-item">Precio: <%= platoComida.price%></li>
+                                <li class="list-group-item">Descuento: <%= platoComida.discount%></li>
+                            </ul>
                         </div>
-                    </article>
-                </section>
-                <!-- Caracteristicas principales -->
-                <section id="pd-specs-container" class="main-container">
-                    <h2 class="pd-specs-title">Características principales</h2>
-                    <!-- Lista -->
-                    <ul class="pd-specs-list">
-                       <li>Marca: Crocs</li>
-                       <li>Modelo: Crocband</li>
-                       <li>Genero: Hombre</li>
-                       <li>Tipo de calzado: Ojota</li>
-                       <li>Material de suela: Croslite</li>
-                    </ul>
-                </section>
-                <!-- Descripcion -->
-                <section id="pd-description-container" class="main-container">
-                    <h2 class="pd-description-title">Descripción</h2>
-                    <p class="pd-description">
-                        Deslízate con tus suecos favoritos y disfruta un ajuste a medida,
-                        un diseño amigable al agua y un formato ventilado para una mejor respiración.
-                        Los puertos de ventilación proveen respiración y ayudan a drenar el agua y la suciedad.
-                        Material Croslite completamente moldeado para un confort Crocs.
-                        Consultá la medidas de las plantillas en la Guía de talles que se encuentra encima del precio de la publicación.
-                    </p>
-                </section>
-            </aside>
-        </section>
-        <!-- Preguntas y respuestas/ misc -->
-        <section class="pd-middle-section">
-            <!-- Preguntas y respuestas -->
-            <section class="pd-questions-container main-container">
-                <h2 class="pd-questions-title">Preguntas y respuestas</h2>
-                <h3 class="pd-questions-subtitle">Preguntar al vendedor</h3>
-                <!-- Input para preguntas -->
-                <article class="pd-questions-subcontainer">
-                    <form action="" class="pd-questions-form" method="POST">
-                        <textarea name="question" placeholder="Escribí tu pregunta..."
-                        autocomplete="off" rows="1"maxlength="2000" required></textarea>
-                        <!-- Preguntar -->
-                        <input type="submit" value="Preguntar" class="pd-questions-form-askbutton hover-button-blue focus-button-blue">
-                    </form>
-                </article>
-                <!-- Preguntas realizadas -->
-                <article class="pd-questions-questionlist">
-                    <h3 class="pd-questions-questionlist-subtitle">Preguntas realizadas</h3>
-                    <!-- Q&A -->
-                    <article class="pd-questions-questionlist-item">
-                        <!-- Pregunta -->
-                        <div class="pd-questions-questionlist-item-question">
-                            <p>Hola! Hay Stock? Hace envios a Cordoba?</p>
-                        </div>
-                        <!-- Respuesta -->
-                        <div class="pd-questions-questionlist-item-answer">
-                            <p>Buenas tardes! Si, tenemos stock del producto. Hacemos envios a todo el pais!</p>
-                        </div>
-                    </article>
-                </article>
-            </section>
-            <!-- Informacion extra/miscelanea -->
-            <section class="pd-middle-section-misc main-container">
-                <h2><i class="fas fa-info-circle"></i>   Cómo cuidar mis Crocs</h2>
-                <div class="pd-middle-section-misc-item">
-                    <p>· Los modelos que lleven materiales más delicados
-                        se limpian por un paño húmedo. Los que son solo de Croslite con agua fría
-                         y jabón.
-                    </p>
-                    <p>· No expongas tus Crocs a altas temperaturas o al sol intenso, 
-                        el calor puede llegar a deformarlas.
-                    </p>
+                        <div class="col-6  bg-light ">
+                              <figure class="form-group">
+                                <img class="w-100 " src="/images/platos/<%= platoComida.image%>" alt="Plato de comida">
+                                <form action="/carrito/adicionarAlCarrito" method="post" class="form-inline" >
+                                  <!--Pendiente con esto, constituye una forma de poder pasar valores desde nuestra vista al controlador  (Así lo recibo en controlador:  req.body.productoId)-->
+                                  <input type="hidden"  name="productId" value="<%= platoComida.id%>">
+                                  
+                                  
+                                  <button class="btn btn-success" type="submit">AGREGAR AL CARRITO</button>
+                                  <label for="cantidad">Cantidad</label>
+                                  <input  class="form-control" type="number" id="cantidad" name="cantidad" value="1">
+                                </form>
+                          </div> 
+                        <a class="btn btn-danger" href="/productos">Volver</a>
+                    </div>                        
                 </div>
-            </section>
-        </section>
-        <!-- Productos recomendados -->
-        <section id="pd-bottom">
-            <h2 class="pd-bottom-subtitle">Productos recomendados</h2>
-            <!-- Productos recomendados -->
-            <div class="pd-bottom-gallery">
-                <!-- Producto 1 -->
-                <article class="pd-bottom-gallery-item main-container">
-                    <!-- Imagen -->
-                    <section class="pd-bottom-gallery-item-image">
-                        <img src="\images\crocs-st-c.webp" alt="">
-                    </section>
-                    <!-- Nombre -->
-                    <section class="pd-bottom-gallery-item-name"><p>
-                        Crocs Santa Cruz Men
-                    </p></section>
-                    <!-- Precio -->
-                    <section class="pd-bottom-gallery-item-price">$15000</section>
-                </article>
-                <!-- Producto 2 -->
-                <article class="pd-bottom-gallery-item main-container">
-                    <!-- Imagen -->
-                    <section class="pd-bottom-gallery-item-image">
-                        <img src="\images\crocs-pink.webp" alt="">
-                    </section>
-                    <!-- Nombre -->
-                    <section class="pd-bottom-gallery-item-name"><p>
-                        Crocs Mujer Due Sport Clog Pink
-                    </p></section>
-                    <!-- Precio -->
-                    <section class="pd-bottom-gallery-item-price">$15000</section>
-                </article>
-                <!-- Producto 3 -->
-                <article class="pd-bottom-gallery-item main-container">
-                    <!-- Imagen -->
-                    <section class="pd-bottom-gallery-item-image">
-                        <img src="\images\crocs-baya.webp" alt="">
-                    </section>
-                    <!-- Nombre -->
-                    <section class="pd-bottom-gallery-item-name"><p>
-                        Crocs Sandalias Baya Khaki
-                    </p></section>
-                    <!-- Precio -->
-                    <section class="pd-bottom-gallery-item-price">$15000</section>
-                </article>
-                <!-- Producto 4 -->
-                <article class="pd-bottom-gallery-item main-container">
-                    <!-- Imagen -->
-                    <section class="pd-bottom-gallery-item-image">
-                        <img src="\images\crocs-literide.webp" alt="">
-                    </section>
-                    <!-- Nombre -->
-                    <section class="pd-bottom-gallery-item-name"><p>
-                        Literide Clog Originales Lapi
-                    </p></section>
-                    <!-- Precio -->
-                    <section class="pd-bottom-gallery-item-price">$15000</section>
-                    
-                </article>
             </div>
         </section>
-    </main>
-    <!-- Footer -->
-    <%- include('../partials/footer')   %>
-    <!-- Workaround (evita que se disparen transiciones al cargar la pagina en Chrome) -->
-    <script> </script>
+        <!-- Footer -->
+        <%- include('../partials/footer') %>        <!-- Scripts para Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

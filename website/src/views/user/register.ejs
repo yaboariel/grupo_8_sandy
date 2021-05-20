@@ -1,67 +1,104 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-
-        <title>Sandy Argentina</title> 
-        
-        <%- include("../partials/head")  %> 
-
-        <link rel='stylesheet' href='/css/login-style.css'> 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel='stylesheet' href='/css/normalize.css'> 
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registrar</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="../css/estilos.css">
 </head>
-
 <body>
+	<main>
+		<form action="" class="formulario" id="formulario">
+			<!--Usuario -->
+			<div class="formulario__grupo" id="grupo__usuario">
+				<label for="usuario" class="formulario__label">Usuario</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="daniel_fuentes">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">4 - 16 dígitos incluir unicamente <b>numeros, letras y guion bajo</b></p>
+			</div>
 
-    <%- include('../partials/header')   %>
+			<!--Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Daniel Fuentes">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">4 - 16 dígitos incluir unicamente <b>numeros , letras y guion bajo</b></p>
+			</div>
 
+			<!--Contraseña -->
+			<div class="formulario__grupo" id="grupo__password">
+				<label for="password" class="formulario__label">Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password" id="password">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La contraseña tiene que ser de <b>6 - 12 dígitos </b></p>
+			</div>
 
-    <main>
-        <h2 id='titulos-1' class= 'titles' >Crea tu cuenta</h2>
-        <form>
-            <div class='container-input'>
-                <input class='text-input' type='text' id='nombreCompleto' placeholder="Nombre y Apellido" name='nombreCompleto' required minlength="3">
-            </div>
-            <div class='container-input'>
-                <input class='text-input' type='text' id='nombreUsuario' placeholder="Nombre de usuario" name='nombreUsuario' required minlength="3">
-            </div>
-            <div class='container-input'>
-                <input class='text-input' type='email' id='email' placeholder="Email" name='email' required>
-            </div>
-            <div class='container-input'>
-                <input class='text-input' type='text' id='domicilio' name='domicilio' placeholder="Domicilio" required>
-            </div>
-            <div class='container-input'>
-                <label class='principal-label'>Selecciona tu foto de perfil<i>(opcional)</i></label>
-                <input id='foto-perfil' type='file' name='imgPerfil'>
-            </div>
-            <div class='container-input'>
-                <label class='principal-label' >Creá tu contraseña</label>
-                <input  id='container-5' type='password' name='contraseña' placeholder="contraseña"required>
-            </div>
-            <div class='container-input'>
-                <label class='principal-label' >Confirmá tu contraseña</label>
-                <input  id='container-5' type='password' name='contraseña' placeholder="contraseña"required>
-            </div>
-            <div class='container-button'>
-                <button type='submit' id='boton-enviar'>Enviar</button>
-            </div>
+			<!--Contraseña 2 -->
+			<div class="formulario__grupo" id="grupo__password2">
+				<label for="password2" class="formulario__label">Repetir Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password2" id="password2">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ambas contraseñas deben ser iguales</p>
+			</div>
 
-            </form>
-       
-        <h4 id='titulos-1' class= 'titles' >¿Tenes cuenta?</h4>
-            <br>
-        <form>
-            <div class='container-button'>
-                <button type='submit' id='boton-enviar'><a class='send-text' href="/usuario/ingresar">Ingresa</a></button>
-            </div>
-        </form>
+			<!--Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="daniel_fuentes@correo.com">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener <b>numeros, puntos, letras y guiones bajos</b></p>
+			</div>
 
-   </main>
-   
-   <%- include('../partials/footer')   %>
+			<!--Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="1132665198">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El telefono solo puede contener numeros <b>10 dígitos</b> no incluir espacios u otros caracteres</p>
+			</div>
 
+			<!--Terminos y Condiciones-->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			</div>
 
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellene todos los campos obligatorios y acepte los <b>Terminos y Condiciones</b> </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Crear Cuenta</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Usuario creado correctamente!</p>
+			</div>
+        
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Ingresar</button>
+			</div>
+        
+		</form>
+
+	</main>
+      <!-- Footer -->
+      <%- include('../partials/footer') %>        <!-- Scripts para Bootstrap -->
+      <script src="/js/formulario.js"></script>
+	
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>
+

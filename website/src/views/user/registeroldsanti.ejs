@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+        <title>Sandy Argentina</title> 
+        
+        <%- include("../partials/head")  %> 
+
+        <link rel='stylesheet' href='/css/login-style.css'> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel='stylesheet' href='/css/normalize.css'> 
+
+</head>
+
+<body>
+
+    <%- include('../partials/header')   %>
+
+
+    <main>
+        <h2 id='titulos-1' class= 'titles' >Crea tu cuenta</h2>
+        <form>
+            <div class='container-input'>
+                <input class='text-input' type='text' id='nombreCompleto' placeholder="Nombre y Apellido" name='nombreCompleto' required minlength="3">
+            </div>
+            <div class='container-input'>
+                <input class='text-input' type='text' id='nombreUsuario' placeholder="Nombre de usuario" name='nombreUsuario' required minlength="3">
+            </div>
+            <div class='container-input'>
+                <input class='text-input' type='email' id='email' placeholder="Email" name='email' required>
+            </div>
+            <div class='container-input'>
+                <input class='text-input' type='text' id='domicilio' name='domicilio' placeholder="Domicilio" required>
+            </div>
+            <div class='container-input'>
+                <label class='principal-label'>Selecciona tu foto de perfil<i>(opcional)</i></label>
+                <input id='foto-perfil' type='file' name='imgPerfil'>
+            </div>
+            <div class='container-input'>
+                <label class='principal-label' >Creá tu contraseña</label>
+                <input  id='container-5' type='password' name='contraseña' placeholder="contraseña"required>
+            </div>
+            <div class='container-input'>
+                <label class='principal-label' >Confirmá tu contraseña</label>
+                <input  id='container-5' type='password' name='contraseña' placeholder="contraseña"required>
+            </div>
+            <div class='container-button'>
+                <button type='submit' id='boton-enviar'>Enviar</button>
+            </div>
+
+            </form>
+       
+        <h4 id='titulos-1' class= 'titles' >¿Tenes cuenta?</h4>
+            <br>
+        <form>
+            <div class='container-button'>
+                <button type='submit' id='boton-enviar'><a class='send-text' href="/usuario/ingresar">Ingresa</a></button>
+            </div>
+        </form>
+
+   </main>
+   
+   <%- include('../partials/footer')   %>
+
+
+</body>
+</html> 
+
+
+
+
+
+
+

@@ -5,3 +5,5 @@ config: path.resolve('./website/src/database/config', 'config.js'),
 'seeders-path': path.resolve('./website/src/database/seeders'),
 'migrations-path': path.resolve('./website/src/database/migrations'),
 }
+
+

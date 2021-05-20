@@ -1,0 +1,523 @@
+/*
+  caja-imag{width:voy cambiando y se hace aspect ratio}
+  img{
+    max-width:100%;
+    height: aut
+  }
+*/
+*{
+    font-family: 'Roboto', sans-serif; 
+      box-sizing: border-box;
+      margin:0;
+      padding: 0;
+      line-height: 1.5;
+    }
+   
+   
+  .encabezado {
+                background-color:#012641;
+                padding-bottom:3px;
+                width:100%;
+                position:fixed;   
+                top: 0;
+                height:100px;
+                z-index: 100;
+  
+              }
+  main {
+                margin-top:100px;
+             }
+  
+  /* top envuelve al logo, la barra de busqueda y mensaje de cuotas, salvo para celulares donde oculto las cuotas*/
+  .top        { display:flex;              
+                padding:10px;              
+                justify-content: space-between; 
+                text-align:center;
+                width:90%;
+                margin:auto;
+                box-sizing: border-box;
+              }
+  .logo       {
+                  width:25%;
+              }
+  
+  /*   
+  .barbusqueda {        
+                  width:20%;
+                  
+               }  */        
+  
+  .barbusqueda input[type=text]{
+                margin-top:0px;
+                margin-left:0px;
+                padding: 1px 8px;
+                border: 1px solid lightskyblue;
+                font-size: 0.75rem;
+                
+                     }
+  
+  
+  .cuotas       {              
+                
+                color:silver;
+                font-size:1rem;
+                justify-content: flex-end;
+                display:none;
+              } 
+  
+                            
+                                                  
+    
+              
+  /*Aplicando propiedades al menÃº de las 3 barritas en fdo azul*/
+  .barras {
+            font-size: 12px;
+            background-color:goldenrod;
+            color: white;
+            display: block;
+            margin: auto;
+            text-align: center;
+            max-width: 40px;   
+            padding: 7px;
+            border-radius: 10px;
+          }
+  
+  img  {
+          width: 100%;
+       } 
+  
+  
+  
+  .caja-menu {           background-color: #000000;
+  
+                          }
+  
+  .menu {
+          color:rgb(255, 255, 255);
+          font-size:0.8rem; 
+          padding:10px;
+          width:90%;
+          margin:0 auto; 
+  
+        }   
+  .opciones {text-align:center;}
+  
+  .opciones, .opciones2  {
+              display:none;
+              }
+  
+              .opciones li a {
+                padding-right:25px;
+                color:silver;
+                font-size:0.7rem;
+  
+              }
+                 
+  
+  .opciones2 li a{
+                color:#d7a836;
+                /*font-weight: bold;*/
+                font-size:0.7rem;
+  
+  }
+  /*FOOTER CLASES*/
+  
+  footer {
+    background-color: #012641;
+  }
+  
+  .container-footer{
+      max-width: 1170px;
+      margin:auto;
+      width: 100%;
+      background-color: #012641;
+      padding: 20px 0;
+    }
+    
+  
+  .container-footer2{
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+  ul{
+      list-style: none;
+  }
+          
+  .block{
+    width: 25%;
+    padding: 0 15px;
+  }
+          
+  .block h4{
+    font-size: 18px;
+    color: #C9A836;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+          .block h4::before{
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            background-color: #C0C0C0;
+            height: 2px;
+            width: 50px;
+          }
+          
+          .block ul li{
+            margin-bottom: 10px;
+          }
+          
+          .block ul li a{ /*Letras a Footer*/
+            font-size: 16px;
+            color: #C9A836;
+            text-decoration: none;
+            font-weight: 300;
+            color: white;
+            display: block;
+            transition: all 0.3s ease;
+          }
+          
+          .block ul li a:hover{
+            color: #C9A836;
+            padding-left: 8px;
+          }
+          
+          .block .socialref a{ /*Color Animacion Iconos*/
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255,255,255,0.2);
+            margin:0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #C9A836;
+            transition: all 1s ease;
+          }
+          .block .socialref a:hover{
+            color: #24262b;
+            background-color: white;
+          }
+          
+        
+  #Copyright  {
+                margin-top:25px;
+                text-align:center;
+                color:whitesmoke;
+                margin-bottom: 20px;
+  }
+   
+  
+  /*
+  ********************************************
+  media screen 361px
+  */
+  
+  
+  @media screen and (min-width: 361px) {
+  
+  .encabezado {height:70px}
+  main {
+    margin-top:70px;
+  }
+  .barbusqueda input[type=text]{
+        margin-top:0px;
+       padding: 6px 8px;
+       border-radius: 10px ;
+       margin-top:4px;
+       border: none;
+        font-size: 10px;
+           }
+  .logo       {
+              margin-top:4px;
+        }        
+           
+  
+  .cuotas {              
+            margin-top:8px;
+            font-size:1rem;
+          }           
+  #cuotas2  { display:none;} 
+  
+  .menu { display:flex;
+    flex-wrap: wrap;
+    color:#ffffff;
+    /*font-weight:bold;*/
+     
+  }     
+  
+  .opciones  {
+  /*display: flex;*/
+  list-style: none;
+  margin: 0; 
+  padding: 0; 
+  padding-left: 0px;
+  /*padding-right: 10px;*/
+  
+  justify-content: flex-start;
+  width: 50%;
+  }
+  
+  /*
+  .opciones li{
+      flex: 1;
+    }            
+  */
+  .opciones a{
+  
+    font-size: 1.3rem;
+    text-decoration: none;
+  
+    /*font-weight:bold;  */
+  
+  }
+  .opciones a:hover{
+    color: rgb(128, 0, 0);
+    background-color: white;
+    border-radius: 5px;
+  
+  }
+  
+  .opciones2  {
+    display:none;
+    }
+  
+  
+  .opciones2soloicono {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+  width: 40%;
+  display:none;
+  }
+  
+  
+  
+  /*
+  ***************************************************************************************************
+  media screen 769px
+  
+  */
+  
+  @media screen and (min-width: 769px)  {
+  
+  
+        .encabezado {
+          height:100px;
+      
+        }
+        main {
+          margin-top:100px;
+        }
+        .top {
+          justify-content: space-between; 
+          text-align:center;
+          width:90%;
+          margin:auto;
+        }
+        .logo       {
+          width:17%;
+      }
+                       
+    .barbusqueda input[type=text]
+    {
+      /*float: right;*/
+      
+      margin-left:0px;
+      padding: 10px 50px;
+      border: 1px silver solid;
+      /*margin-top: 8px;
+      margin-right: 16px;*/
+      font-size: 12px;
+           }
+  .cuotas       {              
+            
+            display:block;
+            justify-content: flex-end;
+          }     
+          
+  #cuotas2  { display:none;}    
+       
+  
+  .menu { display:flex;
+      
+  
+                 /* flex-wrap: wrap;*/
+                  color:#ffffff;
+                 /* flex-direction: row;*/
+                /*  font-weight:bold;*/
+                   
+            }     
+      
+  .opciones  {
+        display: flex;
+        list-style: none;
+        margin: 0; 
+        padding-left: 0px;
+        
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 40%;
+                }
+             
+    
+  .opciones li a{
+         
+                  font-size:1rem;
+                  text-decoration: none;
+                  padding-right: 20px;
+                  /*font-weight:bold;  */
+  
+  
+  
+                }
+  .opciones a:hover, .opciones2 a:hover {
+                  color: #c31212;
+                  background-color: white;
+                  border-radius: 10px;
+                  padding:8px;
+  
+                }
+  
+                
+  .opciones2soloicono  { display:none;}                  
+  .opciones2 {
+        display: flex;
+        list-style: none;
+        margin: 0; 
+        padding: 0px; 
+        
+        padding-right: 0px;
+        flex-wrap: wrap;
+        width: 60%;
+        justify-content: flex-end;
+  
+  
+        }
+  .opciones2 li a{          
+                font-size: 1rem;
+                text-decoration: none;
+                /*font-weight:bold;*/
+                padding-left: 10px;
+  
+            }   
+            
+  
+  
+  .barras {
+    display:none
+  
+    }
+  }
+  
+  
+  
+  /*media screen 1000px*****************************************************************************/
+  
+  
+  
+   @media screen and (min-width: 1000px) {
+    
+    .encabezado {
+      height:100px;
+     }
+    main {
+      margin-top:100px;
+    }
+     
+
+    input::-webkit-input-placeholder {
+      font-size: 20px;
+      line-height: 3;
+      padding-left:0px;
+  }
+    .barbusqueda input[type=text]
+    {
+      /*float: right;*/
+      
+      margin-left:0px;
+      padding: 10px 85px;
+      border: 2px silver solid;
+      /*margin-top: 8px;
+      margin-right: 16px;*/
+      font-size: 12px;
+           }
+  
+  
+    .logo {width:10%}
+    .opciones  {
+      width: 35%;
+      justify-content: flex-start;
+  
+    }
+    /*.producto a img {
+      height: 250px;
+  }
+  */
+    .opciones2 {
+      
+      justify-content: flex-end;
+      width:65%;
+  
+    
+      }
+    .opciones li a, .opciones2 li a {
+      font-size:1.1rem;
+  
+    }
+    
+  
+   }
+  
+  @media screen and (min-width: 1200px) {
+    .encabezado {
+  
+      height:120px;
+  
+    }
+    main {
+      margin-top: 120px;
+    }
+    
+    
+  
+  /*
+    .caja-menu {           background-color: #0076CB;
+                            border-bottom:  #0076CB 7px solid;
+  */
+    }
+    .top {justify-content: space-between; 
+          text-align:center;
+          width:90%;
+          margin:auto;
+        }
+  
+    .logo {
+      width: 10%;
+     } 
+     
+    .cuotas       {
+     /* width:60%;*/
+     font-size:large;
+     font-weight:bold;
+     justify-content: flex-end;
+  
+     }
+      
+    .menu {
+      display:flex;
+      justify-content: space-between; 
+    }
+    
+    .icono {
+       margin-left:10px;
+  
+  
+    }
+  
+  }
+  
+  

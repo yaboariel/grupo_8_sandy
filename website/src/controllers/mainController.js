@@ -2,11 +2,31 @@
 
 
 const path = require('path');
-const productDB = require(path.resolve(__dirname,"..","database","models","product"));
-const products= productDB.all(); 
-const result = products.filter(product => product.destacado==true);
+const fs = require('fs');
 
+/*const productDB = require(path.resolve(__dirname,"..","database","models","product"));
+const products= productDB.all(); 
+const result = products.filter(product => product.destacado==true);*/
+const {Product, Category} = require('../database/models/');
 module.exports = {
+    
+
+    index: function(req,res){
+        Product
+        .findAll()
+        .then(product =>{
+            //return res.send(platos)
+            res.render(path.resolve(__dirname, '..','views','web','home'), {products: product, styles:["master.css","home.css"], title:"Sandy titulo"});
+        })           
+        .catch(error => res.send(error))
+    },
+    nosotros: function(req,res){
+        //res.sendFile(path.resolve(__dirname, '../views/web/nosotros.html'));
+        res.render(path.resolve(__dirname, '../views/web/nosotros'));
+    }
+    
+    /*
+    version anterior
     index : (req,res) =>{
 
         return res.render(path.resolve(__dirname, '../views/web/home'),{products:result, styles:["master.css","home.css"], title:"Sandy titulo"});
@@ -15,7 +35,7 @@ module.exports = {
     cart : (req,res) =>{
         return res.render(path.resolve(__dirname, '../views/web/cart'),{styles: ["master.css", "cart.css", "detail.css"], title: "Sandy | Carrito"});
     }
-
+    */
     /*about : (req,res) =>{
         return res.render('about');
     },
@@ -41,3 +61,34 @@ module.exports = {
 */
     
 }
+
+
+/*
+codigo de dani
+
+const path = require('path');
+const fs = require('fs');
+
+//let platos  = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../models/platos.json')));
+const {Dish, Category} = require('../database/models/');
+
+const webController = {
+    index: function(req,res){
+        Dish
+        .findAll()
+        .then(platos =>{
+            //return res.send(platos)
+            res.render(path.resolve(__dirname, '..','views','web','index'), {platos: platos});
+        })           
+        .catch(error => res.send(error))
+    },
+    nosotros: function(req,res){
+        //res.sendFile(path.resolve(__dirname, '../views/web/nosotros.html'));
+        res.render(path.resolve(__dirname, '../views/web/nosotros'));
+    }
+
+}
+module.exports = webController;
+
+
+*/
