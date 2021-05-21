@@ -16,7 +16,7 @@ module.exports = {
         .findAll()
         .then(product =>{
             //return res.send(platos)
-            res.render(path.resolve(__dirname, '..','views','web','home'), {products: product, styles:["master.css","home.css"], title:"Sandy titulo"});
+            res.render(path.resolve(__dirname, '..','views','web','home'), {products: product, styles:["master.css"], title:"Sandy titulo"});
         })           
         .catch(error => res.send(error))
     },

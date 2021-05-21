@@ -6,30 +6,19 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        name: dataTypes.STRING,
+        nombre: dataTypes.STRING,
     };
-    /*let config = {
+    let config = {
         tableName: 'categories',
         timestamps: false
-    };*/
-    const Category = sequelize.define(alias, cols) 
-    //Aquí creo la relación con la tabla Dishes  - OJo: Relación de 1 a muchos
+    };
+    const Category = sequelize.define(alias, cols, config) 
+    //Aquí creo la relación con la tabla productos  - OJo: Relación de 1 a muchos
     Category.associate = function(models){
-        Category.hasMany(models.Product,{
+        Category.belongsTo(models.Product,{
                 as: 'products',
                 foreignKey: 'categoryId'})}   
     return Category
 }
-
-
-
-    
-
-
-
-
-
-
-
 
 

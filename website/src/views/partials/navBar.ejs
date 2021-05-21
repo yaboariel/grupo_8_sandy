@@ -29,16 +29,18 @@
             <a class="nav-link" href="/administrar">Administrar</a>
         </li>
       <%}%>  
-
+      
       <li class="nav-item">
         <a class="nav-link" href="/usuarios/carrito"><ion-icon name="cart-outline"></ion-icon>
-        <span class="badge badge-info"><%= carritoCantidad %> </span></a>
+             <span class="badge badge-info"> <!--Aca debo imprimir carritoCantidad -->  </span></a> 
+
+      
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/usuarios/logout">Cerrar sesión<ion-icon name="log-out-outline"></ion-icon></a>
       </li>
       <li class="nav-item">
-        <img src="/images/usuarios/<%=locals.usuario.avatar %>"    width = '30' style= 'border-radius: 100%;'alt="">
+        <img src="/images/usuarios/<%=locals.usuario.image %>"    width = '30' style= 'border-radius: 100%;'alt="">
       </li>
     <% } else { %>  
 
