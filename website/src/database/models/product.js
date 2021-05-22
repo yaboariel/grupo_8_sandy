@@ -24,12 +24,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         },
-        categoryId: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
-            allowNull: false
-        },
-
-
         fotoId: {
             type: dataTypes.BIGINT(30).UNSIGNED,
             allowNull: false
@@ -73,7 +67,7 @@ module.exports = (sequelize, dataTypes) => {
         });
              
 
-        Product.hasOne(models.Category, { // models.Genre -> Genres es el valor de alias en genres.js
+        Product.belongsTo(models.Category, { // models.Genre -> Genres es el valor de alias en genres.js
             as: "category",
             foreignKey: "categoryId"
         }) ; 

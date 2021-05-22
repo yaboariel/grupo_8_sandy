@@ -2,17 +2,16 @@ const path = require('path');
 const fs = require('fs');
 const {Product, Category} = require('../database/models/');
 
-const productDB = require(path.resolve(__dirname,"..","database","models","product"));
+/*const productDB = require(path.resolve(__dirname,"..","database","models","product"));*/
 
 module.exports = {
 
     index: function(req,res){
         const calzados = Product.findAll();
         const categorias = Category.findAll();
-        console.log(categorias)
         Promise.all([calzados,categorias])
         .then(([calzados,categorias]) =>{
-            res.render(path.resolve(__dirname , '..','views','product','products') , {calzados,categorias});
+            res.render(path.resolve(__dirname , '..','views','product','products') , {calzados,categorias, styles:["master.css"], title:"Sandy - Catalogo de Productos"});
         })           
         .catch(error => res.send(error))
     },
@@ -20,7 +19,8 @@ module.exports = {
     categorias: (req,res) =>{
        //return res.send(req.query.categoria);
        const categorias = Category.findAll();
-       const calzados = Product
+       const calzados = Product;
+       Product
        .findAll({
            where: {categoryId : req.query.categoria},
            include: [{association: 'category'}]
@@ -28,7 +28,7 @@ module.exports = {
        Promise.all([calzados,categorias])
        .then(([calzados,categorias]) =>
            //return res.send(platoComida);
-           res.render(path.resolve(__dirname, '..','views','product','products'), {calzados,categorias})
+           res.render(path.resolve(__dirname, '..','views','product','products'), {calzados,categorias,styles:["master.css"], title:"Sandy - Categoria "})
        )        
     },
 
@@ -39,7 +39,7 @@ module.exports = {
         })
         .then(calzado =>{
             //return res.send(platoComida);
-            res.render(path.resolve(__dirname, '..','views','product','detail'), {calzado });
+            res.render(path.resolve(__dirname, '..','views','product','detail'), {calzado ,styles:["master.css"], title:"Sandy - Producto detalle"});
         })
     },
 

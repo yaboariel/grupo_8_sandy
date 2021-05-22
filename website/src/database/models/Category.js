@@ -8,17 +8,19 @@ module.exports = (sequelize, dataTypes) => {
         },
         nombre: dataTypes.STRING,
     };
+
     let config = {
-        tableName: 'categories',
-        timestamps: false
-    };
+        timestamps: true,
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt',
+        deletedAt: false
+    }
+
     const Category = sequelize.define(alias, cols, config) 
     //Aquí creo la relación con la tabla productos  - OJo: Relación de 1 a muchos
     Category.associate = function(models){
-        Category.belongsTo(models.Product,{
+        Category.hasMany(models.Product,{
                 as: 'products',
                 foreignKey: 'categoryId'})}   
     return Category
 }
-
-

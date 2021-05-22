@@ -1,8 +1,9 @@
 const path = require('path');
 const fs = require('fs');
-const DB = require(path.resolve(__dirname,"..","database","models"));
-const Op = DB.Sequelize.Op;
-const Product= DB.Product;
+const {Product, Category} = require('../database/models/');
+
+
+
 const title= "Sandy | ADMIN";
 /*const productDB = require(path.resolve(__dirname,"..","database","models","product"));*/
 
@@ -17,13 +18,27 @@ module.exports = {
     },
     /*Por get */
     create: (req,res) =>{
+       const categorias = Category.findAll();
+       const calzados = Product;
+       Product
+       .findAll({
+           where: {categoryId : req.query.categoria},
+           include: [{association: 'category'}]
+       })
+       Promise.all([calzados,categorias])
+       .then(([calzados,categorias]) =>
+           //return res.send(platoComida);
+           res.render(path.resolve(__dirname, '..','views','admin','create'), {calzados,categorias,styles:["master.css", "detail.css"], title:"Sandy - Subir Productos "})
+       )                
+       .catch(error => res.send(error))
+/*
         Product
         .findAll()
         .then(productos => {
-              res.render(path.resolve(__dirname, '../views/admin/create'),{productos, styles: ["master.css", "detail.css"], title});
+              res.render(path.resolve(__dirname, '../views/admin/create'),{productos,category, styles: ["master.css", "detail.css"], title});
         })
         .catch(error => res.send(error))   
-        
+ */       
     },
     /* Por post */
     save: (req,res) => {
@@ -35,6 +50,7 @@ module.exports = {
         _body.descripcion =req.body.descripcion,
         _body.precio= req.body.precio,
         _body.descuento=req.body.descuento,
+        _body.categoryId=req.body.Categoria,   
         _body.filename= req.file ? req.file.filename : ""
 
         Product 

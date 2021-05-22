@@ -16,15 +16,15 @@ module.exports = {
         .findAll()
         .then(product =>{
             //return res.send(platos)
-            res.render(path.resolve(__dirname, '..','views','web','home'), {products: product, styles:["master.css"], title:"Sandy titulo"});
+            res.render(path.resolve(__dirname, '..','views','web','home'), {products: product, styles:["master.css"], title:"Sandy"});
         })           
         .catch(error => res.send(error))
     },
     nosotros: function(req,res){
-        //res.sendFile(path.resolve(__dirname, '../views/web/nosotros.html'));
-        res.render(path.resolve(__dirname, '../views/web/nosotros'));
+       
+        res.render(path.resolve(__dirname, '../views/web/nosotros'),{styles:["master.css"], title:"Sandy- About"});
     }
-    
+}    
     /*
     version anterior
     index : (req,res) =>{
@@ -60,7 +60,7 @@ module.exports = {
     }
 */
     
-}
+
 
 
 /*
