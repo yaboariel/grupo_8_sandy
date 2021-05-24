@@ -7,7 +7,7 @@
       <!--Listado de nuestros productos-->
       <section class="row">
         <article class="col-12">
-          <h2 class="display-4 mt-5 pt-4">Los calzados de más interes</h2>
+          <h2 class="display-4 mt-5 pt-4">Los calzados más populares</h2>
         </article>
         <article class="col-12 mt-3">
           <div class="col-md-6  p-0">
@@ -28,18 +28,21 @@
         <% for(let i= 0; i < calzados.length; i++){ %>
           <article class="col-12 col-md-6 col-lg-3 card p-2 efecto tarjeta">
             <figure >
-              <img  src="/images/platos/<%= platos[i].image%> " class="card-img-top w-100 d-block" alt="Plato">
+              <img  src="/images/calzados/<%= calzados[i].imagen%> " class="card-img-top w-100 d-block" alt="Calzado">
             </figure>
-              <% if (calzados[i].discount == 30) { %>
-                <img class="descuento" src="img/promo30.png" alt="Descuento 30%">  
-              <% }else if(calzados[i].discount == 15 ){ %>
-                <img class="descuento" src="img/promo15.png" alt="Descuento 30%">
+              <% if (calzados[i].descuento == 30) { %>
+                <img class="descuento" src="/img/promo30.png" alt="Descuento 30%">  
+              <% }else if(calzados[i].descuento == 15 ){ %>
+                <img class="descuento" src="/img/promo15.png" alt="Descuento 15%">
               <% } %>
             <div class="card-body">
-              <h5 class="card-title"><%= calzados[i].name%></h5>
+              <h5 class="card-title"><%= calzados[i].title%></h5>
+            
+              
+                                
               <h5 class="card-title" >$  <%= calzados[i].price%> </h5>
-              <p class="card-text descripcion"><%= calzados[i].description%> </p>
-              <a href="/productos/detail/<%=calzados[i].id %>" class="btn btn-primary">Ver detalle</a>
+              <p class="card-text descripcion"><%= calzados[i].descripcion%> </p>
+              <a href="/productos/detalle/<%=calzados[i].id %>" class="btn btn-primary">Ver detalle</a>
             </div>
           </article>
         <% } %>

@@ -6,8 +6,7 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        // created_at: dataTypes.TIMESTAMP,
-        // updated_at: dataTypes.TIMESTAMP,
+        
         title: {
             type: dataTypes.STRING(100),
             allowNull: false
@@ -24,8 +23,12 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         },
-        fotoId: {
-            type: dataTypes.BIGINT(30).UNSIGNED,
+        imagen: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        descripcion: {
+            type: dataTypes.STRING(100),
             allowNull: false
         },
         descuento: {
@@ -57,42 +60,45 @@ module.exports = (sequelize, dataTypes) => {
 
     Product.associate = function (models) {
         
-        Product.belongsTo(models.Brand, { // models.Genre -> Genres es el valor de alias en genres.js
+        Product.belongsTo(models.Brand, { 
             as: "brand",
             foreignKey: "brandId"
         });        
-        Product.belongsTo(models.Material, { // models.Genre -> Genres es el valor de alias en genres.js
+        Product.belongsTo(models.Material, { 
             as: "material",
             foreignKey: "materialId"
         });
              
 
-        Product.belongsTo(models.Category, { // models.Genre -> Genres es el valor de alias en genres.js
+        Product.belongsTo(models.Category, { 
             as: "category",
             foreignKey: "categoryId"
         }) ; 
-        Product.belongsTo(models.Foto, { // models.Genre -> Genres es el valor de alias en genres.js
+       /* Product.belongsTo(models.Foto, { // models.Genre -> Genres es el valor de alias en genres.js
             as: "foto",
             foreignKey: "fotoId"
-        })  ;
-        Product.belongsToMany(models.Product, { // models.Actor -> Actors es el valor de alias en actor.js
+        })  ;*/
+        Product.belongsToMany(models.Color, { 
             as: "colors",
-            through: 'Prod_color',
-            foreignKey: 'productId',
+            through: 'prod_color',
+            foreignKey: 'prodId',
             otherKey: 'colorId',
             timestamps: false
         })  ;
-        Product.belongsToMany(models.Size, { // models.Actor -> Actors es el valor de alias en actor.js
-            as: "sizes",
+        
+        
+        Product.belongsToMany(models.Size, { 
+            as: "sizesrel",
             through: 'ProdSize',
-            foreignKey: 'productId',
+            foreignKey: 'prodId',
             otherKey: 'sizeId',
             timestamps: false
-        })  ;
-        Product.belongsToMany(models.Cart, { // models.Actor -> Actors es el valor de alias en actor.js
+        })
+        
+        Product.belongsToMany(models.Cart, { 
             as: "carts",
             through: 'ProdCart',
-            foreignKey: 'productId',
+            foreignKey: 'prodId',
             otherKey: 'cartId',
             timestamps: false
         })  

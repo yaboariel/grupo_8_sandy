@@ -1,6 +1,3 @@
-/**hay que trabajar sobre esta tabla para relacionar con prod-size */
-
-
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Color';
     let cols = {
@@ -25,10 +22,9 @@ module.exports = (sequelize, dataTypes) => {
     const Color = sequelize.define(alias, cols, config); 
 
     Color.associate = function (models) {
-         /*esto hay que cambiarlo con lo que mando edu */
-        Color.belongsTo(models.Product, { 
+        Color.belongsToMany(models.Product, { 
             as: "products",
-            through: 'ProdColor',
+            through: 'prod_color',
             foreignKey: 'colorId',
             otherKey: 'prodId',
             timestamps: false

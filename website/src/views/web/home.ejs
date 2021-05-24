@@ -37,20 +37,20 @@
               <h2 class="display-4 mt-5 pt-5  ">Productos recomendados</h2>
             </article>
             <% for(let i= 0; i < products.length; i++){ %>
-                <%if(products[i].recommended== 1){%>
+                <%if(products[i].destacado== 1){%>
                 <article class="col-12 col-md-6 col-lg-3 card p-2 efecto tarjeta">
                   <figure >
-                    <img  src="/images/calzados/<%= products[i].image%> " class="card-img-top w-100 d-block" alt="calzado">
+                    <img  src="/images/calzados/<%= products[i].imagen%> " class="card-img-top w-100 d-block" alt="calzado">
                   </figure>
-                    <% if (products[i].discount == 30) { %>
+                    <% if (products[i].descuento == 30) { %>
                       <img class="descuento" src="img/promo30.png" alt="Descuento 30%">  
-                    <% }else if(products[i].discount == 15 ){ %>
+                    <% }else if(products[i].descuento == 15 ){ %>
                       <img class="descuento" src="img/promo15.png" alt="Descuento 30%">
                     <% } %>
                   <div class="card-body">
-                    <h5 class="card-title"><%= products[i].name%></h5>
+                    <h5 class="card-title"><%= products[i].nombre%></h5>
                     <h5 class="card-title" >$  <%= products[i].price%> </h5>
-                    <p class="card-text descripcion"><%= products[i].description%> </p>
+                    <p class="card-text descripcion"><%= products[i].descripcion%> </p>
                     <a href="/productsdetail/<%=products[i].id %>" class="btn btn-primary">Ver detalle</a>
                   </div>
                 </article>

@@ -11,6 +11,19 @@ module.exports = (req,res,next) =>{
 }
 */
 
+/*
+    <% let min=100000,max=0; 
+                                for(let i=0;i<prsize.length;i++) { %> 
+                                 <%  if(min>=prsize[i].price) {min=prsize[i].price}   
+                                     if(max<=prsize[i].price) {max=prsize[i].price}    
+                                 %> 
+                                
+                                <% } %>
+              <h5 class="card-title" >Precio Desde: $<%=(min==100000) ? 0 : min %></h5>
+              <h5 class="card-title" >Precio Hasta: $<%=max %></h5>*/
+
+
+
 const fs = require('fs');
 const path = require('path');
 let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));

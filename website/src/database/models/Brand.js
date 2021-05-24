@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         // created_at: dataTypes.TIMESTAMP,
         // updated_at: dataTypes.TIMESTAMP,
-        name: {
+        nombre: {
             type: dataTypes.STRING(100),
             allowNull: false
         }

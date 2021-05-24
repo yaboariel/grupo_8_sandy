@@ -14,9 +14,9 @@ module.exports = {
     index: function(req,res){
         Product
         .findAll()
-        .then(product =>{
+        .then(products =>{
             //return res.send(platos)
-            res.render(path.resolve(__dirname, '..','views','web','home'), {products: product, styles:["master.css"], title:"Sandy"});
+            res.render(path.resolve(__dirname, '..','views','web','home'), {products, styles:["master.css"], title:"Sandy"});
         })           
         .catch(error => res.send(error))
     },

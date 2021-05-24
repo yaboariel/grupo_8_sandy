@@ -46,10 +46,10 @@ let alias = 'Cart';
                 as: "users",
                 foreignKey: "userId"
             })
-            Cart.hasMany(models.Size, { // models.Movies -> Movie es el valor de alias en movie.js
+            /*Cart.hasMany(models.Size, { // models.Movies -> Movie es el valor de alias en movie.js
                 as: "sizes", // El nombre del modelo pero en plural
                 foreignKey: "sizeId"
-            })
+            })*/
     
     
         }

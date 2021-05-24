@@ -25,6 +25,11 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="descripcion" placeholder="Descripción" required="required" value="">
                                 </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="model" placeholder="Modelo" required="required" value="">
+                                </div>
+                                
+
                                 <div class="col-md-6  p-0">
                                     <% if(categorias != 'undefined'){ %>
                                       
@@ -37,6 +42,64 @@
                                         
                                     <% } %>
                                   </div>  
+                                  <div class="col-md-6  p-0">
+                                    <% if(materials != 'undefined'){ %>
+                                      
+                                        <select class="custom-select form-group mb-2 "  name="material" id="material" >
+                                          <option value="#" disabled >Seleccione la categoría del calzado </option>
+                                          <% for (const material of materials) { %>
+                                            <option value="<%=material.id %>"><%=material.nombre %></option>
+                                          <% } %>
+                                        </select>
+                                        
+                                    <% } %>
+                                  </div>
+
+                                  <div class="col-md-6  p-0">
+                                    <% if(brands != 'undefined'){ %>
+                                      
+                                        <select class="custom-select form-group mb-2 "  name="brand" id="brand" >
+                                          <option value="#" disabled >Seleccione la marca del calzado </option>
+                                          <% for (const brand of brands) { %>
+                                            <option value="<%=brand.id %>"><%=brand.nombre %></option>
+                                          <% } %>
+                                        </select>
+                                        
+                                    <% } %>
+                                  </div>  
+                                  <div class="col-md-6  p-0">
+                                      
+                                        <select class="custom-select form-group mb-2 "  name="destacado" id="destacado" >
+                                          <option value="#" disabled >Destacado?  </option>
+                                            <option value="1">Si</option>
+                                            <option value="0">No</option>
+                                          
+                                        </select>
+                                        
+                                  </div>  
+                                  <div class="col-md-6  p-0">
+                                      
+                                    <select class="custom-select form-group mb-2 "  name="genero" id="genero" >
+                                      <option value="#" disabled >Genero?  </option>
+                                        <option value="0">Masculino</option>
+                                        <option value="1">Femenino</option>
+                                     
+                                    </select>
+                                   </div>  
+
+                                   
+                                  <div class="col-md-6  p-0">
+                                      
+                                    <select class="custom-select form-group mb-2 "  name="adulto" id="adulto" >
+                                      <option value="#" disabled >Talle de Adulto?</option>?  
+                                        <option value="1">Si</option>
+                                        <option value="0">No</option>
+                                     
+                                    </select>
+                                   </div>  
+
+
+
                                 <div class="form-group">
                                     <input type="number" class="form-control" name="precio" placeholder="Precio" required="required" value="">
                                 </div>

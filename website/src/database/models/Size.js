@@ -6,8 +6,6 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        // created_at: dataTypes.TIMESTAMP,
-        // updated_at: dataTypes.TIMESTAMP,
         number: {
             type: dataTypes.STRING(100),
             allowNull: false
@@ -23,13 +21,15 @@ module.exports = (sequelize, dataTypes) => {
 
     Size.associate = function (models) {
 
+    
+        
     Size.belongsToMany(models.Product, { 
         as: "products",
         through: 'ProdSize',
         foreignKey: 'sizeId',
-        otherKey: 'productId',
+        otherKey: 'prodId',
         timestamps: false
-    })  
+    })
 
 }
     

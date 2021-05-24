@@ -7,7 +7,7 @@
     <div class="container-fluid">
       <%- include('../partials/navBar') %>  
 
-        <!-- Cuerpo principal -->
+        <!-- Cuerpo principal --><%="-"%>
         <section class="row">
           <article class="col-12  card pt-5" >
                   <div class="card-body">
@@ -21,20 +21,62 @@
                 <div class="row" >
                     <div class="col-6  bg-light ">
                             <ul class="list-group">
-                                <li class="list-group-item">Id: <%= platoComida.id%></li>
-                                <li class="list-group-item">Nombre: <%= platoComida.name%></li>
-                                <li class="list-group-item">Categoria: <%= platoComida.category.name%></li>
-                                <li class="list-group-item">Descripción: <%= platoComida.description%></li>
-                                <li class="list-group-item">Precio: <%= platoComida.price%></li>
-                                <li class="list-group-item">Descuento: <%= platoComida.discount%></li>
+                                <li class="list-group-item">Id: <%= products.id%></li>
+                                <li class="list-group-item">Nombre: <%= products.title%></li>
+                                <li class="list-group-item">Categoria: <%= products.category.nombre%></li>
+                                <li class="list-group-item">Descripción: <%= products.descripcion%></li>
+                          
+
+
+                                <table class="table mt-5">
+                                  <thead>
+                                      <tr>
+                                          <th>Talle</th>
+                                          <th>Color</th>
+                                          <th>Stock</th>
+                                          <th>Precio</th>
+                                         
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <%for(let i=0;i<prsize.length;i++) { %>
+                                          <tr>
+                                              <td><%= prsize[i].sizerel.number %> </td>
+                                              <td><%= prsize[i].colorrel.name %> </td>
+                                              <td><%= prsize[i].stock %>Un.</td>
+                                              <td> $<%= prsize[i].price %></td>
+                                  
+                                          </tr>
+                                      <% } %>
+                                      
+                          
+                                  </tbody>
+                              </table>    
+
+                       
+                                                                      
+                                <li class="list-group-item">Colores:
+                                <% for(let i=0;i<colores.length;i++) { %>
+                                  <%= colores[i].colors.name%>
+                                  <%= (i===colores.length-1) ? "" : "," %>  <%} %></li>
+                                <% let min=100000,max=0; 
+                                for(let i=0;i<prsize.length;i++) { %> 
+                                 <%  if(min>=prsize[i].price) {min=prsize[i].price}   
+                                     if(max<=prsize[i].price) {max=prsize[i].price}    
+                                 %> 
+                                
+                                <% } %>
+                                <li class="list-group-item">Precio Desde: $<%=(min==100000) ? 0 : min %></li>
+                                <li class="list-group-item">Precio Hasta: $<%=max %></li>
+                                <li class="list-group-item">Descuento: <%= products.descuento%>%</li>
                             </ul>
                         </div>
                         <div class="col-6  bg-light ">
                               <figure class="form-group">
-                                <img class="w-100 " src="/images/platos/<%= platoComida.image%>" alt="Plato de comida">
+                                <img class="w-100 " src="/images/calzados/<%= products.imagen%>" alt="Calzado informal">
                                 <form action="/carrito/adicionarAlCarrito" method="post" class="form-inline" >
                                   <!--Pendiente con esto, constituye una forma de poder pasar valores desde nuestra vista al controlador  (Así lo recibo en controlador:  req.body.productoId)-->
-                                  <input type="hidden"  name="productId" value="<%= platoComida.id%>">
+                                  <input type="hidden"  name="productId" value="<%= products.id%>">
                                   
                                   
                                   <button class="btn btn-success" type="submit">AGREGAR AL CARRITO</button>

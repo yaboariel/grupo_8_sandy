@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const {Product, Category} = require('../database/models/');
+const {Product, Category, Brand, Material} = require('../database/models/');
 
 
 
@@ -12,23 +12,22 @@ module.exports = {
         Product
         .findAll()
         .then(productos => {
-              res.render(path.resolve(__dirname, '../views/admin/administrar'),{productos, styles: ["master.css", "detail.css"], title});
+              res.render(path.resolve(__dirname, '../views/admin/administrar'),{productos, styles: ["master.css"], title});
         })
         .catch(error => res.send(error))
     },
     /*Por get */
     create: (req,res) =>{
        const categorias = Category.findAll();
-       const calzados = Product;
-       Product
-       .findAll({
-           where: {categoryId : req.query.categoria},
-           include: [{association: 'category'}]
-       })
-       Promise.all([calzados,categorias])
-       .then(([calzados,categorias]) =>
+       const calzados = Product.findAll();
+       const brands = Brand.findAll();
+      /* const colors = Color.findAll();*/
+
+       const materials = Material.findAll();
+       Promise.all([calzados,categorias,brands,materials])
+       .then(([calzados,categorias,brands,materials]) =>
            //return res.send(platoComida);
-           res.render(path.resolve(__dirname, '..','views','admin','create'), {calzados,categorias,styles:["master.css", "detail.css"], title:"Sandy - Subir Productos "})
+           res.render(path.resolve(__dirname, '..','views','admin','create'), {calzados,categorias,brands,materials,styles:["master.css", "detail.css"], title:"Sandy - Subir Productos "})
        )                
        .catch(error => res.send(error))
 /*
@@ -46,12 +45,19 @@ module.exports = {
         const _body= req.body;
         
         
-        _body.nombre = req.body.nombre,
+        _body.title = req.body.nombre,
         _body.descripcion =req.body.descripcion,
         _body.precio= req.body.precio,
         _body.descuento=req.body.descuento,
-        _body.categoryId=req.body.Categoria,   
-        _body.filename= req.file ? req.file.filename : ""
+        _body.categoryId=req.body.categoria,   
+        _body.imagen= req.file ? req.file.filename : ""
+        _body.materialId=req.body.material,   
+        _body.model=req.body.model,   
+        _body.brandId=req.body.brand,   
+        _body.title=req.body.title,   
+        _body.categoryId=req.body.categoria,   
+        
+        console.log(_body)
 
         Product 
         .create(_body)
@@ -62,7 +68,7 @@ module.exports = {
     show: (req,res) => {
         Product
         .findByPk(req.params.id)
-        .then(calzado =>{ res.render(path.resolve(__dirname, '../views/admin/detail'), {calzado,styles: ["master.css", "detail.css"], title})
+        .then(calzado =>{ res.render(path.resolve(__dirname, '../views/admin/detail'), {calzado,styles: ["master.css"], title})
                 } )
                 
      
