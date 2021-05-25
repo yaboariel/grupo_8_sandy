@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-05-2021 a las 03:24:38
+-- Tiempo de generación: 25-05-2021 a las 20:58:58
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -37,6 +37,22 @@ CREATE TABLE `brands` (
   `deletedAt` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `brands`
+--
+
+INSERT INTO `brands` (`id`, `nombre`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
+(0, 'Havaianas', NULL, NULL, NULL),
+(1, 'Crocs', NULL, NULL, NULL),
+(2, 'Sea Walk ', NULL, NULL, NULL),
+(3, 'Grimoldi', NULL, NULL, NULL),
+(4, 'Nike', NULL, NULL, NULL),
+(5, 'Adidas', NULL, NULL, NULL),
+(6, 'Puma', NULL, NULL, NULL),
+(7, 'Zara', NULL, NULL, NULL),
+(8, 'Paruolo', NULL, NULL, NULL),
+(9, 'jaguar', NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -51,7 +67,8 @@ CREATE TABLE `carts` (
   `userId` int(11) DEFAULT NULL,
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
-  `deletedAt` timestamp NULL DEFAULT NULL
+  `deletedAt` timestamp NULL DEFAULT NULL,
+  `colorId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -68,6 +85,16 @@ CREATE TABLE `categories` (
   `deletedAt` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `categories`
+--
+
+INSERT INTO `categories` (`id`, `nombre`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
+(4, 'Suecos', '2021-05-20 19:18:14', '2021-05-20 19:18:14', '2021-05-20 19:18:14'),
+(5, 'Sandalia', '2021-05-20 19:23:06', '2021-05-20 19:23:06', '2021-05-20 19:23:06'),
+(8, 'Ojotas', '2021-05-20 19:23:29', '2021-05-20 19:23:29', '2021-05-20 19:23:29'),
+(10, 'Zapatos', '2021-05-20 19:23:52', '2021-05-20 19:23:52', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -81,6 +108,24 @@ CREATE TABLE `colors` (
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `colors`
+--
+
+INSERT INTO `colors` (`id`, `name`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
+(1, 'Negro', NULL, NULL, NULL),
+(2, 'Blanco', NULL, NULL, NULL),
+(3, 'Rojo', NULL, NULL, NULL),
+(4, 'Verde', NULL, NULL, NULL),
+(5, 'Azul', NULL, NULL, NULL),
+(6, 'Amarillo', NULL, NULL, NULL),
+(7, 'Marron', NULL, NULL, NULL),
+(8, 'Fucsia', NULL, NULL, NULL),
+(9, 'Rosa', NULL, NULL, NULL),
+(10, 'Violeta', NULL, NULL, NULL),
+(11, 'Gris', NULL, NULL, NULL),
+(12, 'Naranja', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -110,6 +155,17 @@ CREATE TABLE `materials` (
   `deletedAt` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `materials`
+--
+
+INSERT INTO `materials` (`id`, `nombre`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
+(1, 'Goma Eva', NULL, NULL, NULL),
+(2, 'Cuero', NULL, NULL, NULL),
+(3, 'Corcho', NULL, NULL, NULL),
+(4, 'Plastico', NULL, NULL, NULL),
+(5, 'Cuerina', NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -128,20 +184,29 @@ CREATE TABLE `prodcart` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `prodsize`
+-- Estructura de tabla para la tabla `prodsizes`
 --
 
-CREATE TABLE `prodsize` (
+CREATE TABLE `prodsizes` (
   `id` int(11) NOT NULL,
   `prodId` int(11) DEFAULT NULL,
   `sizeId` int(11) DEFAULT NULL,
   `stock` int(11) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
-  `colorID` int(11) DEFAULT NULL,
+  `colorId` int(11) DEFAULT NULL,
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `prodsizes`
+--
+
+INSERT INTO `prodsizes` (`id`, `prodId`, `sizeId`, `stock`, `price`, `colorId`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
+(8, 4, 4, 30, 1300, 4, NULL, NULL, NULL),
+(9, 4, 5, 40, 1650, 5, NULL, NULL, NULL),
+(10, 4, 6, 10, 2000, 7, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -164,8 +229,40 @@ CREATE TABLE `products` (
   `adulto` tinyint(4) DEFAULT NULL,
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
-  `deletedAt` timestamp NULL DEFAULT NULL
+  `deletedAt` timestamp NULL DEFAULT NULL,
+  `imagen` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `products`
+--
+
+INSERT INTO `products` (`id`, `title`, `model`, `brandId`, `materialId`, `categoryId`, `fotoId`, `descuento`, `descripcion`, `destacado`, `genero`, `adulto`, `createdAt`, `updatedAt`, `deletedAt`, `imagen`) VALUES
+(3, 'Crocs', 'Crocsband', 0, 1, 4, 0, 50, NULL, 1, 0, 1, '2021-05-22 23:34:04', '2021-05-22 23:34:04', NULL, 'calzados-1621725305287.jpg'),
+(4, 'Crocs Clasica para Adultos', 'Crocs Classic', 0, 1, 4, NULL, 15, 'Crocs lisa clasica ', 1, 0, 1, '2021-05-22 23:40:48', '2021-05-25 04:26:53', NULL, 'calzados-1621726848624.jpg'),
+(5, 'Havaianas : High End de Dama', 'High', 0, 1, 8, NULL, 30, 'High Con plataforma alta', 1, 1, 1, '2021-05-24 20:08:48', '2021-05-24 20:08:48', NULL, 'calzados-1621886928915.webp');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `prod_color`
+--
+
+CREATE TABLE `prod_color` (
+  `id` int(11) NOT NULL,
+  `prodId` int(11) DEFAULT NULL,
+  `colorId` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `prod_color`
+--
+
+INSERT INTO `prod_color` (`id`, `prodId`, `colorId`) VALUES
+(1, 4, 1),
+(2, 4, 2),
+(3, 4, 3),
+(4, 4, 5);
 
 -- --------------------------------------------------------
 
@@ -180,6 +277,22 @@ CREATE TABLE `sizes` (
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `sizes`
+--
+
+INSERT INTO `sizes` (`id`, `number`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
+(0, 35, NULL, NULL, NULL),
+(1, 36, NULL, NULL, NULL),
+(2, 37, NULL, NULL, NULL),
+(3, 38, NULL, NULL, NULL),
+(4, 39, NULL, NULL, NULL),
+(5, 40, NULL, NULL, NULL),
+(6, 41, NULL, NULL, NULL),
+(7, 42, NULL, NULL, NULL),
+(8, 43, NULL, NULL, NULL),
+(9, 44, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -204,6 +317,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `nombre`, `apellido`, `address`, `email`, `password`, `userName`, `role`, `image`, `cartId`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
+(0, 'ariel', 'yabo', NULL, 'ariel@gmail.com', '$2a$10$.Br.qBuaKgGYwP9vCrFhEO2BRpXYAaYOhZ3HgrBLfWSZyhtndF2Ey', 'yaboariel', 9, 'Ariel.jpg', NULL, '2021-05-20 13:04:39', '2021-05-20 13:04:39', NULL);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -217,10 +337,7 @@ ALTER TABLE `brands`
 -- Indices de la tabla `carts`
 --
 ALTER TABLE `carts`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_c09d1337-e02e-4234-a00c-31c0a5d2876f` (`prodId`),
-  ADD KEY `FK_f3805bb3-334a-4d59-98a1-1150017c4b00` (`sizeId`),
-  ADD KEY `FK_f310d5e8-89c5-4f29-b80d-0fa6707c4b93` (`userId`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `categories`
@@ -250,27 +367,25 @@ ALTER TABLE `materials`
 -- Indices de la tabla `prodcart`
 --
 ALTER TABLE `prodcart`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_90d51bec-9ddc-4ec1-abba-05882b3077e0` (`prodId`),
-  ADD KEY `FK_d71abdaa-9b8a-4496-97ce-13b7ca5121d1` (`cartId`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `prodsize`
+-- Indices de la tabla `prodsizes`
 --
-ALTER TABLE `prodsize`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_3882a1be-3718-4ca2-adef-4a6643f6b9e2` (`prodId`),
-  ADD KEY `FK_11175114-bd12-439e-8693-6ee2b8fbb013` (`sizeId`),
-  ADD KEY `FK_f49606a5-80b4-4a85-959f-81b20d7044e6` (`colorID`);
+ALTER TABLE `prodsizes`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_4d58f8d8-c6e7-4ca9-8534-002331756e14` (`brandId`),
-  ADD KEY `FK_fa67bf4c-1d5e-4a68-b60c-f3bc55fcb517` (`materialId`),
-  ADD KEY `FK_e2a3accb-cd36-4478-ac31-93935d8d4901` (`categoryId`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `prod_color`
+--
+ALTER TABLE `prod_color`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `sizes`
@@ -293,13 +408,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `colors`
 --
 ALTER TABLE `colors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `fotos`
@@ -311,46 +426,35 @@ ALTER TABLE `fotos`
 -- AUTO_INCREMENT de la tabla `materials`
 --
 ALTER TABLE `materials`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `prodcart`
+--
+ALTER TABLE `prodcart`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `prodsize`
+-- AUTO_INCREMENT de la tabla `prodsizes`
 --
-ALTER TABLE `prodsize`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `prodsizes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `prod_color`
+--
+ALTER TABLE `prod_color`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `carts`
---
-ALTER TABLE `carts`
-  ADD CONSTRAINT `FK_c09d1337-e02e-4234-a00c-31c0a5d2876f` FOREIGN KEY (`prodId`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `FK_f310d5e8-89c5-4f29-b80d-0fa6707c4b93` FOREIGN KEY (`userId`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `FK_f3805bb3-334a-4d59-98a1-1150017c4b00` FOREIGN KEY (`sizeId`) REFERENCES `sizes` (`id`);
-
---
--- Filtros para la tabla `prodcart`
---
-ALTER TABLE `prodcart`
-  ADD CONSTRAINT `FK_90d51bec-9ddc-4ec1-abba-05882b3077e0` FOREIGN KEY (`prodId`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `FK_d71abdaa-9b8a-4496-97ce-13b7ca5121d1` FOREIGN KEY (`cartId`) REFERENCES `carts` (`id`);
-
---
--- Filtros para la tabla `prodsize`
---
-ALTER TABLE `prodsize`
-  ADD CONSTRAINT `FK_11175114-bd12-439e-8693-6ee2b8fbb013` FOREIGN KEY (`sizeId`) REFERENCES `sizes` (`id`),
-  ADD CONSTRAINT `FK_3882a1be-3718-4ca2-adef-4a6643f6b9e2` FOREIGN KEY (`prodId`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `FK_f49606a5-80b4-4a85-959f-81b20d7044e6` FOREIGN KEY (`colorID`) REFERENCES `colors` (`id`);
 
 --
 -- Filtros para la tabla `products`
