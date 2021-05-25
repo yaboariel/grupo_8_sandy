@@ -33,7 +33,10 @@
               <% if (calzados[i].descuento == 30) { %>
                 <img class="descuento" src="/img/promo30.png" alt="Descuento 30%">  
               <% }else if(calzados[i].descuento == 15 ){ %>
-                <img class="descuento" src="/img/promo15.png" alt="Descuento 15%">
+                  <img class="descuento" src="/img/promo15.png" alt="Descuento 15%">
+              
+              <% }else if(calzados[i].descuento == 50 ){ %>
+                <img class="descuento" src="/img/promo50.png" alt="Descuento 50%">
               <% } %>
             <div class="card-body">
               <h5 class="card-title"><%= calzados[i].title%></h5>

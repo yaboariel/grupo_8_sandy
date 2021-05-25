@@ -1,7 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 const {Product, Category, Brand, Material} = require('../database/models/');
-
+const db = require('../database/models/');
+const Op = db.Sequelize.Op;
 
 
 const title= "Sandy | ADMIN";
@@ -21,23 +22,13 @@ module.exports = {
        const categorias = Category.findAll();
        const calzados = Product.findAll();
        const brands = Brand.findAll();
-      /* const colors = Color.findAll();*/
-
        const materials = Material.findAll();
        Promise.all([calzados,categorias,brands,materials])
        .then(([calzados,categorias,brands,materials]) =>
-           //return res.send(platoComida);
            res.render(path.resolve(__dirname, '..','views','admin','create'), {calzados,categorias,brands,materials,styles:["master.css", "detail.css"], title:"Sandy - Subir Productos "})
        )                
        .catch(error => res.send(error))
-/*
-        Product
-        .findAll()
-        .then(productos => {
-              res.render(path.resolve(__dirname, '../views/admin/create'),{productos,category, styles: ["master.css", "detail.css"], title});
-        })
-        .catch(error => res.send(error))   
- */       
+    
     },
     /* Por post */
     save: (req,res) => {
@@ -66,6 +57,8 @@ module.exports = {
          },
 
     show: (req,res) => {
+
+
         Product
         .findByPk(req.params.id)
         .then(calzado =>{ res.render(path.resolve(__dirname, '../views/admin/detail'), {calzado,styles: ["master.css"], title})
@@ -75,22 +68,28 @@ module.exports = {
     },
     /* Por Get  */
     edit: function (req, res) {
+        
+      
+        
+       
         Product
         .findByPk(req.params.id)
-        .then(calzado =>{ res.render(path.resolve(__dirname, '../views/admin/edit'), {calzado,styles: ["master.css", "detail.css"], title})
+        .then(calzado =>{ 
+            console.log(calzado)
+            res.render(path.resolve(__dirname, '../views/admin/edit'), {calzado,styles: ["master.css"], title})
                 } )
-              
+            
 
     },
     
     /* Por post */
     update: (req,res) => {
-        res.send('Got a PUT request at /user')
         const _body=req.body;
                
         _body.title=req.body.title;
         _body.descripcion=req.body.descripcion;
-        _body.precio=req.body.precio;
+        _body.genero=req.body.genero;
+        _body.adulto=req.body.adulto;
         _body.descuento=req.body.descuento;
         _body.fotoId=req.file ? req.file.filename : req.body.oldImagen;
         Product
@@ -121,10 +120,10 @@ module.exports = {
     search: (req,res) =>{
         Product.findAll({
                     where:{
-                        name: {[Op.like]: `%${req.query.buscar}%`}
+                        title: {[Op.like]: `%${req.query.buscar}%`}
                     }
         })
-        .then(resultado => { res.render(path.resolve(__dirname,"..","views","admin","administrar"),{calzados:resultado})})
+        .then(resultado => { res.render(path.resolve(__dirname,"..","views","admin","administrar"),{productos:resultado,styles: ["master.css"], title})})
         .catch(error=> res.send(error))      
          
         }
