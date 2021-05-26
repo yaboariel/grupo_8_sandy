@@ -5,6 +5,8 @@
     <main class="container-fluid">
       <%- include('../partials/navBar.ejs') %>
       <!--Listado de nuestros productos-->
+      <br>
+      <br>
       <section class="row">
         <article class="col-12">
           <h2 class="display-4 mt-5 pt-4">Los calzados más populares</h2>
@@ -30,7 +32,8 @@
             <figure >
               <img  src="/images/calzados/<%= calzados[i].imagen%> " class="card-img-top w-100 d-block" alt="Calzado">
             </figure>
-              <% if (calzados[i].descuento == 30) { %>
+              <!--
+                <% if (calzados[i].descuento == 30) { %>
                 <img class="descuento" src="/img/promo30.png" alt="Descuento 30%">  
               <% }else if(calzados[i].descuento == 15 ){ %>
                   <img class="descuento" src="/img/promo15.png" alt="Descuento 15%">
@@ -40,10 +43,10 @@
               <% } %>
             <div class="card-body">
               <h5 class="card-title"><%= calzados[i].title%></h5>
-            
+            -->
               
                                 
-              <h5 class="card-title" >$  <%= calzados[i].price%> </h5>
+              <h5 class="card-title" >$1000  <%= calzados[i].price%> </h5>
               <p class="card-text descripcion"><%= calzados[i].descripcion%> </p>
               <a href="/productos/detalle/<%=calzados[i].id %>" class="btn btn-primary">Ver detalle</a>
             </div>
