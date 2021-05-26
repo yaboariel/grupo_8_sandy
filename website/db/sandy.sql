@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-05-2021 a las 20:58:58
+-- Tiempo de generación: 27-05-2021 a las 00:20:07
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -302,15 +302,16 @@ INSERT INTO `sizes` (`id`, `number`, `createdAt`, `updatedAt`, `deletedAt`) VALU
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) DEFAULT NULL,
-  `apellido` varchar(255) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL,
+  `nombre` varchar(45) DEFAULT NULL,
+  `apellido` varchar(45) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `userName` varchar(255) DEFAULT NULL,
-  `role` tinyint(4) DEFAULT NULL,
+  `userName` varchar(100) DEFAULT NULL,
+  `role` int(11) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `cartId` int(11) DEFAULT NULL,
+  `usercol` varchar(45) DEFAULT NULL,
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL
@@ -320,8 +321,9 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `nombre`, `apellido`, `address`, `email`, `password`, `userName`, `role`, `image`, `cartId`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
-(0, 'ariel', 'yabo', NULL, 'ariel@gmail.com', '$2a$10$.Br.qBuaKgGYwP9vCrFhEO2BRpXYAaYOhZ3HgrBLfWSZyhtndF2Ey', 'yaboariel', 9, 'Ariel.jpg', NULL, '2021-05-20 13:04:39', '2021-05-20 13:04:39', NULL);
+INSERT INTO `users` (`id`, `nombre`, `apellido`, `address`, `email`, `password`, `userName`, `role`, `image`, `cartId`, `usercol`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
+(1, 'tobias', 'yabo', NULL, 'tobi@gmail.com', '$2a$10$u8A05oo2FtlJq20LfWqbdeOHjodmWg21UzLRiysGv7tH.qpnaSHJG', 'tobiasyabo', 1, 'foto-1621981400647.jpg', NULL, NULL, '2021-05-25 22:23:20', '2021-05-25 22:23:20', NULL),
+(2, 'ariel', 'yabo', NULL, 'yaboariel@gmail.com', '$2a$10$zWiaMHtmIhtHpwswRmF7l.ThCUN.aIEkqSmwSCvRlol1cGjXicvr6', 'ariel@gmail.com', 9, 'foto-1621981422473.jpg', NULL, NULL, '2021-05-25 22:23:42', '2021-05-25 22:23:42', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -397,8 +399,7 @@ ALTER TABLE `sizes`
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_1f7b1bf0-d8e2-447d-a632-bd50c27f9da4` (`cartId`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -453,6 +454,12 @@ ALTER TABLE `prod_color`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- Restricciones para tablas volcadas
 --
 
@@ -463,12 +470,6 @@ ALTER TABLE `products`
   ADD CONSTRAINT `FK_4d58f8d8-c6e7-4ca9-8534-002331756e14` FOREIGN KEY (`brandId`) REFERENCES `brands` (`id`),
   ADD CONSTRAINT `FK_e2a3accb-cd36-4478-ac31-93935d8d4901` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`),
   ADD CONSTRAINT `FK_fa67bf4c-1d5e-4a68-b60c-f3bc55fcb517` FOREIGN KEY (`materialId`) REFERENCES `materials` (`id`);
-
---
--- Filtros para la tabla `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `FK_1f7b1bf0-d8e2-447d-a632-bd50c27f9da4` FOREIGN KEY (`cartId`) REFERENCES `carts` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

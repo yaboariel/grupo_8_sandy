@@ -14,7 +14,7 @@ function ProductsInDb(){
         })
         .then(data =>{
           console.log(data)
-            setProductList(data.products)
+            setProductList(data.data)
         })
         .catch(error => console.log(error))
     },[])

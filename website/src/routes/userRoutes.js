@@ -5,8 +5,6 @@ const path = require('path');
 //Requerir el modulo de los controladores
 const usuariosController = require(path.resolve(__dirname, '../controllers/userController'));
 
-
-
 //Aquí requiero la Base  de Datos.   Esto lo hago para validar si el usuario está o no ya registrado
 const db = require('../database/models/');
 
