@@ -55,29 +55,20 @@ html{
     display: inline-block;
 }
 
-header .header-1, header .header-2{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:1.5rem;
-    width: 100%;
-    z-index: 1000;
-}
-
-header .header-1 .logo{
+.logo{
     font-size: 2rem;
     color:#666;
 }
 
-header .header-1 .logo i{
+.logo i{
     color:var(--blue);
 }
 
-header .header-1 .form-container form{
+.form-container form{
     display: flex;
 }
 
-header .header-1 .form-container form #search{
+.form-container form #search{
     height: 4rem;
     width: 50rem;
     outline: none;
@@ -86,11 +77,11 @@ header .header-1 .form-container form #search{
     padding:0 1rem;
 }
 
-header .header-1 .form-container form #search:focus{
+.form-container form #search:focus{
     border-color: var(--blue);;
 }
 
-header .header-1 .form-container form label{
+.form-container form label{
     height: 4rem;
     width: 5rem;
     text-align: center;
@@ -101,53 +92,49 @@ header .header-1 .form-container form label{
     color:#fff;
 }
 
-header .header-1 .form-container form label:hover{
+.form-container form label:hover{
     color:yellow;
 }
 
-header .header-2{
-    background:var(--blue);
-}
-
-header .header-2 .navbar ul{
+.navbar ul{
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-header .header-2 .navbar ul li{
+.navbar ul li{
     margin:0 1rem;
 }
 
-header .header-2 .navbar ul li a{
+.navbar ul li a{
     font-size: 2rem;
     color:#fff;
 }
 
-header .header-2 .navbar ul li a.active,
-header .header-2 .navbar ul li a:hover{
+.navbar ul li a.active,
+.navbar ul li a:hover{
     color:yellow;
 }
 
-header .header-2 .icons a{
+.icons a{
     color: #fff;
     font-size: 2rem;
     padding: 0 1rem;
 }
 
-header .header-2 .icons a:hover{
+.icons a:hover{
     color:yellow;
 }
 
-header .header-2 #menu{
+#menu{
     font-size: 3rem;
     color:#fff;
     cursor: pointer;
     display: none;
 }
 
-header .header-2.header-active{
+tive{
     position: fixed;
     top:0; left: 0;
     box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
@@ -687,15 +674,15 @@ ul{
         font-size: 55%;
     }
     
-    header .header-1 .form-container form #search{
+    .form-container form #search{
         width: 100%;
     }
 
-    header .header-2 #menu{
+    #menu{
         display: block;
     }
 
-    header .header-2 .navbar{
+    .navbar{
         position: fixed;
         top: -200rem; left: 50%;
         transform: translate(-50%, -50%);
@@ -704,7 +691,7 @@ ul{
         opacity: 0;
     }
 
-    header .header-2 .navbar ul{
+    .navbar ul{
         flex-flow: column;
         background: linear-gradient(var(--blue), blueviolet);
         border:.2rem solid #fff;
@@ -713,13 +700,13 @@ ul{
         width: 27rem;
     }
 
-    header .header-2 .navbar ul li{
+    .navbar ul li{
         width: 100%;
         margin:1rem 0;
         text-align: center;
     }
 
-    header .header-2 .navbar ul li a{
+    .navbar ul li a{
         font-size: 2.5rem;
         display: block;
     }
@@ -728,7 +715,7 @@ ul{
         transform: rotate(180deg);
     }
 
-    header .header-2 .nav-toggle{
+    .nav-toggle{
         top:50%;
         opacity: 1;
     }
@@ -794,12 +781,7 @@ ul{
         font-size: 45%;
     }
 
-    header .header-1{
-        flex-flow: column;
-        padding:1rem;
-    }
-
-    header .header-1 .logo{
+    .logo{
         padding-bottom: 1.5rem;
     }
 
