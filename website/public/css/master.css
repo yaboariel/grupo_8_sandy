@@ -5,7 +5,8 @@
 }
 
 *{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: medium !important;
     margin:0; padding:0;
     box-sizing: border-box;
     text-transform: capitalize;
@@ -664,6 +665,10 @@ ul{
 .footer-col .social-links a:hover{
 	color: #24262b;
 	background-color: #ffffff;
+}
+
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free" !important;
 }
 
 /* media queries  */
