@@ -21,7 +21,7 @@
                     <option value="<%=categoria.id %>"><%=categoria.nombre %></option>
                   <% } %>
                 </select>
-                <button type="submit" class="btn btn-primary mb-2">Buscar calzados categoría seleccionada</button>
+                <button type="submit" class="btn btn-primary mb-2">Buscar calzados</button>
               </form>  
             <% } %>
           </div>  
@@ -45,8 +45,8 @@
               <h5 class="card-title"><%= calzados[i].title%></h5>
             -->
               
-                                
-              <h5 class="card-title" >$1000  <%= calzados[i].price%> </h5>
+
+              <h5 class="card-title" >$  <%= calzados[i].price%> </h5>
               <p class="card-text descripcion"><%= calzados[i].descripcion%> </p>
               <a href="/productos/detalle/<%=calzados[i].id %>" class="btn btn-primary">Ver detalle</a>
             </div>
